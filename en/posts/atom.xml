@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://xinetzone.github.io/cpp-demo</id>
+  <title>Blog</title>
+  <updated>2021-12-18T11:27:33.809596+00:00</updated>
+  <link href="https://xinetzone.github.io/cpp-demo"/>
+  <link href="https://xinetzone.github.io/cpp-demo/en/posts/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.21">ABlog</generator>
+</feed>

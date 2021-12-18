@@ -1,0 +1,202 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 测试"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#include <iostream> // 指出一个头文件"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "int main() {\n",
+    "    std::cout  << \"键入两个数字：\" << std::endl;\n",
+    "    int v1 = 0, v2 = 0;\n",
+    "    std::cin >> v1 >> v2;\n",
+    "    std::cout << v1 << \"与\"  << v2 << \"的和是：\" << v1 + v2 << std::endl;\n",
+    "    return 0;\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "键入两个数字：\n",
+      "112与34的和是：146\n"
+     ]
+    }
+   ],
+   "source": [
+    "main();"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "int main(){\n",
+    "    int sum = 0, val =  1;\n",
+    "    while (val < 10) {\n",
+    "        sum += val;\n",
+    "        ++val;\n",
+    "    }\n",
+    "    std::cout << \"0 到 10 的和：\" << sum;\n",
+    "    return 0;\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 到 10 的和：45"
+     ]
+    }
+   ],
+   "source": [
+    "main();"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "int main(){\n",
+    "    int sum = 0;\n",
+    "    for (int val = 1; val <= 10; ++val)\n",
+    "        sum += val;\n",
+    "    std::cout << \"0 到 10 的和：\" << sum << std::endl;\n",
+    "    return 0;\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 到 10 的和：55\n"
+     ]
+    }
+   ],
+   "source": [
+    "main();"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "int main(){\n",
+    "    int sum = 0, value = 0;\n",
+    "    while (std::cin >> value)\n",
+    "        sum += value;\n",
+    "    std::cout << \"求和：\" << sum << std::endl;\n",
+    "    return 0;\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "求和：1438\n"
+     ]
+    }
+   ],
+   "source": [
+    "main();"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "45"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int a = 45;\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "C++11",
+   "language": "C++11",
+   "name": "xcpp11"
+  },
+  "language_info": {
+   "codemirror_mode": "text/x-c++src",
+   "file_extension": ".cpp",
+   "mimetype": "text/x-c++src",
+   "name": "C++11",
+   "version": "11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
