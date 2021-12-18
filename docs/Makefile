@@ -21,4 +21,5 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 clean:
+	rm -rf xml/*
 	rm -rf $(BUILDDIR)/*

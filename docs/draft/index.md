@@ -1,4 +1,4 @@
-# 快速入门
+# 回收站
 
 ```{toctree}
 :maxdepth: 2
