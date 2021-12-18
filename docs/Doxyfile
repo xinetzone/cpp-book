@@ -1,0 +1,14 @@
+PROJECT_NAME     = "Breathe in a nutshell example"
+GENERATE_XML = YES
+GENERATE_HTML = NO
+JAVADOC_AUTOBRIEF = NO
+GENERATE_LATEX   = NO
+GENERATE_MAN     = NO
+GENERATE_RTF     = NO
+CASE_SENSE_NAMES = NO
+
+OUTPUT_DIRECTORY = .
+INPUT            = examples/
+FILE_PATTERNS     = *cc, *.h
+RECURSIVE         = YES
+QUIET            = YES
