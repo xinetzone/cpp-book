@@ -6,8 +6,8 @@
 :hidden:
 
 tour/index
-guide/index
 programming/index
+guide/index
 other/index
 refs/index
 about/index
