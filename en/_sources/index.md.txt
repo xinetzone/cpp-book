@@ -5,7 +5,7 @@
 :maxdepth: 2
 :hidden:
 
-start/index
+propaedeutics/index
 tour/index
 programming/index
 guide/index

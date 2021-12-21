@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>C++ 基本概念 &#8212; cpp-book 0.1 documentation</title>
+    <title>数字与信息 &#8212; cpp-book 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -81,6 +81,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".cell"
@@ -93,8 +95,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="C++ 语言导学" href="../tour/index.html" />
-    <link rel="prev" title="数字与信息" href="01_digital.html" /> 
+    <link rel="next" title="用电表示计算" href="01_electricity.html" />
+    <link rel="prev" title="预备知识" href="index.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -166,7 +168,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   快速入门
+   预备知识
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -174,18 +176,28 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     数字与信息
+    </a>
+   </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="00_computer.html">
+    <a class="reference internal" href="01_electricity.html">
+     用电表示计算
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_programming.html">
+     什么是编程
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_computer.html">
      计算机与程序
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="01_digital.html">
-     数字与信息
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+    <a class="reference internal" href="concepts.html">
      C++ 基本概念
     </a>
    </li>
@@ -364,9 +376,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/start/02_concepts.ipynb.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/propaedeutics/00_digital.md.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
+                data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -384,10 +396,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/cpp-book/issues/new?title=Issue%20on%20page%20%2Fstart/02_concepts.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/cpp-book/issues/new?title=Issue%20on%20page%20%2Fpropaedeutics/00_digital.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/xinetzone/cpp-book/edit/main/docs/start/02_concepts.ipynb"><button
+        <a class="edit-button" href="https://github.com/xinetzone/cpp-book/edit/main/docs/propaedeutics/00_digital.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -402,36 +414,34 @@ commentsRunWhenDOMLoaded(addUtterances);
 
             <!-- Launch buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/cpp-book/main?urlpath=lab/tree/docs/start/02_concepts.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com//github/xinetzone/cpp-book/blob/main/docs/start/02_concepts.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        <button type="button" class="btn btn-secondary topbarbtn"
-            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
-                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
-        
-    </div>
-</div>
-
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   数值信息编码
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   字符信息编码
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   模拟信号编码
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -439,19 +449,46 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="c">
-<h1>C++ 基本概念<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="sc">&#39;a&#39;</span><span class="w"></span>
-</pre></div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>数字与信息<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>从古到今，我们总是被“数”（number）包围着，特别是计数系统为我们带来了极大的便利。我们可以使用如下形式表示任意进制的 <span class="math notranslate nohighlight">\(n\)</span> 位非负整数：</p>
+<div class="math notranslate nohighlight">
+\[
+p = \sum_{i=0}^n a_n t_n
+\]</div>
+<p>其中，<span class="math notranslate nohighlight">\(a_n\)</span> 称为系数，<span class="math notranslate nohighlight">\(t_n\)</span> 称为位权。比如说，十进制的数字 <span class="math notranslate nohighlight">\(457\)</span> 可以表示为 <span class="math notranslate nohighlight">\(4 * 10^2 + 5 * 10^1 + 3* 10^0\)</span>。</p>
+<p>由于信息论创始人香农指出：通信的最基本消息符号是二值符号。故而现代计算机采用的是二进制数字系统。信息的最小度量单位是 <strong>比特</strong>（bit），以 <code class="docutils literal notranslate"><span class="pre">0</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">1</span></code> 表示两种状态。任何复杂的信息都可以按照一定的编码规则，最终变换为一组 <code class="docutils literal notranslate"><span class="pre">0</span></code> 与 <code class="docutils literal notranslate"><span class="pre">1</span></code> 构成的二进制数据，并能无损地保留信息含义。</p>
+<p>计算机以 <strong>字节</strong> （byte）组织各种信息，字节是计算机用于存储、传输、计算的基本计量单位。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>一个字节可以存储 8 位（bit）二进制数，即：</p>
+<div class="math notranslate nohighlight">
+\[
+1 \text{byte} = 8 \text{bit}
+\]</div>
 </div>
+<p>数值、字符、模拟信号均可处理成二进制数。</p>
+<div class="section" id="id2">
+<h2>数值信息编码<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>整数值有“正数”与“负数”之分，而二进制数只有 <code class="docutils literal notranslate"><span class="pre">0</span></code> 与 <code class="docutils literal notranslate"><span class="pre">1</span></code>，故而约定字节的最高位作为符号位，用 <code class="docutils literal notranslate"><span class="pre">0</span></code> 表示 <code class="docutils literal notranslate"><span class="pre">+</span></code>（正号），<code class="docutils literal notranslate"><span class="pre">1</span></code> 表示 <code class="docutils literal notranslate"><span class="pre">-</span></code>（负号）。实数在计算机中被表示为浮点数。</p>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;a&#39;
-</pre></div>
+<div class="section" id="id3">
+<h2>字符信息编码<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>字符（如汉字、英文等自然语言、控制字符等）被处理成为 <strong>统一码</strong> （Unicode）。即建立了字符到数字的映射关系，比如汉字 “权”，被编码为数字 <code class="docutils literal notranslate"><span class="pre">26435</span></code>（需要再映射为二进制码）。</p>
 </div>
-</div>
+<div class="section" id="id4">
+<h2>模拟信号编码<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>在计算机中，将模拟信号（声音、图形、视频等，也被称为 <strong>连续信号</strong>）转换为二进制数的过程称为数字化处理。</p>
+<dl class="simple myst">
+<dt>采样</dt><dd><p>即将模拟信号表示成离散的符号序列。</p>
+<p>采样过程是在固定的时间间隔内，对模拟信号截取一个振幅值，并用定长的二进制数表示。</p>
+<p>截取模拟信号振幅值的过程称为采样。所得的的振幅值为采样值。</p>
+</dd>
+<dt>量化</dt><dd><p>指的是将信号样本值截取为最接近原信号的整数值过程。</p>
+</dd>
+</dl>
+<p>声音的采样和量化输出的是数字序列。图像针对像素点采样方式可以输出二值图（一个像素点存储为一个比特）、灰度图（一个像素点存储为一个字节）、彩色图等（一个像素点存储为三个字节）。</p>
+<p>可以观看视频：<a class="reference external" href="https://www.zhihu.com/zvideo/1456755277366792192">如何数字化信息</a> 了解更多。</p>
 </div>
 </div>
 
@@ -464,16 +501,16 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "xcpp11"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "xcpp11",
-            path: "./start"
+            kernelName: "python3",
+            path: "./propaedeutics"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'xcpp11'</script>
+    <script>kernelName = 'python3'</script>
 <div class="section">
    
 </div>
@@ -483,17 +520,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="01_digital.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">数字与信息</p>
+            <p class="prev-next-title">预备知识</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../tour/index.html" title="next page">
+    <a class='right-next' id="next-link" href="01_electricity.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C++ 语言导学</p>
+        <p class="prev-next-title">用电表示计算</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
