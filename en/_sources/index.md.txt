@@ -5,6 +5,7 @@
 :maxdepth: 2
 :hidden:
 
+start/index
 tour/index
 guide/index
 programming/index
