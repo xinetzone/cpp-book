@@ -1,4 +1,4 @@
-# 快速入门
+# 预备知识
 
 ```{toctree}
 :maxdepth: 2
