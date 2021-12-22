@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>用电表示计算 &#8212; cpp-book 0.1 documentation</title>
+    <title>用电表示计算（raw） &#8212; cpp-book 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -181,7 +181,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     用电表示计算
+     用电表示计算（raw）
     </a>
    </li>
    <li class="toctree-l2">
@@ -192,6 +192,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2">
     <a class="reference internal" href="03_concepts.html">
      C++ 基本概念
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="04_literal.html">
+     字面值常量
     </a>
    </li>
   </ul>
@@ -313,11 +318,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../draft/00_basic.html">
-     变量与基本类型
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../draft/draft.html">
      C++11 新特性及其学习方法（草稿）
     </a>
@@ -434,8 +434,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>用电表示计算<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="raw">
+<h1>用电表示计算（raw）<a class="headerlink" href="#raw" title="Permalink to this headline">¶</a></h1>
 <p>计算机分别用电的“开”与“闭”模拟二进制的 <code class="docutils literal notranslate"><span class="pre">1</span></code> 与 <code class="docutils literal notranslate"><span class="pre">0</span></code>。借助布尔代数运算实现数值计算以及逻辑计算。</p>
 <p>计算机系统包括：硬件系统和软件系统。</p>
 <dl class="simple myst">
@@ -462,12 +462,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ol>
 <p>现代计算机裸机核心部分是 CPU（中央处理器）、存储器（内存与外存）、输入设备和输出设备。</p>
 <p>CPU 可看作是计算机的操控区（或者“大脑”），内存可视为作为 CPU 与外存沟通的桥梁，外存视为数据和程序的仓库。</p>
-<p>CPU 设置有：运算器、控制器、寄存器、计时器、计数器。</p>
+<p>CPU 设置有：运算器、控制器、寄存器。</p>
 <ul class="simple">
 <li><p>运算器从内存（内存中的东西也是电信号，可以和 CPU 直接交流）运输数据和程序到到寄存器（可视为工作台）；</p></li>
-<li><p>控制器解读寄存器的程序和数据。依次传达指令，同时计数器记录指令的执行次序，计时器监控和调节工作的完成进度；</p></li>
+<li><p>控制器解读寄存器的程序和数据。依次传达指令，同时指令计数器（寄存器的一种）记录指令的执行次序，计时器（寄存器的一种）监控和调节工作的完成进度；</p></li>
 <li><p>运算器接收控制器的指令执行“计算”部分，并将计算结果放回寄存器；</p></li>
-<li><p>寄存器中还存在着一个公告栏，它展示着每条指令的输出结果，如果存在</p></li>
+<li><p>寄存器中还存在着一个公告栏（标志寄存器），它展示着每条指令的输出结果。</p></li>
 </ul>
 </div>
 

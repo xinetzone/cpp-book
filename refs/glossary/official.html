@@ -182,7 +182,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../propaedeutics/01_electricity.html">
-     用电表示计算
+     用电表示计算（raw）
     </a>
    </li>
    <li class="toctree-l2">
@@ -193,6 +193,11 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2">
     <a class="reference internal" href="../../propaedeutics/03_concepts.html">
      C++ 基本概念
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../propaedeutics/04_literal.html">
+     字面值常量
     </a>
    </li>
   </ul>
@@ -313,11 +318,6 @@ commentsRunWhenDOMLoaded(addUtterances);
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../../draft/00_basic.html">
-     变量与基本类型
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../draft/draft.html">
      C++11 新特性及其学习方法（草稿）
@@ -445,14 +445,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>本词汇表是专门 “面向C++” 的。也就是说，它是在 C++ 的背景下定义术语的。例如，它用模板来定义通用编程，用虚拟函数来定义面向对象的编程，而不是试图做到足够的抽象和通用，以涵盖所有语言和所有用途。</p>
 <p>这些词条旨在提供简要的解释，而不是精确的定义。</p>
 <p>欢迎提出改进解释的建议，增加术语，或其他任何能使词汇表更有用的建议：bs at cs dot tamu dot edu.。</p>
-<dl class="glossary simple">
-<dt id="term-bit"><strong>bit</strong><a class="headerlink" href="#term-bit" title="Permalink to this term">¶</a></dt><dt id="term-0"><strong>位</strong><a class="headerlink" href="#term-0" title="Permalink to this term">¶</a></dt><dd><p>一个可以容纳 0 或 1 的 <a class="reference internal" href="#term-13"><span class="xref std std-term">内存</span></a> 单位。在 <a class="reference internal" href="book.html#term-0"><span class="xref std std-term">C++</span></a> 中不能直接访问一个单独的位（寻址（addressing）单位是 <a class="reference internal" href="#term-1"><span class="xref std std-term">字节</span></a>），但可以通过一个位域或使用按位逻辑 <a class="reference internal" href="#term-4"><span class="xref std std-term">运算符</span></a> &amp; 和 | 来访问一个位。TC++PL 6.2.4.</p>
+<dl class="glossary">
+<dt id="term-bit"><strong>bit</strong><a class="headerlink" href="#term-bit" title="Permalink to this term">¶</a></dt><dt id="term-0"><strong>位</strong><a class="headerlink" href="#term-0" title="Permalink to this term">¶</a></dt><dd><p>计算机中最小的信息单位。</p>
+<p>一个可以容纳 0 或 1 的 <a class="reference internal" href="#term-17"><span class="xref std std-term">内存</span></a> 单位。在 <a class="reference internal" href="book.html#term-0"><span class="xref std std-term">C++</span></a> 中不能直接访问一个单独的位（寻址（addressing）单位是 <a class="reference internal" href="#term-1"><span class="xref std std-term">字节</span></a>），但可以通过一个位域或使用按位逻辑 <a class="reference internal" href="#term-4"><span class="xref std std-term">运算符</span></a> &amp; 和 | 来访问一个位。TC++PL 6.2.4.</p>
 </dd>
-<dt id="term-byte"><strong>byte</strong><a class="headerlink" href="#term-byte" title="Permalink to this term">¶</a></dt><dt id="term-1"><strong>字节</strong><a class="headerlink" href="#term-1" title="Permalink to this term">¶</a></dt><dd><p>一个 <a class="reference internal" href="#term-13"><span class="xref std std-term">内存</span></a> 单位，可以容纳 <a class="reference internal" href="book.html#term-0"><span class="xref std std-term">C++</span></a> 表示的 <a class="reference internal" href="#term-2"><span class="xref std std-term">字符集</span></a> 的一个字符。在 C++ 中可以直接寻址的最小的内存单位。通常情况下，一个字节是 8 <a class="reference internal" href="#term-0"><span class="xref std std-term">位</span></a>。TC++PL 4.6.</p>
+<dt id="term-byte"><strong>byte</strong><a class="headerlink" href="#term-byte" title="Permalink to this term">¶</a></dt><dt id="term-1"><strong>字节</strong><a class="headerlink" href="#term-1" title="Permalink to this term">¶</a></dt><dd><p><a class="reference internal" href="#term-17"><span class="xref std std-term">内存</span></a> 单位，可以容纳 <a class="reference internal" href="book.html#term-0"><span class="xref std std-term">C++</span></a> 表示的 <a class="reference internal" href="#term-2"><span class="xref std std-term">字符集</span></a> 的一个字符。在 C++ 中可以直接寻址的最小的内存单位。通常情况下，一个字节是 8 <a class="reference internal" href="#term-0"><span class="xref std std-term">位</span></a>。TC++PL 4.6.</p>
 </dd>
-<dt id="term-character-set"><strong>character set</strong><a class="headerlink" href="#term-character-set" title="Permalink to this term">¶</a></dt><dt id="term-2"><strong>字符集</strong><a class="headerlink" href="#term-2" title="Permalink to this term">¶</a></dt><dd><p>一组整数 <a class="reference internal" href="#term-15"><span class="xref std std-term">值</span></a> 与字符表征的映射；例如，ASCII（ANSI13.4-1968）赋予 0-127 值以意义。ASCII 是 C++ 的表示字符集，是用来表示程序源文本的字符集。TC++PL C.3. D&amp;E 6.5.3.</p>
+<dt id="term-character-set"><strong>character set</strong><a class="headerlink" href="#term-character-set" title="Permalink to this term">¶</a></dt><dt id="term-2"><strong>字符集</strong><a class="headerlink" href="#term-2" title="Permalink to this term">¶</a></dt><dd><p>一组整数 <a class="reference internal" href="#term-19"><span class="xref std std-term">值</span></a> 与字符表征的映射；例如，ASCII（ANSI13.4-1968）赋予 0-127 值以意义。ASCII 是 C++ 的表示字符集，是用来表示程序源文本的字符集。TC++PL C.3. D&amp;E 6.5.3.</p>
 </dd>
-<dt id="term-user-defined-type"><strong>user-defined type</strong><a class="headerlink" href="#term-user-defined-type" title="Permalink to this term">¶</a></dt><dt id="term-3"><strong>用户自定义类型</strong><a class="headerlink" href="#term-3" title="Permalink to this term">¶</a></dt><dd><p><span class="xref std std-term">类</span> 或 <span class="xref std std-term">枚举</span>。程序员可以为用户定义的 <a class="reference internal" href="#term-19"><span class="xref std std-term">类型</span></a> 定义 <a class="reference internal" href="#term-4"><span class="xref std std-term">运算符</span></a> 的含义。另见：<a class="reference internal" href="#term-10"><span class="xref std std-term">运算符重载</span></a>。TC++PL 6.2, 11, D&amp;E 3.6, 11.7.1.</p>
+<dt id="term-user-defined-type"><strong>user-defined type</strong><a class="headerlink" href="#term-user-defined-type" title="Permalink to this term">¶</a></dt><dt id="term-3"><strong>用户自定义类型</strong><a class="headerlink" href="#term-3" title="Permalink to this term">¶</a></dt><dd><p><a class="reference internal" href="#term-24"><span class="xref std std-term">类</span></a> 或 <a class="reference internal" href="#term-25"><span class="xref std std-term">枚举</span></a>。程序员可以为用户定义的 <a class="reference internal" href="#term-23"><span class="xref std std-term">类型</span></a> 定义 <a class="reference internal" href="#term-4"><span class="xref std std-term">运算符</span></a> 的含义。另见：<a class="reference internal" href="#term-10"><span class="xref std std-term">运算符重载</span></a>。TC++PL 6.2, 11, D&amp;E 3.6, 11.7.1.</p>
 </dd>
 <dt id="term-operator"><strong>operator</strong><a class="headerlink" href="#term-operator" title="Permalink to this term">¶</a></dt><dt id="term-4"><strong>运算符</strong><a class="headerlink" href="#term-4" title="Permalink to this term">¶</a></dt><dd><p>内置操作的常规符号，如 <code class="docutils literal notranslate"><span class="pre">+</span></code>，<code class="docutils literal notranslate"><span class="pre">*</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&amp;</span></code>。程序员可以为 <a class="reference internal" href="#term-3"><span class="xref std std-term">用户自定义类型</span></a> 定义运算符的含义。参见：<a class="reference internal" href="#term-10"><span class="xref std std-term">运算符重载</span></a>、<a class="reference internal" href="#term-5"><span class="xref std std-term">一元运算符</span></a>、<a class="reference internal" href="#term-6"><span class="xref std std-term">二元运算符</span></a>、<a class="reference internal" href="#term-7"><span class="xref std std-term">三元运算符</span></a>、<a class="reference internal" href="#term-8"><span class="xref std std-term">前缀运算符</span></a>、<a class="reference internal" href="#term-9"><span class="xref std std-term">后缀运算符</span></a>。TC++PL 6.2.</p>
 </dd>
@@ -486,26 +487,64 @@ operator to be used based on
 resolution</a>
 rules. See also: overload resolution. TC++PL 6.2, D&amp;E 3.6, 11.7.1.</p>
 </dd>
-<dt id="term-linker">linker<a class="headerlink" href="#term-linker" title="Permalink to this term">¶</a></dt><dt id="term-11">链接器<a class="headerlink" href="#term-11" title="Permalink to this term">¶</a></dt><dd><p>C++ 实现的一部分，将单独编译的翻译单元产生的代码合并到一个程序或程序的一部分。TC++PL 9.1, D&amp;E 4.5, 11.3.</p>
+<dt id="term-literal"><strong>literal</strong><a class="headerlink" href="#term-literal" title="Permalink to this term">¶</a></dt><dt id="term-11"><strong>字面值</strong><a class="headerlink" href="#term-11" title="Permalink to this term">¶</a></dt><dd><p>bool 类型、字符类型、整数类型或浮点类型的值的表示法。参见：<a class="reference internal" href="#term-12"><span class="xref std std-term">计数器</span></a>。TC++PL 4.2, 4.3.1, 4.4.1, 4.5.1, 5.2.2, D&amp;E 11.2.1.</p>
 </dd>
-<dt id="term-static-memory">static memory<a class="headerlink" href="#term-static-memory" title="Permalink to this term">¶</a></dt><dt id="term-12">静态内存<a class="headerlink" href="#term-12" title="Permalink to this term">¶</a></dt><dd><p>由 <a class="reference internal" href="#term-11"><span class="xref std std-term">链接器</span></a> 分配的内存。TC++PL 10.4.3, D&amp;E 2.3, 2.11.1, 3.9, 11.4.2.</p>
+<dt id="term-enumerator"><strong>enumerator</strong><a class="headerlink" href="#term-enumerator" title="Permalink to this term">¶</a></dt><dt id="term-12"><strong>计数器</strong><a class="headerlink" href="#term-12" title="Permalink to this term">¶</a></dt><dd><p>枚举的值的名称标识符。TC++PL 4.8, D&amp;E 11.7.</p>
 </dd>
-<dt id="term-memory">memory<a class="headerlink" href="#term-memory" title="Permalink to this term">¶</a></dt><dt id="term-13">内存<a class="headerlink" href="#term-13" title="Permalink to this term">¶</a></dt><dd><p>静态内存、stack、free store。</p>
+<dt id="term-name"><strong>name</strong><a class="headerlink" href="#term-name" title="Permalink to this term">¶</a></dt><dt id="term-13"><strong>名字</strong><a class="headerlink" href="#term-13" title="Permalink to this term">¶</a></dt><dd><p>以字母开头的数字和字母的序列，用于中标识（“name”）在程序文本中的用户自定义实体。一个下划线被视为一个字母。名称区分大小写。标准没有对名称的长度施加上限。TC++PL 4.9.3.</p>
 </dd>
-<dt id="term-address">address<a class="headerlink" href="#term-address" title="Permalink to this term">¶</a></dt><dt id="term-14">地址<a class="headerlink" href="#term-14" title="Permalink to this term">¶</a></dt><dd><p>一个值，用来在计算机 <a class="reference internal" href="#term-13"><span class="xref std std-term">内存</span></a> 中查找一个对象。</p>
+<dt id="term-identifier"><strong>identifier</strong><a class="headerlink" href="#term-identifier" title="Permalink to this term">¶</a></dt><dt id="term-14"><strong>标识符</strong><a class="headerlink" href="#term-14" title="Permalink to this term">¶</a></dt><dd><p>见 <a class="reference internal" href="#term-name"><span class="xref std std-term">name</span></a>。</p>
 </dd>
-<dt id="term-value">value<a class="headerlink" href="#term-value" title="Permalink to this term">¶</a></dt><dt id="term-15">值<a class="headerlink" href="#term-15" title="Permalink to this term">¶</a></dt><dd><p>内存中的一组 <a class="reference internal" href="#term-0"><span class="xref std std-term">位</span></a>，根据类型解释其含义。</p>
+<dt id="term-linker">linker<a class="headerlink" href="#term-linker" title="Permalink to this term">¶</a></dt><dt id="term-15">链接器<a class="headerlink" href="#term-15" title="Permalink to this term">¶</a></dt><dd><p>C++ 实现的一部分，将单独编译的翻译单元产生的代码合并到一个程序或程序的一部分。TC++PL 9.1, D&amp;E 4.5, 11.3.</p>
 </dd>
-<dt id="term-data">data<a class="headerlink" href="#term-data" title="Permalink to this term">¶</a></dt><dt id="term-16">数据<a class="headerlink" href="#term-16" title="Permalink to this term">¶</a></dt><dd><p>计算中用到的 <a class="reference internal" href="#term-15"><span class="xref std std-term">值</span></a>。</p>
+<dt id="term-static-memory">static memory<a class="headerlink" href="#term-static-memory" title="Permalink to this term">¶</a></dt><dt id="term-16">静态内存<a class="headerlink" href="#term-16" title="Permalink to this term">¶</a></dt><dd><p>由 <a class="reference internal" href="#term-15"><span class="xref std std-term">链接器</span></a> 分配的内存。TC++PL 10.4.3, D&amp;E 2.3, 2.11.1, 3.9, 11.4.2.</p>
 </dd>
-<dt id="term-object">object<a class="headerlink" href="#term-object" title="Permalink to this term">¶</a></dt><dt id="term-17">对象<a class="headerlink" href="#term-17" title="Permalink to this term">¶</a></dt><dd><ol class="simple">
+<dt id="term-memory">memory<a class="headerlink" href="#term-memory" title="Permalink to this term">¶</a></dt><dt id="term-17">内存<a class="headerlink" href="#term-17" title="Permalink to this term">¶</a></dt><dd><p>静态内存、stack、free store。</p>
+</dd>
+<dt id="term-address">address<a class="headerlink" href="#term-address" title="Permalink to this term">¶</a></dt><dt id="term-18">地址<a class="headerlink" href="#term-18" title="Permalink to this term">¶</a></dt><dd><p>一个值，用来在计算机 <a class="reference internal" href="#term-17"><span class="xref std std-term">内存</span></a> 中查找一个对象。</p>
+</dd>
+<dt id="term-value">value<a class="headerlink" href="#term-value" title="Permalink to this term">¶</a></dt><dt id="term-19">值<a class="headerlink" href="#term-19" title="Permalink to this term">¶</a></dt><dd><p>内存中的一组 <a class="reference internal" href="#term-0"><span class="xref std std-term">位</span></a>，根据类型解释其含义。</p>
+</dd>
+<dt id="term-data">data<a class="headerlink" href="#term-data" title="Permalink to this term">¶</a></dt><dt id="term-20">数据<a class="headerlink" href="#term-20" title="Permalink to this term">¶</a></dt><dd><p>计算中用到的 <a class="reference internal" href="#term-19"><span class="xref std std-term">值</span></a>。</p>
+</dd>
+<dt id="term-object">object<a class="headerlink" href="#term-object" title="Permalink to this term">¶</a></dt><dt id="term-21">对象<a class="headerlink" href="#term-21" title="Permalink to this term">¶</a></dt><dd><ol class="simple">
 <li><p>已知类型、已初始化的一块内存，保存该类型的一个值；</p></li>
 <li><p>一块内存。</p></li>
 </ol>
 </dd>
-<dt id="term-operation">operation<a class="headerlink" href="#term-operation" title="Permalink to this term">¶</a></dt><dt id="term-18">操作<a class="headerlink" href="#term-18" title="Permalink to this term">¶</a></dt><dd><p>用于执行某个动作，例如函数和运算符。</p>
+<dt id="term-operation">operation<a class="headerlink" href="#term-operation" title="Permalink to this term">¶</a></dt><dt id="term-22">操作<a class="headerlink" href="#term-22" title="Permalink to this term">¶</a></dt><dd><p>用于执行某个动作，例如函数和运算符。</p>
 </dd>
-<dt id="term-type">type<a class="headerlink" href="#term-type" title="Permalink to this term">¶</a></dt><dt id="term-19">类型<a class="headerlink" href="#term-19" title="Permalink to this term">¶</a></dt><dd><p>定义了对象的一组可能取 <a class="reference internal" href="#term-15"><span class="xref std std-term">值</span></a> 及其一组 <a class="reference internal" href="#term-18"><span class="xref std std-term">操作</span></a> 的东西。</p>
+<dt id="term-type">type<a class="headerlink" href="#term-type" title="Permalink to this term">¶</a></dt><dt id="term-23">类型<a class="headerlink" href="#term-23" title="Permalink to this term">¶</a></dt><dd><p>定义了对象的一组可能取 <a class="reference internal" href="#term-19"><span class="xref std std-term">值</span></a> 及其一组 <a class="reference internal" href="#term-22"><span class="xref std std-term">操作</span></a> 的东西。</p>
+</dd>
+<dt id="term-class"><strong>class</strong><a class="headerlink" href="#term-class" title="Permalink to this term">¶</a></dt><dt id="term-24"><strong>类</strong><a class="headerlink" href="#term-24" title="Permalink to this term">¶</a></dt><dd><p>a <a class="reference external" href="https://stroustrup.com/glossary.html#Guser-defined-type">user-defined
+type</a>. A class
+can have <a class="reference external" href="https://stroustrup.com/glossary.html#Gmember-function">member
+function</a>s,
+<a class="reference external" href="https://stroustrup.com/glossary.html#Gmember-data">member data</a>,
+<a class="reference external" href="https://stroustrup.com/glossary.html#Gmember-constant">member
+constant</a>s, and
+<a class="reference external" href="https://stroustrup.com/glossary.html#Gmember-type">member type</a>s. A
+class is thee primary mechanism for representing
+<a class="reference external" href="https://stroustrup.com/glossary.html#Gconcept">concept</a>s in
+<a class="reference external" href="https://stroustrup.com/glossary.html#GC++">C++</a>. See also: <a class="reference external" href="https://stroustrup.com/glossary.html#Gtemplate-class">template
+class</a>. TC++PL
+2.5.2, 10, D&amp;E 2.3.</p>
+</dd>
+<dt id="term-enumeration"><strong>enumeration</strong><a class="headerlink" href="#term-enumeration" title="Permalink to this term">¶</a></dt><dt id="term-25"><strong>枚举</strong><a class="headerlink" href="#term-25" title="Permalink to this term">¶</a></dt><dd><p>a <a class="reference external" href="https://stroustrup.com/glossary.html#Guser-defined-type">user-defined
+type</a>
+consisting of a set of named
+<a class="reference external" href="https://stroustrup.com/glossary.html#Gvalue">value</a>s. TC++PL 4.8, D&amp;E
+11.7.</p>
+</dd>
+<dt id="term-word"><strong>word</strong><a class="headerlink" href="#term-word" title="Permalink to this term">¶</a></dt><dt id="term-26"><strong>字</strong><a class="headerlink" href="#term-26" title="Permalink to this term">¶</a></dt><dd><p>计算机内存的基本单位。</p>
+<p>在给定的机器上，用来存放整数或指针的数个字节。在许多机器上，为了获得可接受的性能，对象必须在字边界上对齐。int 通常存储在一个字中。通常，一个字有 4 个字节。参见：<a class="reference internal" href="#term-27"><span class="xref std std-term">对齐</span></a>。TC + + PL 4.6。</p>
+</dd>
+<dt id="term-alignment"><strong>alignment</strong><a class="headerlink" href="#term-alignment" title="Permalink to this term">¶</a></dt><dt id="term-27"><strong>对齐</strong><a class="headerlink" href="#term-27" title="Permalink to this term">¶</a></dt><dd><p>placing
+<a class="reference external" href="https://stroustrup.com/glossary.html#Gobject">object</a>s in
+<a class="reference external" href="https://stroustrup.com/glossary.html#Gmemory">memory</a> to suit hardware
+requirements. On many machines, an object must be aligned on a
+<a class="reference external" href="https://stroustrup.com/glossary.html#Gword#">word</a> boundary for
+acceptable performance.</p>
 </dd>
 </dl>
 </div>
