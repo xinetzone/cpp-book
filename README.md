@@ -7,3 +7,7 @@
 跟着 C++ 之父 [Bjarne Stroustrup 学习 C++](https://www.stroustrup.com/index.html)。
 
 可以将本项目视为 C++ 读书笔记。
+
+高级教程有：
+
+- 欧长坤 [现代 C++ 教程](https://changkun.de/modern-cpp/) | [github](https://github.com/daobook/modern-cpp-tutorial)。
