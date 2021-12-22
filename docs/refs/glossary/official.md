@@ -19,11 +19,13 @@
 ```{glossary}
 **bit**
 **位**
+    计算机中最小的信息单位。
+
     一个可以容纳 0 或 1 的 {term}`内存` 单位。在 {term}`C++` 中不能直接访问一个单独的位（寻址（addressing）单位是 {term}`字节`），但可以通过一个位域或使用按位逻辑 {term}`运算符` & 和 \| 来访问一个位。TC++PL 6.2.4.
 
 **byte**
 **字节**
-    一个 {term}`内存` 单位，可以容纳 {term}`C++` 表示的 {term}`字符集` 的一个字符。在 C++ 中可以直接寻址的最小的内存单位。通常情况下，一个字节是 8 {term}`位`。TC++PL 4.6.
+    {term}`内存` 单位，可以容纳 {term}`C++` 表示的 {term}`字符集` 的一个字符。在 C++ 中可以直接寻址的最小的内存单位。通常情况下，一个字节是 8 {term}`位`。TC++PL 4.6.
 
 **character set**
 **字符集**
@@ -80,6 +82,22 @@
     resolution](https://stroustrup.com/glossary.html#Goverload-resolution)
     rules. See also: overload resolution. TC++PL 6.2, D&E 3.6, 11.7.1.
 
+**literal**
+**字面值**
+    bool 类型、字符类型、整数类型或浮点类型的值的表示法。参见：{term}`计数器`。TC++PL 4.2, 4.3.1, 4.4.1, 4.5.1, 5.2.2, D&E 11.2.1.
+
+**enumerator**
+**计数器**
+    枚举的值的名称标识符。TC++PL 4.8, D&E 11.7.
+
+**name**
+**名字**
+    以字母开头的数字和字母的序列，用于中标识（"name"）在程序文本中的用户自定义实体。一个下划线被视为一个字母。名称区分大小写。标准没有对名称的长度施加上限。TC++PL 4.9.3.
+
+**identifier**
+**标识符**
+    见 {term}`name`。
+
 linker
 链接器
     C++ 实现的一部分，将单独编译的翻译单元产生的代码合并到一个程序或程序的一部分。TC++PL 9.1, D&E 4.5, 11.3.
@@ -116,4 +134,43 @@ operation
 type
 类型
     定义了对象的一组可能取 {term}`值` 及其一组 {term}`操作` 的东西。
+
+**class**
+**类**
+    a [user-defined
+    type](https://stroustrup.com/glossary.html#Guser-defined-type). A class
+    can have [member
+    function](https://stroustrup.com/glossary.html#Gmember-function)s,
+    [member data](https://stroustrup.com/glossary.html#Gmember-data),
+    [member
+    constant](https://stroustrup.com/glossary.html#Gmember-constant)s, and
+    [member type](https://stroustrup.com/glossary.html#Gmember-type)s. A
+    class is thee primary mechanism for representing
+    [concept](https://stroustrup.com/glossary.html#Gconcept)s in
+    [C++](https://stroustrup.com/glossary.html#GC++). See also: [template
+    class](https://stroustrup.com/glossary.html#Gtemplate-class). TC++PL
+    2.5.2, 10, D&E 2.3.
+
+**enumeration**
+**枚举**
+    a [user-defined
+    type](https://stroustrup.com/glossary.html#Guser-defined-type)
+    consisting of a set of named
+    [value](https://stroustrup.com/glossary.html#Gvalue)s. TC++PL 4.8, D&E
+    11.7.
+
+**word**
+**字**
+    计算机内存的基本单位。
+
+    在给定的机器上，用来存放整数或指针的数个字节。在许多机器上，为了获得可接受的性能，对象必须在字边界上对齐。int 通常存储在一个字中。通常，一个字有 4 个字节。参见：{term}`对齐`。TC + + PL 4.6。
+
+**alignment**
+**对齐**
+    placing
+    [object](https://stroustrup.com/glossary.html#Gobject)s in
+    [memory](https://stroustrup.com/glossary.html#Gmemory) to suit hardware
+    requirements. On many machines, an object must be aligned on a
+    [word](https://stroustrup.com/glossary.html#Gword#) boundary for
+    acceptable performance.
 ```
