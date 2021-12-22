@@ -4,7 +4,11 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# C++ 基本概念"
+    "# C++ 基本概念\n",
+    "\n",
+    "C++ 是一种高级编程语言，设计了大量数据结构和指令。\n",
+    "\n",
+    "查看 [术语表](/refs/glossary/index) 了解一些基本概念。"
    ]
   },
   {
@@ -23,9 +27,7 @@
      "output_type": "execute_result"
     }
    ],
-   "source": [
-    "'a'"
-   ]
+   "source": []
   },
   {
    "cell_type": "code",
@@ -46,7 +48,7 @@
   "kernelspec": {
    "display_name": "C++11",
    "language": "C++11",
-   "name": "python3100jvsc74a57bd000edc830b0681031d502e33386e4eeda2812b45297ce8c940d13c1f09fed4785"
+   "name": "xcpp11"
   },
   "language_info": {
    "codemirror_mode": "text/x-c++src",

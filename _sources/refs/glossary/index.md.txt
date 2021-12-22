@@ -2,8 +2,9 @@
 
 ```{toctree}
 :maxdepth: 2
-:hidden:
-:glob:
 
-*
+official
+Stroustrup-Glossary.en
+book
+other
 ```
