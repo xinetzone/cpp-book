@@ -254,16 +254,6 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "a12cdea7",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "ye"
-   ]
-  },
-  {
    "cell_type": "markdown",
    "id": "0102be60",
    "metadata": {},
@@ -280,7 +270,7 @@
     "    -x   // 一元减法\n",
     "    x*y  // 乘法\n",
     "    x/y  // 除法\n",
-    "    x%y  // 取模\n",
+    "    x%y  // 取模（x，y 不能是浮点数类型）\n",
     "    ```\n",
     "\n",
     "比较运算符\n",
@@ -297,6 +287,7 @@
     ":   `=`\n",
     "\n",
     "    为一个变量赋予新的值。\n",
+    "\n",
     "\n",
     "## 初始化\n",
     "\n",
@@ -722,6 +713,99 @@
   },
   {
    "cell_type": "markdown",
+   "id": "30f2c43f",
+   "metadata": {},
+   "source": [
+    "```{note}\n",
+    "`x % y` 表达式中的 `x` 与 `y` 不能是浮点型。\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "e2e5c3ca",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "input_line_7:4:3: error: invalid operands to binary expression ('double' and 'double')\n",
+      "x % y\n",
+      "~ ^ ~\n"
+     ]
+    },
+    {
+     "ename": "Interpreter Error",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "Interpreter Error: "
+     ]
+    }
+   ],
+   "source": [
+    "double x {45};\n",
+    "double y {7};\n",
+    "x % y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "5f966982",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "input_line_8:4:3: error: invalid operands to binary expression ('double' and 'double')\n",
+      "x % y\n",
+      "~ ^ ~\n"
+     ]
+    },
+    {
+     "ename": "Interpreter Error",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "Interpreter Error: "
+     ]
+    }
+   ],
+   "source": [
+    "double x {45};\n",
+    "int y {7};\n",
+    "x % y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "b7fa84de",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int x {45};\n",
+    "int y {7};\n",
+    "x % y"
+   ]
+  },
+  {
+   "cell_type": "markdown",
    "id": "d89dbf61",
    "metadata": {},
    "source": [
@@ -937,33 +1021,9 @@
    ]
   },
   {
-   "cell_type": "code",
-   "execution_count": 32,
+   "cell_type": "markdown",
    "id": "521d168b",
    "metadata": {},
-   "outputs": [
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "\u001b[1minput_line_64:2:4: \u001b[0m\u001b[0;1;30mnote: \u001b[0muse '|=' to turn this inequality comparison into an or-assignment\u001b[0m\n",
-      " a != b; // 可以看出 a != b\n",
-      "\u001b[0;1;32m   ^~\n",
-      "\u001b[0m\u001b[0;32m   |=\n",
-      "\u001b[0m"
-     ]
-    },
-    {
-     "data": {
-      "text/plain": [
-       "true"
-      ]
-     },
-     "execution_count": 32,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
    "source": [
     "可以看出 `a` 不等于 `b`。\n",
     "\n",
@@ -1209,7 +1269,7 @@
    "codemirror_mode": "text/x-c++src",
    "file_extension": ".cpp",
    "mimetype": "text/x-c++src",
-   "name": "C++11",
+   "name": "c++",
    "version": "11"
   }
  },

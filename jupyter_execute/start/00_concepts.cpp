@@ -20,8 +20,6 @@ sizeof(int) //  4 个字节
 
 sizeof(double)  // 8 个字节
 
-ye
-
 double d1 {2.3};
 d1
 
@@ -73,6 +71,18 @@ int 面积 = 长度 * 宽度; // 乘法运算
 float x = 56;
 sizeof(x*5+10) // 计算的是 x*5+10 的结果 290.0 的大小
 
+double x {45};
+double y {7};
+x % y
+
+double x {45};
+int y {7};
+x % y
+
+int x {45};
+int y {7};
+x % y
+
 double xxx; // 仅仅声明，没有初始化，是未定义的
 double y = xxx; // y 的值也是未定义的
 double z = 2.0 + xxx; // + 的意义和 z 都是未定义的
@@ -97,10 +107,6 @@ c
 
 int b = c;
 b
-
-可以看出 `a` 不等于 `b`。
-
-这种转换又称为“窄化”转换。
 
 5/2 // 整型算术运算
 
