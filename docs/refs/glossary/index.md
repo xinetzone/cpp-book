@@ -3,7 +3,7 @@
 ```{toctree}
 :maxdepth: 2
 
-official
+simple
 Stroustrup-Glossary.en
 book
 other
