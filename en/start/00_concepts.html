@@ -571,7 +571,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">需求</p>
 <p>学习如何使用 C++ 表达一些简单概念。</p>
 </div>
-<p>信息的最小单位是 <a class="reference internal" href="../refs/glossary/simple.html#term-1"><span class="xref std std-term">位</span></a> （也可称作 比特），一个位仅仅存储 <code class="docutils literal notranslate"><span class="pre">0</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">1</span></code> 两个数字。大多数计算机中的基本寻址单元为 <a class="reference internal" href="../refs/glossary/simple.html#term-6"><span class="xref std std-term">字节</span></a>（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 <a class="reference internal" href="../refs/glossary/simple.html#term-4"><span class="xref std std-term">对象</span></a>。对象的 <a class="reference internal" href="../refs/glossary/simple.html#term-2"><span class="xref std std-term">值</span></a> 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 <a class="reference internal" href="../refs/glossary/simple.html#term-3"><span class="xref std std-term">类型</span></a> 决定。对象需要一个 <strong>名字</strong> 以方便使用，称给定类型的命名对象为 <a class="reference internal" href="../refs/glossary/simple.html#term-9"><span class="xref std std-term">变量</span></a>。<a class="reference internal" href="../refs/glossary/simple.html#term-10"><span class="xref std std-term">声明</span></a> 负责为程序引入一个新的名字，并指定该命名实体的类型。<a class="reference internal" href="../refs/glossary/simple.html#term-11"><span class="xref std std-term">定义</span></a> 是分配了内存的声明。</p>
+<p>信息的最小单位是 <a class="reference internal" href="../refs/glossary/simple.html#term-1"><span class="xref std std-term">位</span></a> （也可称作 比特），一个位仅仅存储 <code class="docutils literal notranslate"><span class="pre">0</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">1</span></code> 两个数字。大多数计算机中的基本寻址单元为 <a class="reference internal" href="../refs/glossary/simple.html#term-6"><span class="xref std std-term">字节</span></a>（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 <a class="reference internal" href="../refs/glossary/simple.html#term-4"><span class="xref std std-term">对象</span></a>。对象的 <a class="reference internal" href="../refs/glossary/simple.html#term-2"><span class="xref std std-term">值</span></a> 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 <a class="reference internal" href="../refs/glossary/simple.html#term-3"><span class="xref std std-term">类型</span></a> 决定。对象需要一个 <strong>名字</strong> 以方便使用，称给定类型的命名对象为 <a class="reference internal" href="../refs/glossary/simple.html#term-9"><span class="xref std std-term">变量</span></a>。<a class="reference internal" href="../refs/glossary/simple.html#term-10"><span class="xref std std-term">声明</span></a> 负责为程序引入一个新的名字，并指定该命名实体的类型。</p>
 <p>C++ 提供了若干基本类型，例如：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>：布尔类型。可取 <code class="docutils literal notranslate"><span class="pre">true</span></code> 或 <code class="docutils literal notranslate"><span class="pre">false</span></code>。</p></li>
@@ -586,7 +586,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>想要使用一个变量，需要使用 <a class="reference internal" href="../refs/glossary/simple.html#term-10"><span class="xref std std-term">声明</span></a>：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>int 苹果数量;
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int 苹果数量;
 </pre></div>
 </div>
 </div>
@@ -594,15 +594,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>其中 <code class="docutils literal notranslate"><span class="pre">苹果数量</span></code> 便是一个变量；<code class="docutils literal notranslate"><span class="pre">int</span></code> 便是一个类型。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">hi_world</span><span class="p">;</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">HiWorld</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int hi_world;
+int HiWorld;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">Hi</span><span class="w"> </span><span class="n">World</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误：因为标识符不能有空格</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int Hi World; // 错误：因为标识符不能有空格
 </pre></div>
 </div>
 </div>
@@ -625,7 +625,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>int Hi@World; // 错误：因为标识符不能有 @
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int Hi@World; // 错误：因为标识符不能有 @
 </pre></div>
 </div>
 </div>
@@ -647,10 +647,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>以下划线开头或者包含连续两个下划线的标识符是为 C++ 实现预留的，你的程序中不要使用这种标识符。例如：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">_foo</span><span class="p">;</span><span class="w"> </span><span class="c1">// 不要这样用</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">foo_boor</span><span class="p">;</span><span class="w"> </span><span class="c1">// 正确</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">foo__bar</span><span class="p">;</span><span class="w"> </span><span class="c1">// 不要这样用</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">foo_</span><span class="p">;</span><span class="w"> </span><span class="c1">// 正确</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int _foo; // 不要这样用
+int foo_boor; // 正确
+int foo__bar; // 不要这样用
+int foo_; // 正确
 </pre></div>
 </div>
 </div>
@@ -666,7 +666,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>可以使用运算符 <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> 获取类型的对象大小。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="c1">// 1 个字节</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>sizeof(bool) // 1 个字节
 </pre></div>
 </div>
 </div>
@@ -678,7 +678,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="c1">// 1 个字节</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>sizeof(char) // 1 个字节
 </pre></div>
 </div>
 </div>
@@ -690,7 +690,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="c1">//  4 个字节</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>sizeof(int) //  4 个字节
 </pre></div>
 </div>
 </div>
@@ -702,7 +702,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">)</span><span class="w">  </span><span class="c1">// 8 个字节</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>sizeof(double)  // 8 个字节
 </pre></div>
 </div>
 </div>
@@ -714,7 +714,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ye</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>ye
 </pre></div>
 </div>
 </div>
@@ -753,8 +753,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>通用初始化方法是使用花括号内的一组初始化器列表：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">d1</span><span class="w"> </span><span class="p">{</span><span class="mf">2.3</span><span class="p">};</span><span class="w"></span>
-<span class="n">d1</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>double d1 {2.3};
+d1
 </pre></div>
 </div>
 </div>
@@ -767,8 +767,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>当然也可以使用传统的方法，即赋值语句：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">d1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.3</span><span class="p">;</span><span class="w"></span>
-<span class="n">d1</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>double d1 = 2.3;
+d1
 </pre></div>
 </div>
 </div>
@@ -784,8 +784,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>看几个赋值语句的例子：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// a 初始化为 7</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int a = 7; // a 初始化为 7
+a
 </pre></div>
 </div>
 </div>
@@ -797,8 +797,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// a 通过 赋值语句，获得新值 4</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>a = 4; // a 通过 赋值语句，获得新值 4
+a
 </pre></div>
 </div>
 </div>
@@ -810,8 +810,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// b 的值为 a 的值的拷贝</span>
-<span class="n">b</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int b = a; // b 的值为 a 的值的拷贝
+b
 </pre></div>
 </div>
 </div>
@@ -823,8 +823,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// b 获得新值 a+5</span>
-<span class="n">b</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>b = a + 5; // b 获得新值 a+5
+b
 </pre></div>
 </div>
 </div>
@@ -836,8 +836,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// a 获得新值 a+7</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>a = a + 7; // a 获得新值 a+7
+a
 </pre></div>
 </div>
 </div>
@@ -852,8 +852,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>一个变量的递加（增加 1），可以简写为 <code class="docutils literal notranslate"><span class="pre">++vars</span></code>。比如：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
-<span class="n">a</span><span class="w"> </span><span class="c1">// 查看 a 的值</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int a = 7;
+a // 查看 a 的值
 </pre></div>
 </div>
 </div>
@@ -865,8 +865,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等价于 `a = a + 1;`</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>++a; // 等价于 `a = a + 1;`
+a
 </pre></div>
 </div>
 </div>
@@ -879,9 +879,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>一些二元赋值运算符，可以直接修改变量的当前值：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
-<span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a + 7`</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int a = 7;
+a += 7; // 表示 `a = a + 7`
+a
 </pre></div>
 </div>
 </div>
@@ -893,8 +893,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a - 7`</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>a -= 7; // 表示 `a = a - 7`
+a
 </pre></div>
 </div>
 </div>
@@ -906,8 +906,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a * 2`</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>a *= 2; // 表示 `a = a * 2`
+a
 </pre></div>
 </div>
 </div>
@@ -919,8 +919,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a / 2`</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>a /= 2; // 表示 `a = a / 2`
+a
 </pre></div>
 </div>
 </div>
@@ -932,8 +932,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a % 2`</span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>a %= 2; // 表示 `a = a % 2`
+a
 </pre></div>
 </div>
 </div>
@@ -952,7 +952,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>变量也是一种表达式，它表示与名字对应的那个对象。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>// 计算一些表达式
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>// 计算一些表达式
 int 长度 = 30; // 整数字面常量（用于变量的初始化）
 int 宽度 = 50;
 int 面积 = 长度 * 宽度; // 乘法运算
@@ -975,8 +975,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 <p><code class="docutils literal notranslate"><span class="pre">sizeof</span></code> 也可以计算表达式的 <strong>结果对象</strong> 的大小。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">56</span><span class="p">;</span><span class="w"></span>
-<span class="k">sizeof</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">// 计算的是 x*5+10 的结果 290.0 的大小</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>float x = 56;
+sizeof(x*5+10) // 计算的是 x*5+10 的结果 290.0 的大小
 </pre></div>
 </div>
 </div>
@@ -993,9 +993,9 @@ int 面积 = 长度 * 宽度; // 乘法运算
 <p>下面列出一些不是类型安全的程序：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">xxx</span><span class="p">;</span><span class="w"> </span><span class="c1">// 仅仅声明，没有初始化，是未定义的</span>
-<span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xxx</span><span class="p">;</span><span class="w"> </span><span class="c1">// y 的值也是未定义的</span>
-<span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">xxx</span><span class="p">;</span><span class="w"> </span><span class="c1">// + 的意义和 z 都是未定义的</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>double xxx; // 仅仅声明，没有初始化，是未定义的
+double y = xxx; // y 的值也是未定义的
+double z = 2.0 + xxx; // + 的意义和 z 都是未定义的
 </pre></div>
 </div>
 </div>
@@ -1009,8 +1009,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 <p>C++ 提供了显式的类型转换：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;!&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">x</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>char c = &#39;!&#39;;
+x
 </pre></div>
 </div>
 </div>
@@ -1022,8 +1022,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// 安全转换为 int</span>
-<span class="n">t</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int t = c; // 安全转换为 int
+t
 </pre></div>
 </div>
 </div>
@@ -1035,8 +1035,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;!&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="n">t2</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int t2 = &#39;!&#39;;
+t2
 </pre></div>
 </div>
 </div>
@@ -1049,8 +1049,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 <p>这里 <code class="docutils literal notranslate"><span class="pre">t</span></code> 与 <code class="docutils literal notranslate"><span class="pre">t2</span></code> 都被赋值 <code class="docutils literal notranslate"><span class="pre">33</span></code>。我们称这种 char-int 的转换为安全的，这是因为没有信息丢失；同样，可以将 <code class="docutils literal notranslate"><span class="pre">int</span></code> 的结果拷贝会一个 <code class="docutils literal notranslate"><span class="pre">char</span></code> 中，并且得到原始值：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
-<span class="n">c2</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>char c2 = t;
+c2
 </pre></div>
 </div>
 </div>
@@ -1066,8 +1066,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 <p>不安全指的是一个值可以转换为一个不等于原始值的值。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">525</span><span class="p">;</span><span class="w"></span>
-<span class="n">a</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int a = 525;
+a
 </pre></div>
 </div>
 </div>
@@ -1079,8 +1079,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 试图将一个“大”的整数“压缩”进小的字符型</span>
-<span class="n">c</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>char c = a; // 试图将一个“大”的整数“压缩”进小的字符型
+c
 </pre></div>
 </div>
 </div>
@@ -1092,8 +1092,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
-<span class="n">b</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int b = c;
+b
 </pre></div>
 </div>
 </div>
@@ -1105,7 +1105,7 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>可以看出 `a` 不等于 `b`。
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>可以看出 `a` 不等于 `b`。
 
 这种转换又称为“窄化”转换。
 </pre></div>
@@ -1135,7 +1135,7 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="c1">// 整型算术运算</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>5/2 // 整型算术运算
 </pre></div>
 </div>
 </div>
@@ -1147,7 +1147,7 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mf">2.5</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="c1">//  浮点型算术运算</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>2.5/2 //  浮点型算术运算
 </pre></div>
 </div>
 </div>
@@ -1163,7 +1163,7 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等同于 int{&#39;a&#39;} + 1</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>&#39;a&#39; + 1; // 等同于 int{&#39;a&#39;} + 1
 </pre></div>
 </div>
 </div>
@@ -1175,8 +1175,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 初始化浮点数</span>
-<span class="n">d</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>double d = 2.5; // 初始化浮点数
+d
 </pre></div>
 </div>
 </div>
@@ -1188,8 +1188,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 初始化整数</span>
-<span class="n">t</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int t = 2; // 初始化整数
+t
 </pre></div>
 </div>
 </div>
@@ -1201,8 +1201,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
-<span class="n">d2</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>double d2 = d / t;
+d2
 </pre></div>
 </div>
 </div>
@@ -1214,8 +1214,8 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="c1">// 窄化转换</span>
-<span class="n">t2</span><span class="w"> </span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int t2 = d / t; // 窄化转换
+t2 
 </pre></div>
 </div>
 </div>
@@ -1232,7 +1232,7 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t3</span><span class="w"> </span><span class="p">{</span><span class="n">d</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">t</span><span class="p">};</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int t3 {d / t};
 </pre></div>
 </div>
 </div>
@@ -1264,16 +1264,16 @@ int 面积 = 长度 * 宽度; // 乘法运算
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "xcpp11"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "xcpp11",
+            kernelName: "python397jvsc74a57bd000edc830b0681031d502e33386e4eeda2812b45297ce8c940d13c1f09fed4785",
             path: "./start"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'xcpp11'</script>
+    <script>kernelName = 'python397jvsc74a57bd000edc830b0681031d502e33386e4eeda2812b45297ce8c940d13c1f09fed4785'</script>
 <div class="section">
    
 </div>
