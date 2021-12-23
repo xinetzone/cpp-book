@@ -4,20 +4,42 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# 计算"
+    "# 计算\n",
+    "\n",
+    "```{admonition} 需求\n",
+    "1. 如何做选择（条件语句）；\n",
+    "2. 如何进行重复计算（循环）。\n",
+    "```"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
   "kernelspec": {
    "display_name": "C++11",
    "language": "C++11",
-   "name": "python3100jvsc74a57bd0ddfad08a6f7204f0e97b22fe3bcc4b3773bb6649aab2d2da156ce4a072fd2c2d"
+   "name": "xcpp11"
   },
   "language_info": {
-   "name": "C++11"
-  },
-  "orig_nbformat": 4
+   "codemirror_mode": "text/x-c++src",
+   "file_extension": ".cpp",
+   "mimetype": "text/x-c++src",
+   "name": "c++",
+   "version": "11"
+  }
  },
  "nbformat": 4,
  "nbformat_minor": 2

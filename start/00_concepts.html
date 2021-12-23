@@ -495,16 +495,17 @@ commentsRunWhenDOMLoaded(addUtterances);
      关键字
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#sizeof">
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       sizeof
-      </span>
-     </code>
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sizeof">
+   运算符
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     sizeof
+    </span>
+   </code>
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
@@ -530,6 +531,28 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id9">
+   表达式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   类型安全
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     安全转换
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     不安全转换
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
    类型转换
   </a>
  </li>
@@ -549,7 +572,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">需求</p>
 <p>学习如何使用 C++ 表达一些简单概念。</p>
 </div>
-<p>信息的最小单位是 <a class="reference internal" href="../refs/glossary/simple.html#term-1"><span class="xref std std-term">位</span></a> （也可称作 比特），一个位仅仅存储 <code class="docutils literal notranslate"><span class="pre">0</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">1</span></code> 两个数字。大多数计算机中的基本寻址单元为 <a class="reference internal" href="../refs/glossary/simple.html#term-6"><span class="xref std std-term">字节</span></a>（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 <a class="reference internal" href="../refs/glossary/simple.html#term-4"><span class="xref std std-term">对象</span></a>。对象的 <a class="reference internal" href="../refs/glossary/simple.html#term-2"><span class="xref std std-term">值</span></a> 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 <a class="reference internal" href="../refs/glossary/simple.html#term-3"><span class="xref std std-term">类型</span></a> 决定。对象需要一个 <strong>名字</strong> 以方便使用，称给定类型的命名对象为 <a class="reference internal" href="../refs/glossary/simple.html#term-9"><span class="xref std std-term">变量</span></a>。<a class="reference internal" href="../refs/glossary/simple.html#term-10"><span class="xref std std-term">声明</span></a> 负责为程序引入一个新的名字，并指定该命名实体的类型。<a class="reference internal" href="../refs/glossary/simple.html#term-12"><span class="xref std std-term">函数</span></a> 是一个命名的代码单元（或计算的逻辑单元），可以从程序中其他部分调用它。</p>
+<p>信息的最小单位是 <a class="reference internal" href="../refs/glossary/simple.html#term-1"><span class="xref std std-term">位</span></a> （也可称作 比特），一个位仅仅存储 <code class="docutils literal notranslate"><span class="pre">0</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">1</span></code> 两个数字。大多数计算机中的基本寻址单元为 <a class="reference internal" href="../refs/glossary/simple.html#term-6"><span class="xref std std-term">字节</span></a>（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 <a class="reference internal" href="../refs/glossary/simple.html#term-4"><span class="xref std std-term">对象</span></a>。对象的 <a class="reference internal" href="../refs/glossary/simple.html#term-2"><span class="xref std std-term">值</span></a> 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 <a class="reference internal" href="../refs/glossary/simple.html#term-3"><span class="xref std std-term">类型</span></a> 决定。对象需要一个 <strong>名字</strong> 以方便使用，称给定类型的命名对象为 <a class="reference internal" href="../refs/glossary/simple.html#term-9"><span class="xref std std-term">变量</span></a>。<a class="reference internal" href="../refs/glossary/simple.html#term-10"><span class="xref std std-term">声明</span></a> 负责为程序引入一个新的名字，并指定该命名实体的类型。<code class="docutils literal notranslate"><span class="pre">term</span></code>{定义} 是分配了内存的声明。</p>
 <p>C++ 提供了若干基本类型，例如：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>：布尔类型。可取 <code class="docutils literal notranslate"><span class="pre">true</span></code> 或 <code class="docutils literal notranslate"><span class="pre">false</span></code>。</p></li>
@@ -597,8 +620,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
 <p>C++ 使用符号 <code class="docutils literal notranslate"><span class="pre">//</span></code> 注解代码片段，以帮助人们理解。编译器不会编译注解内容。</p>
 </div>
 <div class="cell docutils container">
@@ -638,9 +661,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h3>关键字<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p><strong>关键字</strong> 是 C++ 用来表示语言结构的特殊标识符。比如，类型 <code class="docutils literal notranslate"><span class="pre">int</span></code> 便是关键字。</p>
 </div>
+</div>
 <div class="section" id="sizeof">
-<h3><code class="docutils literal notranslate"><span class="pre">sizeof</span></code><a class="headerlink" href="#sizeof" title="永久链接至标题">¶</a></h3>
-<p>可以使用 <a class="reference internal" href="../refs/glossary/simple.html#term-12"><span class="xref std std-term">函数</span></a> <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> 获取类型的空间大小。</p>
+<h2>运算符 <code class="docutils literal notranslate"><span class="pre">sizeof</span></code><a class="headerlink" href="#sizeof" title="永久链接至标题">¶</a></h2>
+<p>可以使用运算符 <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> 获取类型的对象大小。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="c1">// 1 个字节</span>
@@ -687,6 +711,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">ye</span><span class="w"></span>
+</pre></div>
 </div>
 </div>
 </div>
@@ -918,61 +948,311 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="id9">
-<h2>类型转换<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
-<p>赋值运算、算术运算以及初始化会在基本类型间进行有意义的类型转换。</p>
+<h2>表达式<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>表达式是从一些 <a class="reference internal" href="../refs/glossary/other.html#term-0"><span class="xref std std-term">操作数</span></a> 计算一个值。最简单的表达式是字面常量，例如：<code class="docutils literal notranslate"><span class="pre">10</span></code>、<code class="docutils literal notranslate"><span class="pre">'a'</span></code>、<code class="docutils literal notranslate"><span class="pre">3.14</span></code>、<code class="docutils literal notranslate"><span class="pre">&quot;喜爱&quot;</span></code>。</p>
+<p>变量也是一种表达式，它表示与名字对应的那个对象。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 初始化浮点数</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>// 计算一些表达式
+int 长度 = 30; // 整数字面常量（用于变量的初始化）
+int 宽度 = 50;
+int 面积 = 长度 * 宽度; // 乘法运算
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<ul class="simple">
+<li><p>字面常量 <code class="docutils literal notranslate"><span class="pre">30</span></code> 和 <code class="docutils literal notranslate"><span class="pre">50</span></code> 用于初始化变量 <code class="docutils literal notranslate"><span class="pre">长度</span></code> 和 <code class="docutils literal notranslate"><span class="pre">宽度</span></code>；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">长度</span></code> 和 <code class="docutils literal notranslate"><span class="pre">宽度</span></code> 进行乘法运算，此时可以将它们理解为变量的值进行乘法运算。</p></li>
+</ul>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>名字在赋值号左边称为 <strong>左值</strong>，名字在赋值号右边称为 <strong>右值</strong>。</p>
+</div>
+<p>赋值语句 <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">长度</span> <span class="pre">=</span> <span class="pre">30;</span></code>，<code class="docutils literal notranslate"><span class="pre">=</span></code> 左边的名字其含义是名字为 <code class="docutils literal notranslate"><span class="pre">长度</span></code> 的变量，此赋值语句的含义是“把 <code class="docutils literal notranslate"><span class="pre">30</span></code> 赋值给名为 <code class="docutils literal notranslate"><span class="pre">长度</span></code> 的变量”；赋值语句 <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">面积</span> <span class="pre">=</span> <span class="pre">长度</span> <span class="pre">*</span> <span class="pre">宽度;</span></code> 右边的名字 <code class="docutils literal notranslate"><span class="pre">长度</span></code> 表示这个变量的值。</p>
+<p><code class="docutils literal notranslate"><span class="pre">sizeof</span></code> 也可以计算表达式的 <strong>结果对象</strong> 的大小。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">56</span><span class="p">;</span><span class="w"></span>
+<span class="k">sizeof</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="c1">// 计算的是 x*5+10 的结果 290.0 的大小</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>类型安全<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<p>对于一个程序或者程序的一部分，若使用的对象符合它们的规定，则它们是类型安全的。</p>
+<p>下面列出一些不是类型安全的程序：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">xxx</span><span class="p">;</span><span class="w"> </span><span class="c1">// 仅仅声明，没有初始化，是未定义的</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xxx</span><span class="p">;</span><span class="w"> </span><span class="c1">// y 的值也是未定义的</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">xxx</span><span class="p">;</span><span class="w"> </span><span class="c1">// + 的意义和 z 都是未定义的</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">建议</p>
+<p>永远记住初始化你的变量，是一个好习惯！</p>
+</div>
+<div class="section" id="id11">
+<h3>安全转换<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p>C++ 提供了显式的类型转换：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;!&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">x</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="c1">// 安全转换为 int</span>
+<span class="n">t</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;!&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="n">t2</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33
+</pre></div>
+</div>
+</div>
+</div>
+<p>这里 <code class="docutils literal notranslate"><span class="pre">t</span></code> 与 <code class="docutils literal notranslate"><span class="pre">t2</span></code> 都被赋值 <code class="docutils literal notranslate"><span class="pre">33</span></code>。我们称这种 char-int 的转换为安全的，这是因为没有信息丢失；同样，可以将 <code class="docutils literal notranslate"><span class="pre">int</span></code> 的结果拷贝会一个 <code class="docutils literal notranslate"><span class="pre">char</span></code> 中，并且得到原始值：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
+<span class="n">c2</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id12">
+<h3>不安全转换<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<p>不安全指的是一个值可以转换为一个不等于原始值的值。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">525</span><span class="p">;</span><span class="w"></span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>525
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 试图将一个“大”的整数“压缩”进小的字符型</span>
+<span class="n">c</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;\r&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="n">b</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>可以看出 `a` 不等于 `b`。
+
+这种转换又称为“窄化”转换。
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_64:2:4: </span><span class=" -Color -Color-Bold -Color-Bold-Black">note: </span>use &#39;|=&#39; to turn this inequality comparison into an or-assignment
+ a != b; // 可以看出 a != b
+<span class=" -Color -Color-Bold -Color-Bold-Green">   ^~</span>
+<span class=" -Color -Color-Green">   |=</span>
+
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>true
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>类型转换<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<p>赋值运算、算术运算以及初始化会在基本类型间进行有意义的类型转换。</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>若算术表达式中有 <code class="docutils literal notranslate"><span class="pre">double</span></code> 类型数据，则进行浮点型算术运算，结果为 <code class="docutils literal notranslate"><span class="pre">double</span></code> 类型；否则就使用整型算术运算，结果为 <code class="docutils literal notranslate"><span class="pre">int</span></code> 类型。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="c1">// 整型算术运算</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mf">2.5</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="c1">//  浮点型算术运算</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2500000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>记号 <code class="docutils literal notranslate"><span class="pre">type(value)</span></code> 和 <code class="docutils literal notranslate"><span class="pre">type{value}</span></code> 表示“将 <code class="docutils literal notranslate"><span class="pre">value</span></code> 转换为 <code class="docutils literal notranslate"><span class="pre">type</span></code> 类型，就像用值 <code class="docutils literal notranslate"><span class="pre">value</span></code> 初始化 <code class="docutils literal notranslate"><span class="pre">type</span></code> 类型的变量一样。”</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等同于 int{&#39;a&#39;} + 1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>98
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.5</span><span class="p">;</span><span class="w"> </span><span class="c1">// 初始化浮点数</span>
 <span class="n">d</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.2000000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.5000000
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 初始化整数</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 初始化整数</span>
 <span class="n">t</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="c1">// 将求和结果赋值给 d</span>
-<span class="n">d</span><span class="w"> </span><span class="c1">// 可以看出此时 d 是浮点数</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
+<span class="n">d2</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9.2000000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.2500000
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="c1">// 把乘积结果赋值给 t</span>
-<span class="n">t</span><span class="w"></span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="c1">// 窄化转换</span>
+<span class="n">t2</span><span class="w"> </span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>64
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
 </pre></div>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">*</span> <span class="pre">t</span></code> 是一个 <code class="docutils literal notranslate"><span class="pre">double</span></code> 值，而 <code class="docutils literal notranslate"><span class="pre">t</span></code> 是 <code class="docutils literal notranslate"><span class="pre">int</span></code>，所以最终的结果被截断为整数。</p>
+<p><code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">/</span> <span class="pre">t</span></code> 是一个 <code class="docutils literal notranslate"><span class="pre">double</span></code> 值，而 <code class="docutils literal notranslate"><span class="pre">t2</span></code> 是 <code class="docutils literal notranslate"><span class="pre">int</span></code>，所以最终的结果被截断为整数。</p>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>使用 <code class="docutils literal notranslate"><span class="pre">type{value}</span></code> 可以避免窄化转换，而 <code class="docutils literal notranslate"><span class="pre">type(value)</span></code> 不能。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">t3</span><span class="w"> </span><span class="p">{</span><span class="n">d</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">t</span><span class="p">};</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_23:2:10: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">type &#39;double&#39; cannot be narrowed to &#39;int&#39; in initializer list [-Wc++11-narrowing]</span>
+ int t3 {d / t};
+<span class=" -Color -Color-Bold -Color-Bold-Green">         ^~~~~</span>
+<span class=" -Color -Color-Bold">input_line_23:2:10: </span><span class=" -Color -Color-Bold -Color-Bold-Black">note: </span>insert an explicit cast to silence this issue
+ int t3 {d / t};
+<span class=" -Color -Color-Bold -Color-Bold-Green">         ^~~~~</span>
+<span class=" -Color -Color-Green">         static_cast&lt;int&gt;( )</span>
+
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

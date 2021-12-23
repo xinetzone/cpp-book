@@ -11,7 +11,7 @@
     "学习如何使用 C++ 表达一些简单概念。\n",
     "```\n",
     "\n",
-    "信息的最小单位是 {term}`位` （也可称作 比特），一个位仅仅存储 `0` 或者 `1` 两个数字。大多数计算机中的基本寻址单元为 {term}`字节`（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 {term}`对象`。对象的 {term}`值` 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 {term}`类型` 决定。对象需要一个 **名字** 以方便使用，称给定类型的命名对象为 {term}`变量`。{term}`声明` 负责为程序引入一个新的名字，并指定该命名实体的类型。{term}`函数` 是一个命名的代码单元（或计算的逻辑单元），可以从程序中其他部分调用它。\n",
+    "信息的最小单位是 {term}`位` （也可称作 比特），一个位仅仅存储 `0` 或者 `1` 两个数字。大多数计算机中的基本寻址单元为 {term}`字节`（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 {term}`对象`。对象的 {term}`值` 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 {term}`类型` 决定。对象需要一个 **名字** 以方便使用，称给定类型的命名对象为 {term}`变量`。{term}`声明` 负责为程序引入一个新的名字，并指定该命名实体的类型。`term`{定义} 是分配了内存的声明。\n",
     "\n",
     "C++ 提供了若干基本类型，例如：\n",
     "\n",
@@ -93,7 +93,7 @@
    "id": "52aee777",
    "metadata": {},
    "source": [
-    "```{margin}\n",
+    "```{note}\n",
     "C++ 使用符号 `//` 注解代码片段，以帮助人们理解。编译器不会编译注解内容。\n",
     "```"
    ]
@@ -103,7 +103,7 @@
    "execution_count": 4,
    "id": "cc2fb456",
    "metadata": {
-    "scrolled": true
+    "scrolled": false
    },
    "outputs": [
     {
@@ -162,9 +162,9 @@
     "\n",
     "**关键字** 是 C++ 用来表示语言结构的特殊标识符。比如，类型 `int` 便是关键字。\n",
     "\n",
-    "### `sizeof`\n",
+    "## 运算符 `sizeof`\n",
     "\n",
-    "可以使用 {term}`函数` `sizeof` 获取类型的空间大小。"
+    "可以使用运算符 `sizeof` 获取类型的对象大小。"
    ]
   },
   {
@@ -234,7 +234,9 @@
    "cell_type": "code",
    "execution_count": 9,
    "id": "6fbd4913",
-   "metadata": {},
+   "metadata": {
+    "scrolled": true
+   },
    "outputs": [
     {
      "data": {
@@ -249,6 +251,16 @@
    ],
    "source": [
     "sizeof(double)  // 8 个字节"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a12cdea7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "ye"
    ]
   },
   {
@@ -647,65 +659,227 @@
    "source": [
     "在很多领域 `*=` 和 `/=` 被视为“缩放”。\n",
     "\n",
-    "## 类型转换\n",
+    "## 表达式\n",
     "\n",
-    "赋值运算、算术运算以及初始化会在基本类型间进行有意义的类型转换。"
+    "表达式是从一些 {term}`操作数` 计算一个值。最简单的表达式是字面常量，例如：`10`、`'a'`、`3.14`、`\"喜爱\"`。\n",
+    "\n",
+    "变量也是一种表达式，它表示与名字对应的那个对象。"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 24,
-   "id": "5ecbc9fc",
+   "execution_count": 2,
+   "id": "21159279",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "// 计算一些表达式\n",
+    "int 长度 = 30; // 整数字面常量（用于变量的初始化）\n",
+    "int 宽度 = 50;\n",
+    "int 面积 = 长度 * 宽度; // 乘法运算"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bd4d3e7e",
+   "metadata": {},
+   "source": [
+    "```{note}\n",
+    "- 字面常量 `30` 和 `50` 用于初始化变量 `长度` 和 `宽度`；\n",
+    "- `长度` 和 `宽度` 进行乘法运算，此时可以将它们理解为变量的值进行乘法运算。\n",
+    "```\n",
+    "\n",
+    "```{important}\n",
+    "名字在赋值号左边称为 **左值**，名字在赋值号右边称为 **右值**。\n",
+    "```\n",
+    "\n",
+    "赋值语句 `int 长度 = 30;`，`=` 左边的名字其含义是名字为 `长度` 的变量，此赋值语句的含义是“把 `30` 赋值给名为 `长度` 的变量”；赋值语句 `int 面积 = 长度 * 宽度;` 右边的名字 `长度` 表示这个变量的值。\n",
+    "\n",
+    "`sizeof` 也可以计算表达式的 **结果对象** 的大小。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "ff750021",
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "2.2000000"
+       "4"
       ]
      },
-     "execution_count": 24,
+     "execution_count": 8,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "double d = 2.2; // 初始化浮点数\n",
-    "d"
+    "float x = 56;\n",
+    "sizeof(x*5+10) // 计算的是 x*5+10 的结果 290.0 的大小"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d89dbf61",
+   "metadata": {},
+   "source": [
+    "## 类型安全\n",
+    "\n",
+    "对于一个程序或者程序的一部分，若使用的对象符合它们的规定，则它们是类型安全的。\n",
+    "\n",
+    "下面列出一些不是类型安全的程序："
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 25,
-   "id": "04271839",
+   "execution_count": 7,
+   "id": "573e8477",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "double xxx; // 仅仅声明，没有初始化，是未定义的\n",
+    "double y = xxx; // y 的值也是未定义的\n",
+    "double z = 2.0 + xxx; // + 的意义和 z 都是未定义的"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "1e9d7b79",
+   "metadata": {},
+   "source": [
+    "```{admonition} 建议\n",
+    "永远记住初始化你的变量，是一个好习惯！\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c0ba8c57",
+   "metadata": {},
+   "source": [
+    "### 安全转换\n",
+    "\n",
+    "C++ 提供了显式的类型转换："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "895e6a20",
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "7"
+       "'!'"
       ]
      },
-     "execution_count": 25,
+     "execution_count": 9,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "int t = 7; // 初始化整数\n",
+    "char c = '!';\n",
+    "x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "b46b535e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "33"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int t = c; // 安全转换为 int\n",
     "t"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 26,
-   "id": "73d10bf0",
+   "execution_count": 11,
+   "id": "8efe07ab",
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "9.2000000"
+       "33"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int t2 = '!';\n",
+    "t2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "479c842a",
+   "metadata": {},
+   "source": [
+    "这里 `t` 与 `t2` 都被赋值 `33`。我们称这种 char-int 的转换为安全的，这是因为没有信息丢失；同样，可以将 `int` 的结果拷贝会一个 `char` 中，并且得到原始值："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "4e8e99b5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'!'"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "char c2 = t;\n",
+    "c2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "82d4142f",
+   "metadata": {},
+   "source": [
+    "### 不安全转换\n",
+    "\n",
+    "不安全指的是一个值可以转换为一个不等于原始值的值。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "0728878e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "525"
       ]
      },
      "execution_count": 26,
@@ -714,20 +888,20 @@
     }
    ],
    "source": [
-    "d = d + t; // 将求和结果赋值给 d\n",
-    "d // 可以看出此时 d 是浮点数"
+    "int a = 525;\n",
+    "a"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": 27,
-   "id": "e1efcab8",
+   "id": "bb90ff43",
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "64"
+       "'\\r'"
       ]
      },
      "execution_count": 27,
@@ -736,22 +910,290 @@
     }
    ],
    "source": [
-    "t = d * t; // 把乘积结果赋值给 t\n",
-    "t"
+    "char c = a; // 试图将一个“大”的整数“压缩”进小的字符型\n",
+    "c"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "9defb39f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "13"
+      ]
+     },
+     "execution_count": 28,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int b = c;\n",
+    "b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "521d168b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\u001b[1minput_line_64:2:4: \u001b[0m\u001b[0;1;30mnote: \u001b[0muse '|=' to turn this inequality comparison into an or-assignment\u001b[0m\n",
+      " a != b; // 可以看出 a != b\n",
+      "\u001b[0;1;32m   ^~\n",
+      "\u001b[0m\u001b[0;32m   |=\n",
+      "\u001b[0m"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "true"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "可以看出 `a` 不等于 `b`。\n",
+    "\n",
+    "这种转换又称为“窄化”转换。"
    ]
   },
   {
    "cell_type": "markdown",
-   "id": "8b41f8f5",
+   "id": "8074fe7c",
    "metadata": {},
    "source": [
-    "`d * t` 是一个 `double` 值，而 `t` 是 `int`，所以最终的结果被截断为整数。"
+    "## 类型转换\n",
+    "\n",
+    "赋值运算、算术运算以及初始化会在基本类型间进行有意义的类型转换。\n",
+    "\n",
+    "```{important}\n",
+    "若算术表达式中有 `double` 类型数据，则进行浮点型算术运算，结果为 `double` 类型；否则就使用整型算术运算，结果为 `int` 类型。\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "560f9552",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "5/2 // 整型算术运算"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "fa19db32",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.2500000"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "2.5/2 //  浮点型算术运算"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "07dd1206",
+   "metadata": {},
+   "source": [
+    "```{important}\n",
+    "记号 `type(value)` 和 `type{value}` 表示“将 `value` 转换为 `type` 类型，就像用值 `value` 初始化 `type` 类型的变量一样。”\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "f8bf619f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "98"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "'a' + 1; // 等同于 int{'a'} + 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "5ecbc9fc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2.5000000"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "double d = 2.5; // 初始化浮点数\n",
+    "d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "04271839",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int t = 2; // 初始化整数\n",
+    "t"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "1d94c80e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1.2500000"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "double d2 = d / t;\n",
+    "d2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "76939829",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int t2 = d / t; // 窄化转换\n",
+    "t2 "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "39f16ca4",
+   "metadata": {},
+   "source": [
+    "`d / t` 是一个 `double` 值，而 `t2` 是 `int`，所以最终的结果被截断为整数。\n",
+    "\n",
+    "```{important}\n",
+    "使用 `type{value}` 可以避免窄化转换，而 `type(value)` 不能。\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "fbbd55d9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\u001b[1minput_line_23:2:10: \u001b[0m\u001b[0;1;31merror: \u001b[0m\u001b[1mtype 'double' cannot be narrowed to 'int' in initializer list [-Wc++11-narrowing]\u001b[0m\n",
+      " int t3 {d / t};\n",
+      "\u001b[0;1;32m         ^~~~~\n",
+      "\u001b[0m\u001b[1minput_line_23:2:10: \u001b[0m\u001b[0;1;30mnote: \u001b[0minsert an explicit cast to silence this issue\u001b[0m\n",
+      " int t3 {d / t};\n",
+      "\u001b[0;1;32m         ^~~~~\n",
+      "\u001b[0m\u001b[0;32m         static_cast<int>( )\n",
+      "\u001b[0m"
+     ]
+    },
+    {
+     "ename": "Interpreter Error",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "Interpreter Error: "
+     ]
+    }
+   ],
+   "source": [
+    "int t3 {d / t};"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "94826b99",
+   "id": "7bbe4f2b",
    "metadata": {},
    "outputs": [],
    "source": []
