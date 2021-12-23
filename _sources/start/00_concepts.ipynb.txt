@@ -1,0 +1,776 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "3210afee",
+   "metadata": {},
+   "source": [
+    "# 基本概念\n",
+    "\n",
+    "```{admonition} 需求\n",
+    "学习如何使用 C++ 表达一些简单概念。\n",
+    "```\n",
+    "\n",
+    "信息的最小单位是 {term}`位` （也可称作 比特），一个位仅仅存储 `0` 或者 `1` 两个数字。大多数计算机中的基本寻址单元为 {term}`字节`（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 {term}`对象`。对象的 {term}`值` 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 {term}`类型` 决定。对象需要一个 **名字** 以方便使用，称给定类型的命名对象为 {term}`变量`。{term}`声明` 负责为程序引入一个新的名字，并指定该命名实体的类型。{term}`函数` 是一个命名的代码单元（或计算的逻辑单元），可以从程序中其他部分调用它。\n",
+    "\n",
+    "C++ 提供了若干基本类型，例如：\n",
+    "\n",
+    "- `bool`：布尔类型。可取 `true` 或 `false`。\n",
+    "- `char`：字符类型。如 `'a'`，`'\\n'` 等\n",
+    "- `int`：整数类型。如 1，42 等\n",
+    "- `double`：双精度浮点数类型。如 2.3，5.0\n",
+    "\n",
+    "这些基本类型都与硬件特性直接相关，其尺寸固定不变，决定了其中所能存储的值的范围。\n",
+    "\n",
+    "## 标识符\n",
+    "\n",
+    "**标识符** 是以字母和下划线开头，后接 0 个或者多个（大写或者小写）字母、数字或者下划线的序列。标识符也可以称作 **名字** 或者是 **变量名称**。\n",
+    "\n",
+    "想要使用一个变量，需要使用 {term}`声明`："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "60037753",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "int 苹果数量;"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ca47b77b",
+   "metadata": {},
+   "source": [
+    "其中 `苹果数量` 便是一个变量；`int` 便是一个类型。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "4a1971da",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "int hi_world;\n",
+    "int HiWorld;"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "e014c21a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\u001b[1minput_line_9:2:8: \u001b[0m\u001b[0;1;31merror: \u001b[0m\u001b[1mexpected ';' at end of declaration\u001b[0m\n",
+      " int Hi World; // 错误：因为标识符不能有空格\n",
+      "\u001b[0;1;32m       ^\n",
+      "\u001b[0m\u001b[0;32m       ;\n",
+      "\u001b[0m"
+     ]
+    },
+    {
+     "ename": "Interpreter Error",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "Interpreter Error: "
+     ]
+    }
+   ],
+   "source": [
+    "int Hi World; // 错误：因为标识符不能有空格"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "52aee777",
+   "metadata": {},
+   "source": [
+    "```{margin}\n",
+    "C++ 使用符号 `//` 注解代码片段，以帮助人们理解。编译器不会编译注解内容。\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "cc2fb456",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "\u001b[1minput_line_10:2:8: \u001b[0m\u001b[0;1;31merror: \u001b[0m\u001b[1mexpected ';' at end of declaration\u001b[0m\n",
+      " int Hi@World; // 错误：因为标识符不能有 @\n",
+      "\u001b[0;1;32m       ^\n",
+      "\u001b[0m\u001b[0;32m       ;\n",
+      "\u001b[0m"
+     ]
+    },
+    {
+     "ename": "Interpreter Error",
+     "evalue": "",
+     "output_type": "error",
+     "traceback": [
+      "Interpreter Error: "
+     ]
+    }
+   ],
+   "source": [
+    "int Hi@World; // 错误：因为标识符不能有 @"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b36239dd",
+   "metadata": {},
+   "source": [
+    "### 双下划线\n",
+    "\n",
+    "以下划线开头或者包含连续两个下划线的标识符是为 C++ 实现预留的，你的程序中不要使用这种标识符。例如："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "8a52f636",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "int _foo; // 不要这样用\n",
+    "int foo_boor; // 正确\n",
+    "int foo__bar; // 不要这样用\n",
+    "int foo_; // 正确"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "011a01c3",
+   "metadata": {},
+   "source": [
+    "### 关键字\n",
+    "\n",
+    "**关键字** 是 C++ 用来表示语言结构的特殊标识符。比如，类型 `int` 便是关键字。\n",
+    "\n",
+    "### `sizeof`\n",
+    "\n",
+    "可以使用 {term}`函数` `sizeof` 获取类型的空间大小。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "71d29f55",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sizeof(bool) // 1 个字节"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "a2169c84",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sizeof(char) // 1 个字节"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "8c84e41e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 8,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sizeof(int) //  4 个字节"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "6fbd4913",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sizeof(double)  // 8 个字节"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0102be60",
+   "metadata": {},
+   "source": [
+    "## 基本运算符\n",
+    "\n",
+    "运算符可以用于操作类型。下面仅仅介绍一些基本运算符：\n",
+    "\n",
+    "算术运算符\n",
+    ":   ```c++\n",
+    "    x+y   // 加法\n",
+    "    +x   // 一元加法\n",
+    "    x-y  // 减法\n",
+    "    -x   // 一元减法\n",
+    "    x*y  // 乘法\n",
+    "    x/y  // 除法\n",
+    "    x%y  // 取模\n",
+    "    ```\n",
+    "\n",
+    "比较运算符\n",
+    ":   ```c++\n",
+    "    x==y   // 相等\n",
+    "    x!=y  // 不相等\n",
+    "    x<y  // 小于\n",
+    "    x>y  // 大于\n",
+    "    x<=y  // 小于等于\n",
+    "    x>=y  // 大于等于\n",
+    "    ```\n",
+    "\n",
+    "赋值运算符\n",
+    ":   `=`\n",
+    "\n",
+    "    为一个变量赋予新的值。\n",
+    "\n",
+    "## 初始化\n",
+    "\n",
+    "通用初始化方法是使用花括号内的一组初始化器列表："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "6be1f52c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2.3000000"
+      ]
+     },
+     "execution_count": 10,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "double d1 {2.3};\n",
+    "d1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fe4c0f6c",
+   "metadata": {},
+   "source": [
+    "当然也可以使用传统的方法，即赋值语句："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "44bba3c8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2.3000000"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "double d1 = 2.3;\n",
+    "d1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "add80bc3",
+   "metadata": {},
+   "source": [
+    "## 赋值语句\n",
+    "\n",
+    "看几个赋值语句的例子："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "d1a4ee2f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "7"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int a = 7; // a 初始化为 7\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "a56542ab",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = 4; // a 通过 赋值语句，获得新值 4\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "b1134142",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "4"
+      ]
+     },
+     "execution_count": 14,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int b = a; // b 的值为 a 的值的拷贝\n",
+    "b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "716d83cd",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "9"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "b = a + 5; // b 获得新值 a+5\n",
+    "b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "b70afafa",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "11"
+      ]
+     },
+     "execution_count": 16,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = a + 7; // a 获得新值 a+7\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9078a397",
+   "metadata": {},
+   "source": [
+    "### 复合赋值运算符\n",
+    "\n",
+    "一个变量的递加（增加 1），可以简写为 `++vars`。比如："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "3f578af2",
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "7"
+      ]
+     },
+     "execution_count": 17,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int a = 7;\n",
+    "a // 查看 a 的值"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "315edfb1",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "8"
+      ]
+     },
+     "execution_count": 18,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "++a; // 等价于 `a = a + 1;`\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "03733a26",
+   "metadata": {},
+   "source": [
+    "一些二元赋值运算符，可以直接修改变量的当前值："
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "15340d1b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "14"
+      ]
+     },
+     "execution_count": 19,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int a = 7;\n",
+    "a += 7; // 表示 `a = a + 7`\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "0fffbf8e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "7"
+      ]
+     },
+     "execution_count": 20,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a -= 7; // 表示 `a = a - 7`\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "0886bd22",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "14"
+      ]
+     },
+     "execution_count": 21,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a *= 2; // 表示 `a = a * 2`\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "0e60979f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "7"
+      ]
+     },
+     "execution_count": 22,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a /= 2; // 表示 `a = a / 2`\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "9ab96b89",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 23,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a %= 2; // 表示 `a = a % 2`\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3c42dfc7",
+   "metadata": {},
+   "source": [
+    "在很多领域 `*=` 和 `/=` 被视为“缩放”。\n",
+    "\n",
+    "## 类型转换\n",
+    "\n",
+    "赋值运算、算术运算以及初始化会在基本类型间进行有意义的类型转换。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "5ecbc9fc",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2.2000000"
+      ]
+     },
+     "execution_count": 24,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "double d = 2.2; // 初始化浮点数\n",
+    "d"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "04271839",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "7"
+      ]
+     },
+     "execution_count": 25,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "int t = 7; // 初始化整数\n",
+    "t"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "73d10bf0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "9.2000000"
+      ]
+     },
+     "execution_count": 26,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "d = d + t; // 将求和结果赋值给 d\n",
+    "d // 可以看出此时 d 是浮点数"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "e1efcab8",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "64"
+      ]
+     },
+     "execution_count": 27,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "t = d * t; // 把乘积结果赋值给 t\n",
+    "t"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8b41f8f5",
+   "metadata": {},
+   "source": [
+    "`d * t` 是一个 `double` 值，而 `t` 是 `int`，所以最终的结果被截断为整数。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "94826b99",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "C++11",
+   "language": "C++11",
+   "name": "xcpp11"
+  },
+  "language_info": {
+   "codemirror_mode": "text/x-c++src",
+   "file_extension": ".cpp",
+   "mimetype": "text/x-c++src",
+   "name": "c++",
+   "version": "11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

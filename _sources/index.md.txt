@@ -6,6 +6,7 @@
 :hidden:
 
 propaedeutics/index
+start/index
 tour/index
 programming/index
 guide/index

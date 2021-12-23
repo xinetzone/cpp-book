@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>C++ 基本概念 &#8212; cpp-book 0.1 documentation</title>
+    <title>基本概念 &#8212; cpp-book 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -93,8 +93,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="字面值常量" href="04_literal.html" />
-    <link rel="prev" title="什么是编程" href="02_programming.html" /> 
+    <link rel="next" title="计算" href="01_compute.html" />
+    <link rel="prev" title="快速上手 C++" href="index.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -164,39 +164,61 @@ commentsRunWhenDOMLoaded(addUtterances);
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../propaedeutics/index.html">
    预备知识
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="00_digital.html">
+    <a class="reference internal" href="../propaedeutics/00_digital.html">
      数字与信息
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="01_electricity.html">
+    <a class="reference internal" href="../propaedeutics/01_electricity.html">
      用电表示计算（raw）
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="02_programming.html">
+    <a class="reference internal" href="../propaedeutics/02_programming.html">
      什么是编程
     </a>
    </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   快速上手 C++
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     C++ 基本概念
+     基本概念
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="04_literal.html">
+    <a class="reference internal" href="01_compute.html">
+     计算
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_literals.html">
      字面值常量
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_use.html">
+     使用代码
     </a>
    </li>
   </ul>
@@ -225,8 +247,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../refs/index.html">
    参考
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,15 +257,15 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../refs/glossary/index.html">
      术语表
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../refs/glossary/official.html">
-       Bjarne Stroustrup C++ 术语表
+      <a class="reference internal" href="../refs/glossary/simple.html">
+       常用术语
       </a>
      </li>
      <li class="toctree-l3">
@@ -279,8 +301,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    About
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -311,8 +333,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../draft/index.html">
    回收站
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -384,7 +406,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/propaedeutics/03_concepts.ipynb.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/start/00_concepts.ipynb.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -404,10 +426,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/cpp-book/issues/new?title=Issue%20on%20page%20%2Fpropaedeutics/03_concepts.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/cpp-book/issues/new?title=Issue%20on%20page%20%2Fstart/00_concepts.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/xinetzone/cpp-book/edit/main/docs/propaedeutics/03_concepts.ipynb"><button
+        <a class="edit-button" href="https://github.com/xinetzone/cpp-book/edit/main/docs/start/00_concepts.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -427,7 +449,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/cpp-book/main?urlpath=lab/tree/docs/propaedeutics/03_concepts.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/cpp-book/main?urlpath=lab/tree/docs/start/00_concepts.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -435,7 +457,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com//github/xinetzone/cpp-book/blob/main/docs/propaedeutics/03_concepts.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com//github/xinetzone/cpp-book/blob/main/docs/start/00_concepts.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -458,11 +480,6 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   基本类型与声明变量
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    标识符
   </a>
@@ -475,6 +492,15 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id4">
      关键字
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sizeof">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sizeof
+      </span>
+     </code>
     </a>
    </li>
   </ul>
@@ -491,6 +517,18 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id7">
+   赋值语句
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     复合赋值运算符
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
    类型转换
   </a>
  </li>
@@ -504,53 +542,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="c">
-<h1>C++ 基本概念<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h1>
-<p>C++ 是一种高级编程语言，设计了大量数据结构和指令。</p>
-<p>查看 <a class="reference internal" href="../refs/glossary/index.html"><span class="doc std std-doc">术语表</span></a> 了解一些基本概念。</p>
-<p>C++ 通过操作计算机内存实现各种各样的任务。先看看一些术语：</p>
-<dl class="simple myst">
-<dt>单元</dt><dd><p>一个完整东西的与众不同的（如命名）部分。</p>
-</dd>
-<dt>位</dt><dd><p>计算机中基本信息单位。可能的取值为 0 或者 1。</p>
-</dd>
-<dt>值</dt><dd><p>一组二进制 <a class="reference internal" href="../refs/glossary/official.html#term-0"><span class="xref std std-term">位</span></a>，具体的含义由其 <a class="reference internal" href="../refs/glossary/official.html#term-23"><span class="xref std std-term">类型</span></a> 决定。</p>
-</dd>
-<dt>类型</dt><dd><p>定义了一组可能的值以及一组（对象上）的操作。</p>
-</dd>
-<dt>对象</dt><dd><p>存放某种类型值的内存空间。</p>
-</dd>
-<dt>地址</dt><dd><p>一个值，用来在计算机内存中查找一个对象。</p>
-</dd>
-<dt>字节</dt><dd><p>大多数计算机中的基本寻址单元。1 byte = 8 bit。</p>
-</dd>
-<dt>字</dt><dd><p>计算机的基本单元，通常用于保存一个整数的单元。1 word = 4 byte</p>
-</dd>
-<dt>初始化</dt><dd><p>为对象赋予最初的（初始）值。</p>
-</dd>
-<dt>变量</dt><dd><p>给定类型的命名对象；除非没有初始化，否则包含一个值。</p>
-</dd>
-<dt>声明</dt><dd><p>声明是一条语句，负责为程序引入一个新的名字，并指定该命名实体的类型。</p>
-</dd>
-<dt>定义</dt><dd><p>一个实体的声明，提供了所有必要信息，令程序可使用此实体。一种更简单的说法：分配了内存的声明。</p>
-</dd>
-<dt>函数</dt><dd><p>一个命名的代码单元的，可以从程序中其他部分调用它；计算的逻辑单元。</p>
-</dd>
-<dt>数据</dt><dd><p>计算中用到的值。</p>
-</dd>
-<dt>类</dt><dd><p>用户自定义类型，可以包含数据成员、函数成员和成员类型。</p>
-</dd>
-<dt>接口</dt><dd><p>一个声明或一组声明，指明了一段代码（如一个函数或类）如何被调用。</p>
-</dd>
-<dt>迭代</dt><dd><p>重复执行一段代码的动作。</p>
-</dd>
-<dt>文件</dt><dd><p>计算机中永久保存信息的容器。</p>
-</dd>
-<dt>头文件</dt><dd><p>一个包含声明的文件，其中的声明用于程序中不同部分共享接口。</p>
-</dd>
-</dl>
-<div class="section" id="id1">
-<h2>基本类型与声明变量<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>基本概念<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition- admonition">
+<p class="admonition-title">需求</p>
+<p>学习如何使用 C++ 表达一些简单概念。</p>
+</div>
+<p>信息的最小单位是 <a class="reference internal" href="../refs/glossary/simple.html#term-1"><span class="xref std std-term">位</span></a> （也可称作 比特），一个位仅仅存储 <code class="docutils literal notranslate"><span class="pre">0</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">1</span></code> 两个数字。大多数计算机中的基本寻址单元为 <a class="reference internal" href="../refs/glossary/simple.html#term-6"><span class="xref std std-term">字节</span></a>（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 <a class="reference internal" href="../refs/glossary/simple.html#term-4"><span class="xref std std-term">对象</span></a>。对象的 <a class="reference internal" href="../refs/glossary/simple.html#term-2"><span class="xref std std-term">值</span></a> 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 <a class="reference internal" href="../refs/glossary/simple.html#term-3"><span class="xref std std-term">类型</span></a> 决定。对象需要一个 <strong>名字</strong> 以方便使用，称给定类型的命名对象为 <a class="reference internal" href="../refs/glossary/simple.html#term-9"><span class="xref std std-term">变量</span></a>。<a class="reference internal" href="../refs/glossary/simple.html#term-10"><span class="xref std std-term">声明</span></a> 负责为程序引入一个新的名字，并指定该命名实体的类型。<a class="reference internal" href="../refs/glossary/simple.html#term-12"><span class="xref std std-term">函数</span></a> 是一个命名的代码单元（或计算的逻辑单元），可以从程序中其他部分调用它。</p>
 <p>C++ 提供了若干基本类型，例如：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>：布尔类型。可取 <code class="docutils literal notranslate"><span class="pre">true</span></code> 或 <code class="docutils literal notranslate"><span class="pre">false</span></code>。</p></li>
@@ -558,7 +556,90 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><code class="docutils literal notranslate"><span class="pre">int</span></code>：整数类型。如 1，42 等</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">double</span></code>：双精度浮点数类型。如 2.3，5.0</p></li>
 </ul>
-<p>某种基本类型都与硬件特性直接相关，其尺寸固定不变，决定了其中所能存储的值的范围：</p>
+<p>这些基本类型都与硬件特性直接相关，其尺寸固定不变，决定了其中所能存储的值的范围。</p>
+<div class="section" id="id2">
+<h2>标识符<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><strong>标识符</strong> 是以字母和下划线开头，后接 0 个或者多个（大写或者小写）字母、数字或者下划线的序列。标识符也可以称作 <strong>名字</strong> 或者是 <strong>变量名称</strong>。</p>
+<p>想要使用一个变量，需要使用 <a class="reference internal" href="../refs/glossary/simple.html#term-10"><span class="xref std std-term">声明</span></a>：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>int 苹果数量;
+</pre></div>
+</div>
+</div>
+</div>
+<p>其中 <code class="docutils literal notranslate"><span class="pre">苹果数量</span></code> 便是一个变量；<code class="docutils literal notranslate"><span class="pre">int</span></code> 便是一个类型。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">hi_world</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">HiWorld</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">Hi</span><span class="w"> </span><span class="n">World</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误：因为标识符不能有空格</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_9:2:8: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">expected &#39;;&#39; at end of declaration</span>
+ int Hi World; // 错误：因为标识符不能有空格
+<span class=" -Color -Color-Bold -Color-Bold-Green">       ^</span>
+<span class=" -Color -Color-Green">       ;</span>
+
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>C++ 使用符号 <code class="docutils literal notranslate"><span class="pre">//</span></code> 注解代码片段，以帮助人们理解。编译器不会编译注解内容。</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>int Hi@World; // 错误：因为标识符不能有 @
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_10:2:8: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">expected &#39;;&#39; at end of declaration</span>
+ int Hi@World; // 错误：因为标识符不能有 @
+<span class=" -Color -Color-Bold -Color-Bold-Green">       ^</span>
+<span class=" -Color -Color-Green">       ;</span>
+
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>双下划线<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>以下划线开头或者包含连续两个下划线的标识符是为 C++ 实现预留的，你的程序中不要使用这种标识符。例如：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">_foo</span><span class="p">;</span><span class="w"> </span><span class="c1">// 不要这样用</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">foo_boor</span><span class="p">;</span><span class="w"> </span><span class="c1">// 正确</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">foo__bar</span><span class="p">;</span><span class="w"> </span><span class="c1">// 不要这样用</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">foo_</span><span class="p">;</span><span class="w"> </span><span class="c1">// 正确</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>关键字<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p><strong>关键字</strong> 是 C++ 用来表示语言结构的特殊标识符。比如，类型 <code class="docutils literal notranslate"><span class="pre">int</span></code> 便是关键字。</p>
+</div>
+<div class="section" id="sizeof">
+<h3><code class="docutils literal notranslate"><span class="pre">sizeof</span></code><a class="headerlink" href="#sizeof" title="Permalink to this headline">¶</a></h3>
+<p>可以使用 <a class="reference internal" href="../refs/glossary/simple.html#term-12"><span class="xref std std-term">函数</span></a> <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> 获取类型的空间大小。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">sizeof</span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="c1">// 1 个字节</span>
@@ -607,82 +688,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-<p>声明语句，可以这样编写：</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>int 苹果数量;
-</pre></div>
-</div>
-</div>
-</div>
-<p>其中 <code class="docutils literal notranslate"><span class="pre">苹果数量</span></code> 便是一个变量。变量的命名规则见 <a class="reference internal" href="../refs/glossary/official.html#term-14"><span class="xref std std-term">标识符</span></a> 或者 <a class="reference internal" href="../refs/glossary/official.html#term-13"><span class="xref std std-term">名字</span></a>。</p>
-</div>
-<div class="section" id="id2">
-<h2>标识符<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference internal" href="../refs/glossary/official.html#term-14"><span class="xref std std-term">标识符</span></a> 是以字母和下划线开头，后接 0 个或者多个（大写或者小写）字母、数字或者下划线的序列。</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">hi_world</span><span class="p">;</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">HiWorld</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">Hi</span><span class="w"> </span><span class="n">World</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误：因为标识符不能有空格</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_19:2:8: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">expected &#39;;&#39; at end of declaration</span>
- int Hi World; // 错误：因为标识符不能有空格
-<span class=" -Color -Color-Bold -Color-Bold-Green">       ^</span>
-<span class=" -Color -Color-Green">       ;</span>
-
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">Hi</span><span class="o">%</span><span class="n">World</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误：因为标识符不能有 %</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_20:2:8: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">expected &#39;;&#39; at end of declaration</span>
- int Hi%World; // 错误：因为标识符不能有 %
-<span class=" -Color -Color-Bold -Color-Bold-Green">       ^</span>
-<span class=" -Color -Color-Green">       ;</span>
-
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="id3">
-<h3>双下划线<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>以下划线开头或者包含连续两个下划线的标识符是为 C++ 实现预留的，你的程序中不要使用这种标识符。例如：</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">_foo</span><span class="p">;</span><span class="w"> </span><span class="c1">// 不要这样用</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">foo_boor</span><span class="p">;</span><span class="w"> </span><span class="c1">// 正确</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">foo__bar</span><span class="p">;</span><span class="w"> </span><span class="c1">// 不要这样用</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">foo_</span><span class="p">;</span><span class="w"> </span><span class="c1">// 正确</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="id4">
-<h3>关键字<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p><strong>关键字</strong> 是 C++ 用来表示语言结构的特殊标识符。</p>
 </div>
 </div>
 <div class="section" id="id5">
@@ -745,7 +750,174 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="id7">
-<h2>类型转换<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2>赋值语句<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<p>看几个赋值语句的例子：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// a 初始化为 7</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"> </span><span class="c1">// a 通过 赋值语句，获得新值 4</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// b 的值为 a 的值的拷贝</span>
+<span class="n">b</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// b 获得新值 a+5</span>
+<span class="n">b</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// a 获得新值 a+7</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>复合赋值运算符<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>一个变量的递加（增加 1），可以简写为 <code class="docutils literal notranslate"><span class="pre">++vars</span></code>。比如：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="c1">// 查看 a 的值</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等价于 `a = a + 1;`</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8
+</pre></div>
+</div>
+</div>
+</div>
+<p>一些二元赋值运算符，可以直接修改变量的当前值：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a + 7`</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a - 7`</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a * 2`</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a / 2`</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a % 2`</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<p>在很多领域 <code class="docutils literal notranslate"><span class="pre">*=</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/=</span></code> 被视为“缩放”。</p>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>类型转换<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <p>赋值运算、算术运算以及初始化会在基本类型间进行有意义的类型转换。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -816,7 +988,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         kernelOptions: {
             kernelName: "xcpp11",
-            path: "./propaedeutics"
+            path: "./start"
         },
         predefinedOutput: true
     }
@@ -831,17 +1003,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="02_programming.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">什么是编程</p>
+            <p class="prev-next-title">快速上手 C++</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="04_literal.html" title="next page">
+    <a class='right-next' id="next-link" href="01_compute.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">字面值常量</p>
+        <p class="prev-next-title">计算</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

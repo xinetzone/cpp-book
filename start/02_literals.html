@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>字面值常量 &#8212; cpp-book 0.1 documentation</title>
+    <title>字面值常量 &#8212; cpp-book 0.1 文档</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -79,6 +79,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
+    <script src="../_static/translations.js"></script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -91,12 +92,12 @@ commentsRunWhenDOMLoaded(addUtterances);
     <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
     <script>mermaid.initialize({startOnLoad:true});</script>
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="C++ 语言导学" href="../tour/index.html" />
-    <link rel="prev" title="C++ 基本概念" href="03_concepts.html" /> 
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="使用代码" href="03_use.html" />
+    <link rel="prev" title="计算" href="01_compute.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
+    <meta name="docsearch:language" content="zh_CN">
     
 
     <!-- Google Analytics -->
@@ -155,7 +156,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">cpp-book 0.1 documentation</h1>
+      <h1 class="site-logo" id="site-title">cpp-book 0.1 文档</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -164,39 +165,61 @@ commentsRunWhenDOMLoaded(addUtterances);
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="index.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../propaedeutics/index.html">
    预备知识
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../propaedeutics/00_digital.html">
+     数字与信息
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../propaedeutics/01_electricity.html">
+     用电表示计算（raw）
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../propaedeutics/02_programming.html">
+     什么是编程
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   快速上手 C++
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="00_digital.html">
-     数字与信息
+    <a class="reference internal" href="00_concepts.html">
+     基本概念
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="01_electricity.html">
-     用电表示计算（raw）
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="02_programming.html">
-     什么是编程
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="03_concepts.html">
-     C++ 基本概念
+    <a class="reference internal" href="01_compute.html">
+     计算
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      字面值常量
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="03_use.html">
+     使用代码
     </a>
    </li>
   </ul>
@@ -225,8 +248,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../refs/index.html">
    参考
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -235,15 +258,15 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../refs/glossary/index.html">
      术语表
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../refs/glossary/official.html">
-       Bjarne Stroustrup C++ 术语表
+      <a class="reference internal" href="../refs/glossary/simple.html">
+       常用术语
       </a>
      </li>
      <li class="toctree-l3">
@@ -277,27 +300,27 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../about/index.html">
-   About
+   关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../CODE_OF_CONDUCT.html">
-     Covenant Code of Conduct
+     行为准则
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../CONTRIBUTING.html">
-     Contributing
+     贡献
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../SECURITY.html">
-     Security Policy
+     安全策略
     </a>
    </li>
    <li class="toctree-l2">
@@ -311,8 +334,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../draft/index.html">
    回收站
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -384,7 +407,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/propaedeutics/04_literal.ipynb.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/start/02_literals.ipynb.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -404,10 +427,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/cpp-book/issues/new?title=Issue%20on%20page%20%2Fpropaedeutics/04_literal.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/cpp-book/issues/new?title=Issue%20on%20page%20%2Fstart/02_literals.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/xinetzone/cpp-book/edit/main/docs/propaedeutics/04_literal.ipynb"><button
+        <a class="edit-button" href="https://github.com/xinetzone/cpp-book/edit/main/docs/start/02_literals.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -427,7 +450,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/cpp-book/main?urlpath=lab/tree/docs/propaedeutics/04_literal.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/cpp-book/main?urlpath=lab/tree/docs/start/02_literals.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -435,7 +458,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com//github/xinetzone/cpp-book/blob/main/docs/propaedeutics/04_literal.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com//github/xinetzone/cpp-book/blob/main/docs/start/02_literals.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -498,10 +521,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>字面值常量<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="../refs/glossary/official.html#term-11"><span class="xref std std-term">字面值</span></a> 常量用于表示不同类型的值。例如，<code class="docutils literal notranslate"><span class="pre">7</span></code> 表示整形值“七”，<code class="docutils literal notranslate"><span class="pre">&quot;早餐&quot;</span></code> 表示字符串值 “早餐”，<code class="docutils literal notranslate"><span class="pre">true</span></code> 表示布尔值“真”。</p>
+<h1>字面值常量<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p><strong>字面值</strong> 常量用于表示不同类型的值。例如，<code class="docutils literal notranslate"><span class="pre">7</span></code> 表示整形值“七”，<code class="docutils literal notranslate"><span class="pre">&quot;早餐&quot;</span></code> 表示字符串值 “早餐”，<code class="docutils literal notranslate"><span class="pre">true</span></code> 表示布尔值“真”。</p>
 <div class="section" id="id2">
-<h2>整数字面值常量<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2>整数字面值常量<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>整数字面值常量：十进制、八进制、十六进制、二进制。</p>
 <ul class="simple">
 <li><p>十进制数字就是我们常用的：0、1、2、3、4、5、6、7、8 和 9。</p></li>
@@ -758,7 +781,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="id3">
-<h2>浮点字面值常量<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<h2>浮点字面值常量<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>浮点字面值常量包含一个小数点 <code class="docutils literal notranslate"><span class="pre">.</span></code>，一个指数（如 <code class="docutils literal notranslate"><span class="pre">e5</span></code>），或者通过后缀 <code class="docutils literal notranslate"><span class="pre">d</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">f</span></code> 指明是浮点值。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -846,7 +869,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="id4">
-<h2>布尔字面值常量<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<h2>布尔字面值常量<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>布尔字面值常量有 <code class="docutils literal notranslate"><span class="pre">true</span></code> （整型值为 <code class="docutils literal notranslate"><span class="pre">1</span></code>） 和 <code class="docutils literal notranslate"><span class="pre">false</span></code> （整型值为 <code class="docutils literal notranslate"><span class="pre">0</span></code>）。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -874,7 +897,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="id5">
-<h2>字符字面值常量<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<h2>字符字面值常量<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>字符字面值是指用单引号 <code class="docutils literal notranslate"><span class="pre">''</span></code> 包裹起来的字符。如：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -914,7 +937,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="id6">
-<h2>字符串字面值常量<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<h2>字符串字面值常量<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>字符串字面值常量是使用双引号包裹的字符序列。比如：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -943,7 +966,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="section" id="id7">
-<h2>指针字面值常量<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<h2>指针字面值常量<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>指针字面值常量只有一个：空指针 <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>。</p>
 <p>任何值为 <code class="docutils literal notranslate"><span class="pre">0</span></code> 的常量表达式都可以当作空指针使用，例如：</p>
 <div class="cell docutils container">
@@ -1057,7 +1080,7 @@ int *p4 = z; // 错误：z 不是一个常量
         },
         kernelOptions: {
             kernelName: "xcpp11",
-            path: "./propaedeutics"
+            path: "./start"
         },
         predefinedOutput: true
     }
@@ -1072,17 +1095,17 @@ int *p4 = z; // 错误：z 不是一个常量
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="03_concepts.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="01_compute.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">C++ 基本概念</p>
+            <p class="prev-next-subtitle">上一页</p>
+            <p class="prev-next-title">计算</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../tour/index.html" title="next page">
+    <a class='right-next' id="next-link" href="03_use.html" title="下一页 页">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">C++ 语言导学</p>
+        <p class="prev-next-subtitle">下一页</p>
+        <p class="prev-next-title">使用代码</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
