@@ -556,6 +556,16 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   关于运算符
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     ==
+    </span>
+   </code>
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -714,6 +724,10 @@ S = \sum_{x=1}^{10} x^2
 </div>
 </div>
 </div>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p><code class="docutils literal notranslate"><span class="pre">while</span></code> 的循环体一定要使用 <code class="docutils literal notranslate"><span class="pre">{}</span></code> 包裹。</p>
+</div>
 </div>
 <div class="section" id="for">
 <h3>for 语句<a class="headerlink" href="#for" title="永久链接至标题">¶</a></h3>
@@ -740,6 +754,14 @@ S = \sum_{x=1}^{10} x^2
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="id4">
+<h2>关于运算符 <code class="docutils literal notranslate"><span class="pre">==</span></code><a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<ol class="simple">
+<li><p>由运算符 <code class="docutils literal notranslate"><span class="pre">==</span></code> 组成的表达式一定要使用 <code class="docutils literal notranslate"><span class="pre">()</span></code> 起来包裹起来。（避免出现歧义）。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(x</span> <span class="pre">==</span> <span class="pre">y)</span></code> 可以理解为隐式类型转换。</p></li>
+<li><p>可以使用强制类型转换 <code class="docutils literal notranslate"><span class="pre">{x</span> <span class="pre">==</span> <span class="pre">y}</span></code> 表示真值判断表达式。</p></li>
+</ol>
 </div>
 </div>
 
