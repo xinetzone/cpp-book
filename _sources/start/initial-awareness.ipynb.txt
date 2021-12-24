@@ -11,6 +11,15 @@
     "对于 C++ 代码形成初步认知。\n",
     "```\n",
     "\n",
+    "```{hint}\n",
+    "{guilabel}`视频`\n",
+    "\n",
+    "- [C++ 的对象、类型、值和变量](https://www.bilibili.com/video/BV1tZ4y1X7Hh)\n",
+    "- [C++ 变量命名规则](https://www.bilibili.com/video/BV1uD4y1c7dz)\n",
+    "- [C++ 基本类型、简单运算符、类型安全与转换、表达式、赋值语句](https://www.bilibili.com/video/BV1t44y177e8)\n",
+    "```\n",
+    "\n",
+    "\n",
     "信息的最小单位是 {term}`位` （也可称作 比特），一个位仅仅存储 `0` 或者 `1` 两个数字。大多数计算机中的基本寻址单元为 {term}`字节`（1 byte = 8 bit），与一个字符占据的空间大小相当。C++ 对内存做了抽象，将一块内存抽象为一个 {term}`对象`。对象的 {term}`值` 便是其对应的内存空间存储的一组比特值，值所代表的含义和所占据的比特数由其 {term}`类型` 决定。对象需要一个 **名字** 以方便使用，称给定类型的命名对象为 {term}`变量`。{term}`声明` 负责为程序引入一个新的名字，并指定该命名实体的类型。\n",
     "\n",
     "C++ 提供了若干基本类型，例如：\n",
@@ -1350,13 +1359,13 @@
   "kernelspec": {
    "display_name": "C++11",
    "language": "C++11",
-   "name": "xcpp11"
+   "name": "python397jvsc74a57bd000edc830b0681031d502e33386e4eeda2812b45297ce8c940d13c1f09fed4785"
   },
   "language_info": {
    "codemirror_mode": "text/x-c++src",
    "file_extension": ".cpp",
    "mimetype": "text/x-c++src",
-   "name": "c++",
+   "name": "C++11",
    "version": "11"
   }
  },
