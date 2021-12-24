@@ -46,7 +46,8 @@ extensions = [
     "sphinxcontrib.mermaid",
     "sphinx_panels",
     "sphinx_inline_tabs",
-    'breathe'
+    "breathe",
+    # "sphinx.ext.graphviz"
     # "sphinx.ext.todo",
     # "sphinxcontrib.bibtex",
     # "sphinx_togglebutton",
