@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>计算 &#8212; cpp-book 0.1 documentation</title>
+    <title>语句 &#8212; cpp-book 0.1 documentation</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -208,7 +208,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     计算
+     语句
     </a>
    </li>
    <li class="toctree-l2">
@@ -406,7 +406,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/start/01_compute.ipynb.txt"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/start/01_statements.ipynb.txt"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -426,10 +426,10 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/cpp-book/issues/new?title=Issue%20on%20page%20%2Fstart/01_compute.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/cpp-book/issues/new?title=Issue%20on%20page%20%2Fstart/01_statements.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/xinetzone/cpp-book/edit/main/docs/start/01_compute.ipynb"><button
+        <a class="edit-button" href="https://github.com/xinetzone/cpp-book/edit/main/docs/start/01_statements.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -449,7 +449,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/cpp-book/main?urlpath=lab/tree/docs/start/01_compute.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/cpp-book/main?urlpath=lab/tree/docs/start/01_statements.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -457,7 +457,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
-        <a class="colab-button" href="https://colab.research.google.com//github/xinetzone/cpp-book/blob/main/docs/start/01_compute.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+        <a class="colab-button" href="https://colab.research.google.com//github/xinetzone/cpp-book/blob/main/docs/start/01_statements.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
                 title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
                     src="../_static/images/logo_colab.png"
                     alt="Interact on Colab">Colab</button></a>
@@ -474,6 +474,36 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   语句的错误使用
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ;
+      </span>
+     </code>
+     的作用
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     无效语句
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -482,13 +512,99 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>计算<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<h1>语句<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="admonition- admonition">
 <p class="admonition-title">需求</p>
-<ol class="simple">
-<li><p>如何做选择（条件语句）；</p></li>
-<li><p>如何进行重复计算（循环）。</p></li>
-</ol>
+<p>学习 C++ 如何组织大块代码单元。</p>
+</div>
+<p>上章已经介绍了两种语句：表达式语句和声明语句。表达式语句是以分号（<code class="docutils literal notranslate"><span class="pre">;</span></code>）结束的一个表达式。比如，</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
+<span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>均属于表达式语句。C++ 通过 <strong>语句</strong>  组织（大块）代码单元。</p>
+<div class="section" id="id2">
+<h2>语句的错误使用<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>语句使用不当会给编程工作带来很多问题。</p>
+<div class="section" id="id3">
+<h3><code class="docutils literal notranslate"><span class="pre">;</span></code> 的作用<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>分号的使用是从技术上考虑的，例如：</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// 语法错误，缺少分号</span>
+</pre></div>
+</div>
+<p>这是因为编译器不知道这条语句表达的是 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">b;</span> <span class="pre">++b;</span></code> 还是 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">b++;</span> <span class="pre">b;</span></code>，即存在二义性。</p>
+<div class="admonition- admonition">
+<p class="admonition-title">建议</p>
+<p>表达式语句和赋值语句的结束千万别忘记使用 <code class="docutils literal notranslate"><span class="pre">;</span></code>。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>无效语句<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>程序中的语句一般是要起作用的，那些不起作用的语句称为 <strong>无效语句</strong>。例如：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 加法操作，但程序中没有使用到它的结果</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>上面的两条语句中的第一条便是无效语句。这类
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mf">3.4</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">4.5</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>false
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.4</span><span class="p">;</span><span class="w"></span>
+<span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4.5</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>false
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">b2</span><span class="p">){}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

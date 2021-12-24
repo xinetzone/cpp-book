@@ -93,7 +93,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="计算" href="01_compute.html" />
+    <link rel="next" title="语句" href="01_statements.html" />
     <link rel="prev" title="快速上手 C++" href="index.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -207,8 +207,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="01_compute.html">
-     计算
+    <a class="reference internal" href="01_statements.html">
+     语句
     </a>
    </li>
    <li class="toctree-l2">
@@ -497,19 +497,21 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sizeof">
-   运算符
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     sizeof
-    </span>
-   </code>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id5">
    基本运算符
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sizeof">
+     运算符
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       sizeof
+      </span>
+     </code>
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id6">
@@ -661,8 +663,35 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><strong>关键字</strong> 是 C++ 用来表示语言结构的特殊标识符。比如，类型 <code class="docutils literal notranslate"><span class="pre">int</span></code> 便是关键字。</p>
 </div>
 </div>
+<div class="section" id="id5">
+<h2>基本运算符<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<p>运算符可以用于操作对象以实现某些功能。下面仅仅介绍一些基本运算符：</p>
+<dl class="simple myst">
+<dt>算术运算符</dt><dd><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="w">   </span><span class="c1">// 加法</span>
+<span class="o">+</span><span class="n">x</span><span class="w">   </span><span class="c1">// 一元加法</span>
+<span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="w">  </span><span class="c1">// 减法</span>
+<span class="o">-</span><span class="n">x</span><span class="w">   </span><span class="c1">// 一元减法</span>
+<span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="w">  </span><span class="c1">// 乘法</span>
+<span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="w">  </span><span class="c1">// 除法</span>
+<span class="n">x</span><span class="o">%</span><span class="n">y</span><span class="w">  </span><span class="c1">// 取模（x，y 不能是浮点数类型）</span>
+</pre></div>
+</div>
+</dd>
+<dt>比较运算符</dt><dd><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="w">   </span><span class="c1">// 相等</span>
+<span class="n">x</span><span class="o">!=</span><span class="n">y</span><span class="w">  </span><span class="c1">// 不相等</span>
+<span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="w">  </span><span class="c1">// 小于</span>
+<span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="w">  </span><span class="c1">// 大于</span>
+<span class="n">x</span><span class="o">&lt;=</span><span class="n">y</span><span class="w">  </span><span class="c1">// 小于等于</span>
+<span class="n">x</span><span class="o">&gt;=</span><span class="n">y</span><span class="w">  </span><span class="c1">// 大于等于</span>
+</pre></div>
+</div>
+</dd>
+<dt>赋值运算符</dt><dd><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p>
+<p>为一个变量赋予新的值。</p>
+</dd>
+</dl>
 <div class="section" id="sizeof">
-<h2>运算符 <code class="docutils literal notranslate"><span class="pre">sizeof</span></code><a class="headerlink" href="#sizeof" title="Permalink to this headline">¶</a></h2>
+<h3>运算符 <code class="docutils literal notranslate"><span class="pre">sizeof</span></code><a class="headerlink" href="#sizeof" title="Permalink to this headline">¶</a></h3>
 <p>可以使用运算符 <code class="docutils literal notranslate"><span class="pre">sizeof</span></code> 获取类型的对象大小。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -713,33 +742,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-<div class="section" id="id5">
-<h2>基本运算符<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>运算符可以用于操作类型。下面仅仅介绍一些基本运算符：</p>
-<dl class="simple myst">
-<dt>算术运算符</dt><dd><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="w">   </span><span class="c1">// 加法</span>
-<span class="o">+</span><span class="n">x</span><span class="w">   </span><span class="c1">// 一元加法</span>
-<span class="n">x</span><span class="o">-</span><span class="n">y</span><span class="w">  </span><span class="c1">// 减法</span>
-<span class="o">-</span><span class="n">x</span><span class="w">   </span><span class="c1">// 一元减法</span>
-<span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="w">  </span><span class="c1">// 乘法</span>
-<span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="w">  </span><span class="c1">// 除法</span>
-<span class="n">x</span><span class="o">%</span><span class="n">y</span><span class="w">  </span><span class="c1">// 取模（x，y 不能是浮点数类型）</span>
-</pre></div>
-</div>
-</dd>
-<dt>比较运算符</dt><dd><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">==</span><span class="n">y</span><span class="w">   </span><span class="c1">// 相等</span>
-<span class="n">x</span><span class="o">!=</span><span class="n">y</span><span class="w">  </span><span class="c1">// 不相等</span>
-<span class="n">x</span><span class="o">&lt;</span><span class="n">y</span><span class="w">  </span><span class="c1">// 小于</span>
-<span class="n">x</span><span class="o">&gt;</span><span class="n">y</span><span class="w">  </span><span class="c1">// 大于</span>
-<span class="n">x</span><span class="o">&lt;=</span><span class="n">y</span><span class="w">  </span><span class="c1">// 小于等于</span>
-<span class="n">x</span><span class="o">&gt;=</span><span class="n">y</span><span class="w">  </span><span class="c1">// 大于等于</span>
-</pre></div>
-</div>
-</dd>
-<dt>赋值运算符</dt><dd><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p>
-<p>为一个变量赋予新的值。</p>
-</dd>
-</dl>
 </div>
 <div class="section" id="id6">
 <h2>初始化<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
@@ -858,7 +860,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等价于 `a = a + 1;`</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等同于 `a = a + 1;`</span>
 <span class="n">a</span><span class="w"></span>
 </pre></div>
 </div>
@@ -869,11 +871,24 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// 等同于 `a = a - 1;`</span>
+<span class="n">a</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7
+</pre></div>
+</div>
+</div>
+</div>
 <p>一些二元赋值运算符，可以直接修改变量的当前值：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"></span>
-<span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a + 7`</span>
+<span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a + 7;`</span>
 <span class="n">a</span><span class="w"></span>
 </pre></div>
 </div>
@@ -886,7 +901,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a - 7`</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a - 7;`</span>
 <span class="n">a</span><span class="w"></span>
 </pre></div>
 </div>
@@ -899,7 +914,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a * 2`</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a * 2;`</span>
 <span class="n">a</span><span class="w"></span>
 </pre></div>
 </div>
@@ -912,7 +927,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a / 2`</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a / 2;`</span>
 <span class="n">a</span><span class="w"></span>
 </pre></div>
 </div>
@@ -925,7 +940,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a % 2`</span>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 表示 `a = a % 2;`</span>
 <span class="n">a</span><span class="w"></span>
 </pre></div>
 </div>
@@ -942,7 +957,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="id9">
 <h2>表达式<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
 <p>表达式是从一些 <a class="reference internal" href="../refs/glossary/other.html#term-0"><span class="xref std std-term">操作数</span></a> 计算一个值。最简单的表达式是字面常量，例如：<code class="docutils literal notranslate"><span class="pre">10</span></code>、<code class="docutils literal notranslate"><span class="pre">'a'</span></code>、<code class="docutils literal notranslate"><span class="pre">3.14</span></code>、<code class="docutils literal notranslate"><span class="pre">&quot;喜爱&quot;</span></code>。</p>
-<p>变量也是一种表达式，它表示与名字对应的那个对象。</p>
+<p>变量也是一种表达式，它表示与名字对应的那个对象。同样赋值语句也是表达式。</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>// 计算一些表达式
@@ -992,9 +1007,10 @@ int 面积 = 长度 * 宽度; // 乘法运算
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>input_line_7:4:3: error: invalid operands to binary expression (&#39;double&#39; and &#39;double&#39;)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_55:4:3: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">invalid operands to binary expression (&#39;double&#39; and &#39;double&#39;)</span>
 x % y
-~ ^ ~
+<span class=" -Color -Color-Bold -Color-Bold-Green">~ ^ ~</span>
+
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
@@ -1011,9 +1027,10 @@ x % y
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>input_line_8:4:3: error: invalid operands to binary expression (&#39;double&#39; and &#39;double&#39;)
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_56:4:3: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">invalid operands to binary expression (&#39;double&#39; and &#39;double&#39;)</span>
 x % y
-~ ^ ~
+<span class=" -Color -Color-Bold -Color-Bold-Green">~ ^ ~</span>
+
 </pre></div>
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
@@ -1031,6 +1048,38 @@ x % y
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>对于比较运算符 <code class="docutils literal notranslate"><span class="pre">==</span></code> 避免出现歧义，单独使用时，请使用 <code class="docutils literal notranslate"><span class="pre">()</span></code> 括起来。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这种写法有歧义</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_61:2:4: </span><span class=" -Color -Color-Bold -Color-Bold-Black">note: </span>use &#39;=&#39; to turn this equality comparison into an assignment
+ x == y; // 这种写法有歧义
+<span class=" -Color -Color-Bold -Color-Bold-Green">   ^~</span>
+<span class=" -Color -Color-Green">   =</span>
+
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>false
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">);</span><span class="w"> </span><span class="c1">// 这样才是正确的写法</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>false
 </pre></div>
 </div>
 </div>
@@ -1064,7 +1113,7 @@ x % y
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;!&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>45
 </pre></div>
 </div>
 </div>
@@ -1267,10 +1316,10 @@ x % y
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_23:2:10: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">type &#39;double&#39; cannot be narrowed to &#39;int&#39; in initializer list [-Wc++11-narrowing]</span>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_94:2:10: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">type &#39;double&#39; cannot be narrowed to &#39;int&#39; in initializer list [-Wc++11-narrowing]</span>
  int t3 {d / t};
 <span class=" -Color -Color-Bold -Color-Bold-Green">         ^~~~~</span>
-<span class=" -Color -Color-Bold">input_line_23:2:10: </span><span class=" -Color -Color-Bold -Color-Bold-Black">note: </span>insert an explicit cast to silence this issue
+<span class=" -Color -Color-Bold">input_line_94:2:10: </span><span class=" -Color -Color-Bold -Color-Bold-Black">note: </span>insert an explicit cast to silence this issue
  int t3 {d / t};
 <span class=" -Color -Color-Bold -Color-Bold-Green">         ^~~~~</span>
 <span class=" -Color -Color-Green">         static_cast&lt;int&gt;( )</span>
@@ -1294,16 +1343,16 @@ x % y
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "xcpp11"
         },
         kernelOptions: {
-            kernelName: "python397jvsc74a57bd000edc830b0681031d502e33386e4eeda2812b45297ce8c940d13c1f09fed4785",
+            kernelName: "xcpp11",
             path: "./start"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python397jvsc74a57bd000edc830b0681031d502e33386e4eeda2812b45297ce8c940d13c1f09fed4785'</script>
+    <script>kernelName = 'xcpp11'</script>
 <div class="section">
    
 </div>
@@ -1320,10 +1369,10 @@ x % y
             <p class="prev-next-title">快速上手 C++</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01_compute.html" title="next page">
+    <a class='right-next' id="next-link" href="01_statements.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">计算</p>
+        <p class="prev-next-title">语句</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
