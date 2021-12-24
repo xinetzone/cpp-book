@@ -203,24 +203,71 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../start/00_concepts.html">
-     基本概念
+    <a class="reference internal" href="../start/initial-awareness.html">
+     初步认知
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../start/01_statements.html">
-     语句
+    <a class="reference internal" href="../start/controlflow.html">
+     流程控制
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../start/02_literals.html">
-     字面值常量
+    <a class="reference internal" href="../start/statement-errors.html">
+     语句误用
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../start/03_use.html">
-     使用代码
+    <a class="reference internal" href="../start/function.html">
+     函数
     </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/iostream.html">
+     输入输出流
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../start/concepts/index.html">
+     基础概念
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../start/concepts/00_memory.html">
+       映射到硬件
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../start/concepts/01_basic-type.html">
+       类型
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../start/concepts/01_bool.html">
+       布尔值
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../start/concepts/03_use.html">
+       使用代码
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../start/concepts/expression.html">
+       表达式
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../start/concepts/literals.html">
+       字面值常量
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -248,8 +295,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../refs/index.html">
    参考
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -258,8 +305,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../refs/glossary/index.html">
      术语表
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -302,8 +349,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    关于
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -334,8 +381,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="index.html">
    回收站
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -503,15 +550,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>程序文件通常被称为 <strong>源文件</strong>（source code），常用的后缀有 <code class="docutils literal notranslate"><span class="pre">.cc</span></code>、<code class="docutils literal notranslate"><span class="pre">.cxx</span></code>、<code class="docutils literal notranslate"><span class="pre">.cpp</span></code>、<code class="docutils literal notranslate"><span class="pre">.cp</span></code> 以及 <code class="docutils literal notranslate"><span class="pre">.C</span></code>。</p>
 <p>访问 <code class="docutils literal notranslate"><span class="pre">main</span></code> 的返回值的方法依赖于系统：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="a3dbf8fa-6a00-4b35-bd23-76907c6381f4" name="aaa10aec-edcd-4b28-8e2b-06bd4e56ec24" type="radio">
-</input><label class="tabbed-label" for="a3dbf8fa-6a00-4b35-bd23-76907c6381f4">
+<input checked="checked" id="d775a4b7-db4d-4513-9250-b3436aa3a0be" name="6e31621c-29eb-4bfd-ad76-61ae079ef1f3" type="radio">
+</input><label class="tabbed-label" for="d775a4b7-db4d-4513-9250-b3436aa3a0be">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> %ERRORLEVEL%
 </pre></div>
 </div>
 </div>
-<input id="622ec28b-653f-43ba-8bf8-9afb8a27c9c5" name="aaa10aec-edcd-4b28-8e2b-06bd4e56ec24" type="radio">
-</input><label class="tabbed-label" for="622ec28b-653f-43ba-8bf8-9afb8a27c9c5">
+<input id="67b688b6-6e33-4c01-9d31-b4c24f7bff03" name="6e31621c-29eb-4bfd-ad76-61ae079ef1f3" type="radio">
+</input><label class="tabbed-label" for="67b688b6-6e33-4c01-9d31-b4c24f7bff03">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$?</span>
 </pre></div>

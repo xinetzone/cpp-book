@@ -15,7 +15,11 @@
 ```{toctree}
 :maxdepth: 2
 :hidden:
-:glob:
 
-*
+initial-awareness
+controlflow
+statement-errors
+function
+iostream
+concepts/index
 ```
