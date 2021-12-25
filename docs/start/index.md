@@ -19,7 +19,13 @@
 initial-awareness
 controlflow
 statement-errors
-function
+simple-function
+pointer
+literals
+constexpr
+class
+scope
+memory/index
 iostream
 concepts/index
 ```
