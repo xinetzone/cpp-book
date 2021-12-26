@@ -279,7 +279,7 @@ post_date_format_short = '%b %d, %Y'
 # 避免将 jupter 执行报错的信息输出到 cmd
 nb_merge_streams = True
 execution_allow_errors = True
-jupyter_execute_notebooks = 'auto' # "cache", "force"
+jupyter_execute_notebooks = "cache" # 'force', "cache", "auto"
 
 epub_show_urls = 'footnote'
 
