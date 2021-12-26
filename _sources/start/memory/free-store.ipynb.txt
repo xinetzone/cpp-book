@@ -1,0 +1,93 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "cc49c76f",
+   "metadata": {},
+   "source": [
+    "# 自由空间和引用\n",
+    "\n",
+    "```{admonition} 需求\n",
+    "简单理解 `new` 运算符、引用的概念。\n",
+    "```\n",
+    "\n",
+    "```{hint}\n",
+    "{guilabel}`视频`\n",
+    "\n",
+    "...\n",
+    "```\n",
+    "\n",
+    "## 自由空间\n",
+    "\n",
+    "当你编写一个 C++ 程序时，编译器为你的代码分配内存（也称为 **代码存储** （code storage）或 **文本存储** （text storage）），并为你定义的全局变量分配内存（称为 **静态存储** （static storage））。编译器还为你预留调用函数时所需的空间，函数需要用这些空间保存其参数和局部变量（称为 **栈存储** （stack storage）或 **自动存储** （automatic storage））。计算机中剩余的内存是“自由的”（“空闲的”），可以用于其他用途。内存分布：\n",
+    "\n",
+    "```{mermaid}\n",
+    "classDiagram\n",
+    "    class 内存布局\n",
+    "    内存布局 : +代码\n",
+    "    内存布局 : +静态数据\n",
+    "    内存布局 : +自由空间\n",
+    "    内存布局 : +栈\n",
+    "```\n",
+    "\n",
+    "C++ 语言使用 `new` 运算符将“自由空间” （free store，又称为 **堆** （heap））变为可用状态。"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "a8e6ab42",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "double* p = new double[4]; // 在自由空间中分配 4 个 double"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5b0f3626",
+   "metadata": {},
+   "source": [
+    "这段代码要求 C++ 运行时系统在自由空间中分配 4 个 `double`，并指向第一个 `double` 的指针返回给我们使用。\n",
+    "\n",
+    "运算符 `new` 返回一个指向它所创建的对象的指针。\n",
+    "\n",
+    "- 若它创建了多个对象，则返回指向第一个对象的指针。\n",
+    "- 若对象的类型是 `X`，则 `new` 返回的指针类型是 `X*`。\n",
+    "\n",
+    "例如：\n",
+    "\n",
+    "```c++\n",
+    "char* q = new double[4]; // 错误：将 double* 赋予 char*\n",
+    "```\n",
+    "\n",
+    "## 自由空间分配\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "de9072b6",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "C++11",
+   "language": "C++11",
+   "name": "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc"
+  },
+  "language_info": {
+   "codemirror_mode": "text/x-c++src",
+   "file_extension": ".cpp",
+   "mimetype": "text/x-c++src",
+   "name": "C++11",
+   "version": "11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}

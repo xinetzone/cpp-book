@@ -219,9 +219,61 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="function.html">
-     函数
+    <a class="reference internal" href="type.html">
+     类型
     </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="simple-function.html">
+     函数初尝试
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pointer.html">
+     内存 地址 指针
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="literals.html">
+     字面值常量
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="constexpr.html">
+     常量表达式
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class.html">
+     类
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     作用域
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="memory/index.html">
+     映射到硬件
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="memory/free-store.html">
+       自由空间和引用
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="memory/array.html">
+       数组
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="iostream.html">
@@ -232,22 +284,12 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="concepts/index.html">
      基础概念
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="concepts/00_memory.html">
-       映射到硬件
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="concepts/01_basic-type.html">
-       类型
-      </a>
-     </li>
      <li class="toctree-l3">
       <a class="reference internal" href="concepts/01_bool.html">
        布尔值
@@ -264,8 +306,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="concepts/literals.html">
-       字面值常量
+      <a class="reference internal" href="concepts/raw.html">
+       临时
       </a>
      </li>
     </ul>
@@ -296,8 +338,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../refs/index.html">
    参考
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -306,8 +348,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../refs/glossary/index.html">
      术语表
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -350,8 +392,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    About
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -382,8 +424,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../draft/index.html">
    回收站
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -396,11 +438,6 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2">
     <a class="reference internal" href="../draft/draft2.html">
      C++ 初识(raw)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../draft/first.html">
-     测试
     </a>
    </li>
    <li class="toctree-l2">
@@ -611,65 +648,6 @@ x + 10 &amp; x &gt;= 0
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>Failed to start the Kernel. 
-
-ERROR in cling::CIFactory::createCI(): cannot extract standard library include paths!
-
-Invoking:
-
-  LC_ALL=C x86_64-conda-linux-gnu-c++  -O3 -DNDEBUG -xc++ -E -v /dev/null 2&gt;&amp;1 | sed -n -e &#39;/^.include/,${&#39; -e &#39;/^ \/.*++/p&#39; -e &#39;}&#39;
-
-Results was:
-
-With exit code 0
-
-error: invalid value &#39;c++20&#39; in &#39;-std=c++20&#39;
-
-note: use &#39;c++98&#39; or &#39;c++03&#39; for &#39;ISO C++ 1998 with amendments&#39; standard
-
-note: use &#39;gnu++98&#39; or &#39;gnu++03&#39; for &#39;ISO C++ 1998 with amendments and GNU extensions&#39; standard
-
-note: use &#39;c++11&#39; for &#39;ISO C++ 2011 with amendments&#39; standard
-
-note: use &#39;gnu++11&#39; for &#39;ISO C++ 2011 with amendments and GNU extensions&#39; standard
-
-note: use &#39;c++14&#39; for &#39;ISO C++ 2014 with amendments&#39; standard
-
-note: use &#39;gnu++14&#39; for &#39;ISO C++ 2014 with amendments and GNU extensions&#39; standard
-
-note: use &#39;c++17&#39; for &#39;ISO C++ 2017 with amendments&#39; standard
-
-note: use &#39;gnu++17&#39; for &#39;ISO C++ 2017 with amendments and GNU extensions&#39; standard
-
-note: use &#39;c++2a&#39; for &#39;Working draft for ISO C++ 2020&#39; standard
-
-note: use &#39;gnu++2a&#39; for &#39;Working draft for ISO C++ 2020 with GNU extensions&#39; standard
-
-In file included from input_line_2:1:
-
-/home/xinet/anaconda3/envs/cling/include/cling/Interpreter/RuntimeUniverse.h:166:26: warning: default template arguments for a function template are a C++11 extension [-Wc++11-extensions]
-
-      template &lt;class T, class = T (*)() /*disable for arrays*/&gt;
-
-                         ^       ~~~~~~~
-
-input_line_2:4:62: error: expected function body after function declarator
-
-extern &quot;C&quot; int __cxa_atexit(void (*f)(void*), void*, void*)  noexcept;
-
-                                                             ^
-
-input_line_2:6:55: error: use of undeclared identifier &#39;__cxa_atexit&#39;
-
-extern &quot;C&quot; int atexit(void(*f)())  throw ()  { return __cxa_atexit((void(*)(void*))f, 0, __dso_handle); }
-
-                                                      ^. 
-
-View Jupyter &lt;a href=&#39;command:jupyter.viewOutput&#39;&gt;log&lt;/a&gt; for further details.
-</pre></div>
-</div>
-</div>
 </div>
 <p>给定 <code class="docutils literal notranslate"><span class="pre">x</span></code> 的值，求取 <code class="docutils literal notranslate"><span class="pre">y</span></code> 的值：</p>
 <div class="cell docutils container">
@@ -843,13 +821,13 @@ for (int x {0}; x &lt;= 10; ++x)
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python397jvsc74a57bd000edc830b0681031d502e33386e4eeda2812b45297ce8c940d13c1f09fed4785",
+            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
             path: "./start"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python397jvsc74a57bd000edc830b0681031d502e33386e4eeda2812b45297ce8c940d13c1f09fed4785'</script>
+    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
 <div class="section">
    
 </div>

@@ -1,0 +1,44 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# 类\n",
+    "\n",
+    "```{admonition} 需求\n",
+    "学习自定义类型的方法。\n",
+    "```\n",
+    "\n",
+    "```{hint}\n",
+    "{guilabel}`视频`\n",
+    "\n",
+    "...\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "C++11",
+   "language": "C++11",
+   "name": "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc"
+  },
+  "language_info": {
+   "codemirror_mode": "text/x-c++src",
+   "file_extension": ".cpp",
+   "mimetype": "text/x-c++src",
+   "name": "c++",
+   "version": "11"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

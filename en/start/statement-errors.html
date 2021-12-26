@@ -93,7 +93,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="函数" href="function.html" />
+    <link rel="next" title="类型" href="type.html" />
     <link rel="prev" title="流程控制" href="controlflow.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -217,9 +217,61 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="function.html">
-     函数
+    <a class="reference internal" href="type.html">
+     类型
     </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="simple-function.html">
+     函数初尝试
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="pointer.html">
+     内存 地址 指针
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="literals.html">
+     字面值常量
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="constexpr.html">
+     常量表达式
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="class.html">
+     类
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="scope.html">
+     作用域
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="memory/index.html">
+     映射到硬件
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="memory/free-store.html">
+       自由空间和引用
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="memory/array.html">
+       数组
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="iostream.html">
@@ -230,22 +282,12 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="concepts/index.html">
      基础概念
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
     <ul>
-     <li class="toctree-l3">
-      <a class="reference internal" href="concepts/00_memory.html">
-       映射到硬件
-      </a>
-     </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="concepts/01_basic-type.html">
-       类型
-      </a>
-     </li>
      <li class="toctree-l3">
       <a class="reference internal" href="concepts/01_bool.html">
        布尔值
@@ -262,8 +304,8 @@ commentsRunWhenDOMLoaded(addUtterances);
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="concepts/literals.html">
-       字面值常量
+      <a class="reference internal" href="concepts/raw.html">
+       临时
       </a>
      </li>
     </ul>
@@ -294,8 +336,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../refs/index.html">
    参考
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -304,8 +346,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../refs/glossary/index.html">
      术语表
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-    <label for="toctree-checkbox-5">
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -348,8 +390,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    About
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -380,8 +422,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../draft/index.html">
    回收站
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -394,11 +436,6 @@ commentsRunWhenDOMLoaded(addUtterances);
    <li class="toctree-l2">
     <a class="reference internal" href="../draft/draft2.html">
      C++ 初识(raw)
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../draft/first.html">
-     测试
     </a>
    </li>
    <li class="toctree-l2">
@@ -622,10 +659,10 @@ commentsRunWhenDOMLoaded(addUtterances);
             <p class="prev-next-title">流程控制</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="function.html" title="next page">
+    <a class='right-next' id="next-link" href="type.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">函数</p>
+        <p class="prev-next-title">类型</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
