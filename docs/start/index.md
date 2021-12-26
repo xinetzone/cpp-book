@@ -19,6 +19,7 @@
 initial-awareness
 controlflow
 statement-errors
+type
 simple-function
 pointer
 literals
