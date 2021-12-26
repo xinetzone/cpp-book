@@ -16,11 +16,12 @@
 :maxdepth: 2
 :hidden:
 
+use
 initial-awareness
 controlflow
 statement-errors
-type
 simple-function
+type
 pointer
 literals
 constexpr
