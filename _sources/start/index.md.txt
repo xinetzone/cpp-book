@@ -22,12 +22,11 @@ controlflow
 statement-errors
 simple-function
 type
-pointer
-literals
 constexpr
+memory/index
+literals
 class
 scope
-memory/index
 iostream
 concepts/index
 ```

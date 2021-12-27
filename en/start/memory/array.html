@@ -81,6 +81,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".cell"
@@ -93,8 +95,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="输入输出流" href="../iostream.html" />
-    <link rel="prev" title="自由空间和引用" href="free-store.html" /> 
+    <link rel="next" title="内存 地址 指针" href="pointer.html" />
+    <link rel="prev" title="映射到硬件" href="index.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -232,28 +234,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../pointer.html">
-     内存 地址 指针
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../literals.html">
-     字面值常量
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../constexpr.html">
      常量表达式
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../class.html">
-     类
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../scope.html">
-     作用域
     </a>
    </li>
    <li class="toctree-l2 current active has-children">
@@ -266,17 +248,37 @@ commentsRunWhenDOMLoaded(addUtterances);
      </i>
     </label>
     <ul class="current">
-     <li class="toctree-l3">
-      <a class="reference internal" href="free-store.html">
-       自由空间和引用
-      </a>
-     </li>
      <li class="toctree-l3 current active">
       <a class="current reference internal" href="#">
        数组
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="pointer.html">
+       内存 地址 指针
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="free-store.html">
+       自由空间和引用
+      </a>
+     </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../literals.html">
+     字面值常量
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../class.html">
+     类
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../scope.html">
+     作用域
+    </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../iostream.html">
@@ -558,6 +560,24 @@ commentsRunWhenDOMLoaded(addUtterances);
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> 导航
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   声明
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   初始化
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -576,11 +596,76 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p><span class="guilabel">视频</span></p>
 <p>…</p>
 </div>
+<p>计算机的内存是一个字节序列。可以将字节序列的字节从 0 开始进行编号。将这种“指明内存中位置的数字”称为 <strong>地址</strong>。可以将一个地址看作一种整型值。内存中的第一个字节的地址为 0，下一个字节的地址为 1，以此类推。字节（byte）的单位为 <code class="docutils literal notranslate"><span class="pre">B</span></code>，有如下单位：</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+1 B = 2^3 \text{bit}\\
+1 \text{word} = 2^2 B \\
+1 KB = 2^{10} B\\
+1 MB = 2^{10} KB = 2^{20} B\\
+1 GB = 2^{10} MB = 2^{30} B\\
+1 TB = 2^{10} GB = 2^{40} B\\
+1 PB = 2^{10} TB = 2^{50} B
+\end{cases}
+\end{split}\]</div>
 <dl class="simple myst">
 <dt><strong>数组</strong></dt><dd><p>用于表示内存中连续存储的同构对象序列（即数组的元素都具有相同的类型，且各元素之间不存在内存间隙）。数组的元素从 0 开始编号。在声明中用“方括号” <code class="docutils literal notranslate"><span class="pre">[]</span></code> 表示数组。</p>
 </dd>
 </dl>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">};</span><span class="w"></span>
+<div class="admonition- admonition">
+<p class="admonition-title">使用限制</p>
+<p>一个具名数组的元素数目必须在编译时就已知。</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>数组可看作是复合型的类型，即由算术类型复合而成。</p>
+</div>
+<div class="section" id="id2">
+<h2>声明<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>声明的方法同变量声明：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">[];</span><span class="w"> </span><span class="c1">// 声明一个要指定数组的元素个数</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_7:2:6: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">definition of variable with array type needs an explicit size or an initializer</span>
+ int k[]; // 声明一个要指定数组的元素个数
+<span class=" -Color -Color-Bold -Color-Bold-Green">     ^</span>
+
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">// 正确</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>初始化<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>初始化方法有：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">pp</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// 赋值初始化，此处没有知道元素个数，是因为由其值推断而得</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">p2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// 显式指定数组元素个数</span>
+<span class="c1">// { } 初始化方法</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">p3</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// 此处没有知道元素个数，是因为由其值推断而得</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">p4</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>数组的元组个数一定要是常量：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="p">{</span><span class="mi">100</span><span class="p">};</span><span class="w"></span>
 <span class="kt">int</span><span class="w"> </span><span class="n">gai</span><span class="p">[</span><span class="n">max</span><span class="p">];</span><span class="w"> </span><span class="c1">// 一个全局数组（包含 100 个 int）；“永远活跃”</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -590,9 +675,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="admonition- admonition">
-<p class="admonition-title">使用限制</p>
-<p>一个具名数组的元素数目必须在编译时就已知。</p>
 </div>
 </div>
 
@@ -605,16 +687,16 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "xcpp11"
         },
         kernelOptions: {
-            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
+            kernelName: "xcpp11",
             path: "./start/memory"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
+    <script>kernelName = 'xcpp11'</script>
 <div class="section">
    
 </div>
@@ -624,17 +706,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="free-store.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">自由空间和引用</p>
+            <p class="prev-next-title">映射到硬件</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../iostream.html" title="next page">
+    <a class='right-next' id="next-link" href="pointer.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">输入输出流</p>
+        <p class="prev-next-title">内存 地址 指针</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

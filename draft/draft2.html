@@ -233,28 +233,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../start/pointer.html">
-     内存 地址 指针
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../start/literals.html">
-     字面值常量
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../start/constexpr.html">
      常量表达式
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../start/class.html">
-     类
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../start/scope.html">
-     作用域
     </a>
    </li>
    <li class="toctree-l2 has-children">
@@ -268,16 +248,36 @@ commentsRunWhenDOMLoaded(addUtterances);
     </label>
     <ul>
      <li class="toctree-l3">
-      <a class="reference internal" href="../start/memory/free-store.html">
-       自由空间和引用
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="../start/memory/array.html">
        数组
       </a>
      </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../start/memory/pointer.html">
+       内存 地址 指针
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../start/memory/free-store.html">
+       自由空间和引用
+      </a>
+     </li>
     </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/literals.html">
+     字面值常量
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/class.html">
+     类
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/scope.html">
+     作用域
+    </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../start/iostream.html">
@@ -587,15 +587,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>程序文件通常被称为 <strong>源文件</strong>（source code），常用的后缀有 <code class="docutils literal notranslate"><span class="pre">.cc</span></code>、<code class="docutils literal notranslate"><span class="pre">.cxx</span></code>、<code class="docutils literal notranslate"><span class="pre">.cpp</span></code>、<code class="docutils literal notranslate"><span class="pre">.cp</span></code> 以及 <code class="docutils literal notranslate"><span class="pre">.C</span></code>。</p>
 <p>访问 <code class="docutils literal notranslate"><span class="pre">main</span></code> 的返回值的方法依赖于系统：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="4fbb417a-5350-477d-952b-89e23d0da9ce" name="a31fb926-11d8-40ad-8586-d0967e96121a" type="radio">
-</input><label class="tabbed-label" for="4fbb417a-5350-477d-952b-89e23d0da9ce">
+<input checked="checked" id="69f4be00-a0cd-44db-8f87-193ae2688a26" name="4b3d3652-0572-4204-872b-ac4b62518ca5" type="radio">
+</input><label class="tabbed-label" for="69f4be00-a0cd-44db-8f87-193ae2688a26">
 Windows</label><div class="tabbed-content docutils">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> %ERRORLEVEL%
 </pre></div>
 </div>
 </div>
-<input id="af764203-06ba-488b-b6a2-3e1fd4d2bfdd" name="a31fb926-11d8-40ad-8586-d0967e96121a" type="radio">
-</input><label class="tabbed-label" for="af764203-06ba-488b-b6a2-3e1fd4d2bfdd">
+<input id="f4c67014-8bbe-4f30-9cd3-499cf44c7985" name="4b3d3652-0572-4204-872b-ac4b62518ca5" type="radio">
+</input><label class="tabbed-label" for="f4c67014-8bbe-4f30-9cd3-499cf44c7985">
 Linux</label><div class="tabbed-content docutils">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="nv">$?</span>
 </pre></div>
