@@ -594,7 +594,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p><span class="guilabel">视频</span></p>
-<p>…</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.bilibili.com/video/BV1HZ4y1D7dh">简单了解 C++ 数组</a></p></li>
+</ul>
 </div>
 <p>计算机的内存是一个字节序列。可以将字节序列的字节从 0 开始进行编号。将这种“指明内存中位置的数字”称为 <strong>地址</strong>。可以将一个地址看作一种整型值。内存中的第一个字节的地址为 0，下一个字节的地址为 1，以此类推。字节（byte）的单位为 <code class="docutils literal notranslate"><span class="pre">B</span></code>，有如下单位：</p>
 <div class="math notranslate nohighlight">
@@ -626,7 +628,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>声明的方法同变量声明：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">[];</span><span class="w"> </span><span class="c1">// 声明一个要指定数组的元素个数</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int k[]; // 声明一个要指定数组的元素个数
 </pre></div>
 </div>
 </div>
@@ -644,7 +646,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="c1">// 正确</span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int k[2]; // 正确
 </pre></div>
 </div>
 </div>
@@ -655,11 +657,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>初始化方法有：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">pp</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// 赋值初始化，此处没有知道元素个数，是因为由其值推断而得</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">p2</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// 显式指定数组元素个数</span>
-<span class="c1">// { } 初始化方法</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">p3</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span><span class="w"> </span><span class="c1">// 此处没有知道元素个数，是因为由其值推断而得</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">p4</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int pp[] = {2, 3}; // 赋值初始化，此处没有知道元素个数，是因为由其值推断而得
+int p2[2] = {2, 3}; // 显式指定数组元素个数
+// { } 初始化方法
+int p3[] {2, 3}; // 此处没有知道元素个数，是因为由其值推断而得
+int p4[2] {};
 </pre></div>
 </div>
 </div>
@@ -687,16 +689,16 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "xcpp11"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "xcpp11",
+            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
             path: "./start/memory"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'xcpp11'</script>
+    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
 <div class="section">
    
 </div>
