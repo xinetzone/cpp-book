@@ -265,6 +265,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="separate-compliation.html">
+     分离式编译
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="literals.html">
      字面值常量
     </a>
@@ -644,12 +649,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="id2">
 <h2>函数定义<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p><strong>函数定义</strong> 的语法描述：</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span>类型 函数名(参数表) 函数体
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>类型 函数名(参数表) 函数体
 </pre></div>
 </div>
 <p>其中 <code class="docutils literal notranslate"><span class="pre">类型</span></code> 是函数的返回值的类型，<code class="docutils literal notranslate"><span class="pre">函数名</span></code> 是函数的标记，括号内是 <code class="docutils literal notranslate"><span class="pre">参数表</span></code>，<code class="docutils literal notranslate"><span class="pre">函数体</span></code> 是实现函数功能的语句。</p>
 <p><code class="docutils literal notranslate"><span class="pre">参数表</span></code> （parameter list）的每个元素称为一个 <strong>参数</strong> （parameter）或 <strong>形式参数</strong> （formal argument），<code class="docutils literal notranslate"><span class="pre">参数表</span></code> 可以为空。如果不需要函数返回任何结果，返回值类型可以设定为 <code class="docutils literal notranslate"><span class="pre">void</span></code>。比如：</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">xxx</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">xxx</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hi!&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
@@ -684,16 +689,16 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "python"
+            mode: "xcpp11"
         },
         kernelOptions: {
-            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
+            kernelName: "xcpp11",
             path: "./start"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
+    <script>kernelName = 'xcpp11'</script>
 <div class="section">
    
 </div>

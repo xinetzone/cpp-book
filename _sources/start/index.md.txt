@@ -24,6 +24,7 @@ simple-function
 type
 constexpr
 memory/index
+separate-compliation
 literals
 class
 scope
