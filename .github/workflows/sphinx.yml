@@ -45,7 +45,7 @@ jobs:
           pip install -r docs/requirements.txt
           sudo apt-get update
           sudo apt-get install doxygen
-          conda install -c conda-forge xeus-cling
+          conda env create -f environment.yml
 
       - name: 🔧 Build HTML
         run: |
