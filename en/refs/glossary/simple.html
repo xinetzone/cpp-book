@@ -79,7 +79,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -236,12 +236,39 @@ commentsRunWhenDOMLoaded(addUtterances);
      常量表达式
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/dive2function.html">
+     深入了解函数
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../start/class/index.html">
+     类
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../start/class/intro.html">
+       用户自定义类型
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../start/class/start.html">
+       演化一个类
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../../start/memory/index.html">
      映射到硬件
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -274,11 +301,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../../start/class.html">
-     类
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../../start/scope.html">
      作用域
     </a>
@@ -292,8 +314,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../../start/concepts/index.html">
      基础概念
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -341,8 +363,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../index.html">
    参考
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -351,8 +373,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="index.html">
      术语表
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -395,8 +417,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../../about/index.html">
    About
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -427,8 +449,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../../draft/index.html">
    回收站
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -500,7 +522,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -536,12 +558,128 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>常用术语</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+            </div>
+            
+              <div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>常用术语<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>C++ 是一种高级编程语言，设计了大量数据结构和指令。</p>
+<p>可以查看 <a class="reference internal" href="index.html"><span class="doc std std-doc">术语表</span></a> 了解更多概念。</p>
+<p>C++ 通过操作计算机内存实现各种各样的任务。先看看一些术语：</p>
+<dl class="glossary">
+<dt id="term-unit">unit<a class="headerlink" href="#term-unit" title="Permalink to this term">¶</a></dt><dt id="term-0">单元<a class="headerlink" href="#term-0" title="Permalink to this term">¶</a></dt><dd><p>一个完整东西的与众不同的（如命名）部分。就像我们把相关联的知识点组织成为不同的章节单元。</p>
+</dd>
+<dt id="term-bit">bit<a class="headerlink" href="#term-bit" title="Permalink to this term">¶</a></dt><dt id="term-1">位<a class="headerlink" href="#term-1" title="Permalink to this term">¶</a></dt><dd><p>计算机中基本信息单位。可能的取值为 0 或者 1。</p>
+</dd>
+<dt id="term-value">value<a class="headerlink" href="#term-value" title="Permalink to this term">¶</a></dt><dt id="term-2">值<a class="headerlink" href="#term-2" title="Permalink to this term">¶</a></dt><dd><p>一组二进制 <a class="reference internal" href="#term-1"><span class="xref std std-term">位</span></a>，具体的含义由其 <a class="reference internal" href="#term-3"><span class="xref std std-term">类型</span></a> 决定。</p>
+</dd>
+<dt id="term-type">type<a class="headerlink" href="#term-type" title="Permalink to this term">¶</a></dt><dt id="term-3">类型<a class="headerlink" href="#term-3" title="Permalink to this term">¶</a></dt><dd><p>定义了一组可能的值以及一组（对象上）的操作。</p>
+</dd>
+<dt id="term-object">object  <a class="headerlink" href="#term-object" title="Permalink to this term">¶</a></dt><dt id="term-4">对象<a class="headerlink" href="#term-4" title="Permalink to this term">¶</a></dt><dd><p>存放某种类型值的内存空间。</p>
+</dd>
+<dt id="term-address">address<a class="headerlink" href="#term-address" title="Permalink to this term">¶</a></dt><dt id="term-5">地址<a class="headerlink" href="#term-5" title="Permalink to this term">¶</a></dt><dd><p>一个值，用来在计算机内存中查找一个对象。</p>
+</dd>
+<dt id="term-byte">byte<a class="headerlink" href="#term-byte" title="Permalink to this term">¶</a></dt><dt id="term-6">字节<a class="headerlink" href="#term-6" title="Permalink to this term">¶</a></dt><dd><p>大多数计算机中的基本寻址单元。1 byte = 8 bit。</p>
+</dd>
+<dt id="term-word">word<a class="headerlink" href="#term-word" title="Permalink to this term">¶</a></dt><dt id="term-7">字<a class="headerlink" href="#term-7" title="Permalink to this term">¶</a></dt><dd><p>计算机的基本单元，通常用于保存一个整数的单元。1 word = 4 byte</p>
+</dd>
+<dt id="term-initialize">initialize<a class="headerlink" href="#term-initialize" title="Permalink to this term">¶</a></dt><dt id="term-8">初始化<a class="headerlink" href="#term-8" title="Permalink to this term">¶</a></dt><dd><p>为对象赋予最初的（初始）值。</p>
+</dd>
+<dt id="term-variable">variable<a class="headerlink" href="#term-variable" title="Permalink to this term">¶</a></dt><dt id="term-9">变量<a class="headerlink" href="#term-9" title="Permalink to this term">¶</a></dt><dd><p>给定类型的命名对象；除非没有初始化，否则包含一个值。</p>
+</dd>
+<dt id="term-declaration">declaration<a class="headerlink" href="#term-declaration" title="Permalink to this term">¶</a></dt><dt id="term-10">声明<a class="headerlink" href="#term-10" title="Permalink to this term">¶</a></dt><dd><p>声明是一条语句，负责为程序引入一个新的名字，并指定该命名实体的类型。</p>
+</dd>
+<dt id="term-definition">definition<a class="headerlink" href="#term-definition" title="Permalink to this term">¶</a></dt><dt id="term-11">定义<a class="headerlink" href="#term-11" title="Permalink to this term">¶</a></dt><dd><p>一个实体的声明，提供了所有必要信息，令程序可使用此实体。一种更简单的说法：分配了内存的声明。</p>
+</dd>
+<dt id="term-function">function<a class="headerlink" href="#term-function" title="Permalink to this term">¶</a></dt><dt id="term-12">函数<a class="headerlink" href="#term-12" title="Permalink to this term">¶</a></dt><dd><p>一个命名的代码单元或计算的逻辑单元。可以从程序中其他部分调用它。</p>
+</dd>
+<dt id="term-class">class<a class="headerlink" href="#term-class" title="Permalink to this term">¶</a></dt><dt id="term-13">类<a class="headerlink" href="#term-13" title="Permalink to this term">¶</a></dt><dd><p>用户自定义类型，可以包含数据成员、函数成员和成员类型。</p>
+</dd>
+<dt id="term-template">template<a class="headerlink" href="#term-template" title="Permalink to this term">¶</a></dt><dt id="term-14">模板<a class="headerlink" href="#term-14" title="Permalink to this term">¶</a></dt><dd><p>一个类或者一个函数，用一个或者多个类型或（编译时）值进行参数化；支持泛型编程的基本 C++ 语言结构。</p>
+</dd>
+<dt id="term-argument">argument<a class="headerlink" href="#term-argument" title="Permalink to this term">¶</a></dt><dt id="term-15">实参<a class="headerlink" href="#term-15" title="Permalink to this term">¶</a></dt><dd><p>传递给一个 <a class="reference internal" href="#term-12"><span class="xref std std-term">函数</span></a> 或 <a class="reference internal" href="#term-14"><span class="xref std std-term">模板</span></a> 的 <a class="reference internal" href="#term-2"><span class="xref std std-term">值</span></a>。在模板的情况下，一个实参往往是一个 <a class="reference internal" href="#term-3"><span class="xref std std-term">类型</span></a>。</p>
+</dd>
+<dt id="term-parameter">parameter<a class="headerlink" href="#term-parameter" title="Permalink to this term">¶</a></dt><dt id="term-16">形参<a class="headerlink" href="#term-16" title="Permalink to this term">¶</a></dt><dt id="term-17">参数<a class="headerlink" href="#term-17" title="Permalink to this term">¶</a></dt><dd><p>函数或模板显式输入的声明。当被调用时，函数可以通过参数的名字访问传递来的实参。</p>
+</dd>
+<dt id="term-data">data<a class="headerlink" href="#term-data" title="Permalink to this term">¶</a></dt><dt id="term-18">数据<a class="headerlink" href="#term-18" title="Permalink to this term">¶</a></dt><dd><p>计算中用到的值。</p>
+</dd>
+<dt id="term-interface">interface<a class="headerlink" href="#term-interface" title="Permalink to this term">¶</a></dt><dt id="term-19">接口<a class="headerlink" href="#term-19" title="Permalink to this term">¶</a></dt><dd><p>一个声明或一组声明，指明了一段代码（如一个函数或类）如何被调用。</p>
+</dd>
+<dt id="term-iteration">iteration<a class="headerlink" href="#term-iteration" title="Permalink to this term">¶</a></dt><dt id="term-20">迭代<a class="headerlink" href="#term-20" title="Permalink to this term">¶</a></dt><dd><p>重复执行一段代码的动作。</p>
+</dd>
+<dt id="term-library">library<a class="headerlink" href="#term-library" title="Permalink to this term">¶</a></dt><dt id="term-21">库<a class="headerlink" href="#term-21" title="Permalink to this term">¶</a></dt><dd><p>一组类型、函数、类等等，实现了一组特性（抽象），这些特性会被很多程序用作其一部分。</p>
+</dd>
+<dt id="term-file">file<a class="headerlink" href="#term-file" title="Permalink to this term">¶</a></dt><dt id="term-22">文件<a class="headerlink" href="#term-22" title="Permalink to this term">¶</a></dt><dd><p>计算机中永久保存信息的容器。</p>
+</dd>
+<dt id="term-source-code">source code<a class="headerlink" href="#term-source-code" title="Permalink to this term">¶</a></dt><dt id="term-23">源代码<a class="headerlink" href="#term-23" title="Permalink to this term">¶</a></dt><dd><p>程序员生成的代码，（原则上）对其他程序员可读。</p>
+</dd>
+<dt id="term-object-code">object code<a class="headerlink" href="#term-object-code" title="Permalink to this term">¶</a></dt><dt id="term-24">对象代码<a class="headerlink" href="#term-24" title="Permalink to this term">¶</a></dt><dd><p>编译器的输出，链接器的输入。也称为目标代码。</p>
+</dd>
+<dt id="term-source-file">source file<a class="headerlink" href="#term-source-file" title="Permalink to this term">¶</a></dt><dt id="term-25">源文件<a class="headerlink" href="#term-25" title="Permalink to this term">¶</a></dt><dd><p>源代码文件。</p>
+<p>C++ 源文件常使用后缀 <code class="docutils literal notranslate"><span class="pre">.cc</span></code>、<code class="docutils literal notranslate"><span class="pre">.cxx</span></code>、<code class="docutils literal notranslate"><span class="pre">.cpp</span></code>；C 源文件使用 <code class="docutils literal notranslate"><span class="pre">.c</span></code> 表示。</p>
+</dd>
+<dt id="term-object-file">object file<a class="headerlink" href="#term-object-file" title="Permalink to this term">¶</a></dt><dt id="term-26">对象文件<a class="headerlink" href="#term-26" title="Permalink to this term">¶</a></dt><dd><p>包含对象代码的文件。也称为目标文件。</p>
+</dd>
+<dt id="term-header">header<a class="headerlink" href="#term-header" title="Permalink to this term">¶</a></dt><dt id="term-27">头文件<a class="headerlink" href="#term-27" title="Permalink to this term">¶</a></dt><dd><p>一个包含声明的文件，其中的声明用于程序中不同部分共享接口。</p>
+<p>文件的后缀可以是 <code class="docutils literal notranslate"><span class="pre">.h</span></code>、<code class="docutils literal notranslate"><span class="pre">.hpp</span></code>。</p>
+</dd>
+<dt id="term-linker">linker<a class="headerlink" href="#term-linker" title="Permalink to this term">¶</a></dt><dt id="term-28">链接器<a class="headerlink" href="#term-28" title="Permalink to this term">¶</a></dt><dd><p>将对象代码与库组合称为一个可执行文件的程序。</p>
+</dd>
+<dt id="term-compiler">compiler<a class="headerlink" href="#term-compiler" title="Permalink to this term">¶</a></dt><dt id="term-29">编译器<a class="headerlink" href="#term-29" title="Permalink to this term">¶</a></dt><dd><p>将源代码转换为二进制代码文件的程序。</p>
+</dd>
+<dt id="term-operation">operation<a class="headerlink" href="#term-operation" title="Permalink to this term">¶</a></dt><dt id="term-30">操作<a class="headerlink" href="#term-30" title="Permalink to this term">¶</a></dt><dd><p>用于执行某个动作，例如函数和运算符。</p>
+</dd>
+<dt id="term-copy">copy<a class="headerlink" href="#term-copy" title="Permalink to this term">¶</a></dt><dt id="term-31">拷贝<a class="headerlink" href="#term-31" title="Permalink to this term">¶</a></dt><dd><p>令两个对象具有相同值的操作。</p>
+</dd>
+<dt id="term-move">move<a class="headerlink" href="#term-move" title="Permalink to this term">¶</a></dt><dt id="term-32">移动<a class="headerlink" href="#term-32" title="Permalink to this term">¶</a></dt><dd><p>将一个值从一个对象转移到另一个对象的操作，原对象将获得表示“空”的值。</p>
+</dd>
+<dt id="term-33">循环<a class="headerlink" href="#term-33" title="Permalink to this term">¶</a></dt><dd><p>反复执行的一段代码；有 for 语句 与 while 语句。</p>
+</dd>
+</dl>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/cpp-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./refs/glossary"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -669,15 +807,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By xinetzone<br/>
-        
-            &copy; Copyright 2021, xinetzone.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By xinetzone<br/>
+    
+        &copy; Copyright 2021, xinetzone.<br/>
+  </p>
+</footer>
 </main>
 
 

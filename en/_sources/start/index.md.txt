@@ -23,10 +23,11 @@ statement-errors
 simple-function
 type
 constexpr
+dive2function
+class/index
 memory/index
 separate-compliation
 literals
-class
 scope
 iostream
 concepts/index

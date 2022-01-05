@@ -79,7 +79,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -236,12 +236,39 @@ commentsRunWhenDOMLoaded(addUtterances);
      常量表达式
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../dive2function.html">
+     深入了解函数
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../class/index.html">
+     类
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../class/intro.html">
+       用户自定义类型
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../class/start.html">
+       演化一个类
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2 current active has-children">
     <a class="reference internal" href="index.html">
      映射到硬件
     </a>
-    <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -274,11 +301,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../class.html">
-     类
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../scope.html">
      作用域
     </a>
@@ -292,8 +314,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../concepts/index.html">
      基础概念
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -341,8 +363,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../../refs/index.html">
    参考
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -351,8 +373,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../../refs/glossary/index.html">
      术语表
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -395,8 +417,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../../about/index.html">
    About
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -427,8 +449,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../../draft/index.html">
    回收站
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -500,7 +522,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -561,12 +583,168 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>地址与指针</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+            </div>
+            
+              <div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>地址与指针<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition- admonition">
+<p class="admonition-title">需求</p>
+<p>简单理解地址与指针的概念。</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><span class="guilabel">视频</span></p>
+<p>…</p>
+</div>
+<p>在内存中保存的任何东西都有一个 <strong>地址</strong>。例如：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span><span class="w"></span>
+</pre></div>
+</div>
+<p>这段代码为变量 <code class="docutils literal notranslate"><span class="pre">var</span></code> 分配一段 “int 大小” 的内存，并将值 <code class="docutils literal notranslate"><span class="pre">17</span></code> 保存到这段内存中。</p>
+<p>可以保存和操作地址。保存地址的对象（即一块内存或者说是一个内存字节序列）被称为 <strong>指针</strong>。例如，用于保存 <code class="docutils literal notranslate"><span class="pre">int</span></code> 的地址的类型称为“指向 <code class="docutils literal notranslate"><span class="pre">int</span></code> 的指针”或“<code class="docutils literal notranslate"><span class="pre">int</span></code> 指针”，其表示方法为 <code class="docutils literal notranslate"><span class="pre">int*</span></code>：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">var</span><span class="w"> </span><span class="c1">// ptr 保存 var 的地址</span>
+</pre></div>
+</div>
+<p>地址运算符 <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> 用于获得一个对象的地址。</p>
+<p>每种类型都有对应的指针类型。例如：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int x = 17;
+
+int* pi = &amp;x; // int 指针
+pi
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@0x7fff19cd14f8
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>double e = 2.14143;
+
+double* pd = &amp;e; // double 指针
+pd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>@0x7fff19cd14f8
+</pre></div>
+</div>
+</div>
+</div>
+<p>查看指向的对象的值，可以使用 “内容”运算符 <code class="docutils literal notranslate"><span class="pre">*</span></code> （这是一元运算符）。</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>*pi
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>17
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>*pd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.1414300
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>内容运算符</strong> （常称为 <strong>解引用</strong> 运算符）也可以被用于赋值操作的左侧：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>*pi = 27; // 正确：可以将 27 赋予 pi 指向的 int
+*pd = 3.14; // 正确：可以将 3.14 赋予 pd 指向的 double
+*pd = *pi; // 正确：可以将一个 int (*pi) 赋予一个 double (*pd)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>27.000000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<ul class="simple">
+<li><p>指针类型提供一些适用于地址的操作；</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">int</span></code> 提供适用于整数的（算术和逻辑）操作。</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>不要混用指针和整数！</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误：不能将一个 int* 赋予一个 int</span>
+<span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误：不能将一个 int 赋予一个 int*</span>
+</pre></div>
+</div>
+</div>
+<p>同样，不同类型的指针也不能混用：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pi</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误：不能将一个 int* 赋予一个 chat*</span>
+
+<span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">pc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">;</span><span class="w"></span>
+<span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pc</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误：不能将一个 char* 赋予一个 int*</span>
+</pre></div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/cpp-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
+            path: "./start/memory"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -734,15 +912,13 @@ pd
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By xinetzone<br/>
-        
-            &copy; Copyright 2021, xinetzone.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By xinetzone<br/>
+    
+        &copy; Copyright 2021, xinetzone.<br/>
+  </p>
+</footer>
 </main>
 
 

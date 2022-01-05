@@ -79,7 +79,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -235,12 +235,39 @@ commentsRunWhenDOMLoaded(addUtterances);
      常量表达式
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="start/dive2function.html">
+     深入了解函数
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="start/class/index.html">
+     类
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="start/class/intro.html">
+       用户自定义类型
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="start/class/start.html">
+       演化一个类
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="start/memory/index.html">
      映射到硬件
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -273,11 +300,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="start/class.html">
-     类
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="start/scope.html">
      作用域
     </a>
@@ -291,8 +313,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="start/concepts/index.html">
      基础概念
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -340,8 +362,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="refs/index.html">
    参考
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -350,8 +372,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="refs/glossary/index.html">
      术语表
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -394,8 +416,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="about/index.html">
    About
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -426,8 +448,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="draft/index.html">
    回收站
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -499,7 +521,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -535,7 +557,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> 导航
@@ -558,7 +580,88 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>动手学习 C++</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> 导航 </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   动手学习 C++
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   索引与表格
+  </a>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="c">
+<h1>动手学习 C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://github.com/xinetzone/cpp-book/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/xinetzone/cpp-book" /></a> <a class="reference external" href="https://github.com/xinetzone/cpp-book/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/xinetzone/cpp-book" /></a> <a class="reference external" href="https://github.com/xinetzone/cpp-book/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/xinetzone/cpp-book" /></a> <a class="reference external" href="https://github.com/xinetzone/cpp-book/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/xinetzone/cpp-book" /></a> <img alt="repo size" src="https://img.shields.io/github/repo-size/xinetzone/cpp-book.svg" /> <a class="reference external" href="https://github.com/xinetzone/cpp-book/graphs/contributors"><img alt="contributors" src="https://img.shields.io/github/contributors/xinetzone/cpp-book.svg" /></a> <a class="reference external" href="https://github.com/xinetzone/cpp-book/watchers"><img alt="watcher" src="https://img.shields.io/github/watchers/xinetzone/cpp-book.svg" /></a></p>
+<p>项目启动的详细步骤见如下网站和视频：</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://xinetzone.github.io/sphinx-demo/start/cpp.html">C++ 环境搭建</a>。</p></li>
+<li><p><a class="reference external" href="https://www.bilibili.com/video/BV1gu411S7ZK">浅谈如何开始学习 C++</a>：关于学习 C++ 大部书的一些浅见。</p></li>
+<li><p><a class="reference external" href="https://www.bilibili.com/video/BV1HF411B7tw">零基础动手学习 C++ 课程启动方法_哔哩哔哩_bilibili</a>：适合零编程基础的涉众，仅仅关注教程本身以及如何动手实操 C++ 代码即可。</p></li>
+<li><p><a class="reference external" href="https://www.bilibili.com/video/BV1A44y177nk">启动 C++ 学习项目（参与版）</a>：适合想要共同开发这个项目的涉众。</p></li>
+</ul>
+<p>跟着 C++ 之父 <a class="reference external" href="https://www.stroustrup.com/index.html">Bjarne Stroustrup 学习 C++</a>。</p>
+<p>可以将本项目视为 C++ 读书笔记。</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>索引与表格<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/cpp-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -626,15 +729,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By xinetzone<br/>
-        
-            &copy; Copyright 2021, xinetzone.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By xinetzone<br/>
+    
+        &copy; Copyright 2021, xinetzone.<br/>
+  </p>
+</footer>
 </main>
 
 

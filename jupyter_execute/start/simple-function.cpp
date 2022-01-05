@@ -8,4 +8,4 @@ square(20)
 
 int square(int x); // 声明函数
 
-
+int main {}

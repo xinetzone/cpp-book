@@ -79,7 +79,7 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
@@ -236,12 +236,39 @@ commentsRunWhenDOMLoaded(addUtterances);
      常量表达式
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dive2function.html">
+     深入了解函数
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="class/index.html">
+     类
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class/intro.html">
+       用户自定义类型
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="class/start.html">
+       演化一个类
+      </a>
+     </li>
+    </ul>
+   </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="memory/index.html">
      映射到硬件
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-    <label for="toctree-checkbox-3">
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -274,11 +301,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="class.html">
-     类
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="scope.html">
      作用域
     </a>
@@ -292,8 +314,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="concepts/index.html">
      基础概念
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-    <label for="toctree-checkbox-4">
+    <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+    <label for="toctree-checkbox-5">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -341,8 +363,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../refs/index.html">
    参考
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -351,8 +373,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal" href="../refs/glossary/index.html">
      术语表
     </a>
-    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-    <label for="toctree-checkbox-6">
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
      <i class="fas fa-chevron-down">
      </i>
     </label>
@@ -395,8 +417,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../about/index.html">
    About
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
-  <label for="toctree-checkbox-7">
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -427,8 +449,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <a class="reference internal" href="../draft/index.html">
    回收站
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
-  <label for="toctree-checkbox-8">
+  <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+  <label for="toctree-checkbox-9">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -500,7 +522,7 @@ commentsRunWhenDOMLoaded(addUtterances);
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -561,7 +583,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> 导航
@@ -578,13 +600,193 @@ commentsRunWhenDOMLoaded(addUtterances);
    函数声明
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     main
+    </span>
+   </code>
+   函数
+  </a>
+ </li>
 </ul>
 
             </nav>
         </div>
     </div>
 </div>
-    <div id="main-content" class="row">
+    <!-- Table of contents that is only displayed when printing the page -->
+    <div id="jb-print-docs-body" class="onlyprint">
+        <h1>函数初尝试</h1>
+        <!-- Table of contents -->
+        <div id="print-main-content" class="row">
+            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
+            <div id="jb-print-toc">
+                
+                <div>
+                    <h2> 导航 </h2>
+                </div>
+                <nav aria-label="Page">
+                    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   函数定义
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   函数声明
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#main">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     main
+    </span>
+   </code>
+   函数
+  </a>
+ </li>
+</ul>
+
+                </nav>
+            </div>
+            
+              <div>
+                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>函数初尝试<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="admonition- admonition">
+<p class="admonition-title">需求</p>
+<p>学习函数的定义和调用的初尝试。</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p><span class="guilabel">视频</span></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.bilibili.com/video/BV1RS4y1M7UG/">C++ 函数与类型</a></p></li>
+</ul>
+</div>
+<p>回顾 <a class="reference internal" href="controlflow.html"><span class="doc std std-doc">流程控制</span></a> 中使用的代码块会发现：有一些代码块被反复使用，每次编写同样的代码片段，完全在做低效的工作。</p>
+<p><strong>函数</strong> （function）是一个具名的语句序列，能够返回计算结果（称为 <strong>返回值</strong>）。</p>
+<p>通俗地说，把那些重复使用的代码块起一个名字（即函数名），后面直接使用该名字来执行其所代表的代码块。可以看出：函数的语义与变量很相似。</p>
+<p>使用函数的好处，出来开头说的那些外，还有：</p>
+<ul class="simple">
+<li><p>实现计算逻辑的分离；</p></li>
+<li><p>通过函数名可以表达更清晰的逻辑；</p></li>
+<li><p>利用函数，高效利用和组织代码；</p></li>
+<li><p>减少调试的工作量。</p></li>
+</ul>
+<p>看看如何编写求平方的运算：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回 x 的平方</span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">square</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>400
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>函数定义<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p><strong>函数定义</strong> 的语法描述：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">类型</span><span class="w"> </span><span class="n">函数名</span><span class="p">(</span><span class="n">参数表</span><span class="p">)</span><span class="w"> </span><span class="n">函数体</span><span class="w"></span>
+</pre></div>
+</div>
+<p>其中 <code class="docutils literal notranslate"><span class="pre">类型</span></code> 是函数的返回值的类型，<code class="docutils literal notranslate"><span class="pre">函数名</span></code> 是函数的标记，括号内是 <code class="docutils literal notranslate"><span class="pre">参数表</span></code>，<code class="docutils literal notranslate"><span class="pre">函数体</span></code> 是实现函数功能的语句。</p>
+<p><code class="docutils literal notranslate"><span class="pre">参数表</span></code> （parameter list）的每个元素称为一个 <strong>参数</strong> （parameter）或 <strong>形式参数</strong> （formal argument），<code class="docutils literal notranslate"><span class="pre">参数表</span></code> 可以为空。如果不需要函数返回任何结果，返回值类型可以设定为 <code class="docutils literal notranslate"><span class="pre">void</span></code>。比如：</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">xxx</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hi!&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>这个函数的细节先不用关心，后面再介绍。</p>
+</div>
+<div class="section" id="id3">
+<h2>函数声明<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>如何不关注函数的细节，仅仅使用函数的话，C++ 提供了一种与函数定义分离的方法来显示函数的信息，称为 <strong>函数声明</strong> （function declaration）。</p>
+<p>比如：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// 声明函数</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这里的 <code class="docutils literal notranslate"><span class="pre">;</span></code> 表示函数体，相当于一个空的函数体。</p>
+</div>
+<p>关于函数声明的细节，后面再展开。</p>
+</div>
+<div class="section" id="main">
+<h2><code class="docutils literal notranslate"><span class="pre">main</span></code> 函数<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h2>
+<p>每个 C++ 程序必须有一个名为 <code class="docutils literal notranslate"><span class="pre">main</span></code> 的全局函数，它是程序执行的起点。若返回 <code class="docutils literal notranslate"><span class="pre">int</span></code> 类型，则它是程序返回给“系统”的值。如果不返回任何内容，则系统会收到一个表示程序成功完成的值；若返回非零值，则表示程序执行失败。</p>
+<p>下面的代码便是最小单元的程序：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/cpp-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
+            path: "./start"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
+<div class="section">
+   
+</div>
+
+              </div>
+              
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="row noprint">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
         
               <div>
@@ -614,16 +816,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>看看如何编写求平方的运算：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int square(int x) {
-    return x * x; // 返回 x 的平方
-}
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回 x 的平方</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>square(2)
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">square</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -635,7 +837,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>square(20)
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">square</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -648,7 +850,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="section" id="id2">
 <h2>函数定义<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p><strong>函数定义</strong> 的语法描述：</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span>类型 函数名(参数表) 函数体
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">类型</span><span class="w"> </span><span class="n">函数名</span><span class="p">(</span><span class="n">参数表</span><span class="p">)</span><span class="w"> </span><span class="n">函数体</span><span class="w"></span>
 </pre></div>
 </div>
 <p>其中 <code class="docutils literal notranslate"><span class="pre">类型</span></code> 是函数的返回值的类型，<code class="docutils literal notranslate"><span class="pre">函数名</span></code> 是函数的标记，括号内是 <code class="docutils literal notranslate"><span class="pre">参数表</span></code>，<code class="docutils literal notranslate"><span class="pre">函数体</span></code> 是实现函数功能的语句。</p>
@@ -666,7 +868,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>比如：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>int square(int x); // 声明函数
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">square</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="c1">// 声明函数</span>
 </pre></div>
 </div>
 </div>
@@ -676,6 +878,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>这里的 <code class="docutils literal notranslate"><span class="pre">;</span></code> 表示函数体，相当于一个空的函数体。</p>
 </div>
 <p>关于函数声明的细节，后面再展开。</p>
+</div>
+<div class="section" id="main">
+<h2><code class="docutils literal notranslate"><span class="pre">main</span></code> 函数<a class="headerlink" href="#main" title="Permalink to this headline">¶</a></h2>
+<p>每个 C++ 程序必须有一个名为 <code class="docutils literal notranslate"><span class="pre">main</span></code> 的全局函数，它是程序执行的起点。若返回 <code class="docutils literal notranslate"><span class="pre">int</span></code> 类型，则它是程序返回给“系统”的值。如果不返回任何内容，则系统会收到一个表示程序成功完成的值；若返回非零值，则表示程序执行失败。</p>
+<p>下面的代码便是最小单元的程序：</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 
@@ -688,16 +902,16 @@ commentsRunWhenDOMLoaded(addUtterances);
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "xcpp11"
+            mode: "python"
         },
         kernelOptions: {
-            kernelName: "xcpp11",
+            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
             path: "./start"
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'xcpp11'</script>
+    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
 <div class="section">
    
 </div>
@@ -726,15 +940,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By xinetzone<br/>
-        
-            &copy; Copyright 2021, xinetzone.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By xinetzone<br/>
+    
+        &copy; Copyright 2021, xinetzone.<br/>
+  </p>
+</footer>
 </main>
 
 
