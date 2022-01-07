@@ -26,7 +26,6 @@ constexpr
 dive2function
 class/index
 memory/index
-separate-compliation
 literals
 scope
 iostream
