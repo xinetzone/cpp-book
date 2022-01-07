@@ -291,11 +291,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="separate-compliation.html">
-     分离式编译
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="literals.html">
      字面值常量
     </a>
@@ -598,19 +593,20 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>语句误用</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> 导航 </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>语句误用</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 导航 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    语句的错误使用
@@ -640,7 +636,9 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -725,96 +723,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>语句误用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="admonition- admonition">
-<p class="admonition-title">需求</p>
-<p>了解一些错误使用语句的细节。</p>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p><span class="guilabel">视频</span></p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.bilibili.com/video/BV1CL4y1n7jc">C++ 语句误用</a></p></li>
-</ul>
-</div>
-<p>上章已经介绍了两种语句：表达式语句和声明语句。表达式语句是以分号（<code class="docutils literal notranslate"><span class="pre">;</span></code>）结束的一个表达式。比如，</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w"></span>
-<span class="n">a</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-</div>
-<p>均属于表达式语句。C++ 通过 <strong>语句</strong>  组织（大块）代码单元。</p>
-<div class="section" id="id2">
-<h2>语句的错误使用<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>语句使用不当会给编程工作带来很多问题。</p>
-<div class="section" id="id3">
-<h3><code class="docutils literal notranslate"><span class="pre">;</span></code> 的作用<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>分号的使用是从技术上考虑的，例如：</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">++</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// 语法错误，缺少分号</span>
-</pre></div>
-</div>
-<p>这是因为编译器不知道这条语句表达的是 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">b;</span> <span class="pre">++b;</span></code> 还是 <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">b++;</span> <span class="pre">b;</span></code>，即存在二义性。</p>
-<div class="admonition- admonition">
-<p class="admonition-title">建议</p>
-<p>表达式语句和赋值语句的结束千万别忘记使用 <code class="docutils literal notranslate"><span class="pre">;</span></code>。</p>
-</div>
-</div>
-<div class="section" id="id4">
-<h3>无效语句<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
-<p>程序中的语句一般是要起作用的，那些不起作用的语句称为 <strong>无效语句</strong>。例如：</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// 加法操作，但程序中没有使用到它的结果</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-</div>
-<p>上面的两条语句中的第一条便是无效语句。</p>
-</div>
-</div>
-<div class="section" id="id5">
-<h2>空语句<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
-<p>考虑如下代码：</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"></span>
-<span class="p">{</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>编译器无法识别此语义错误，这种语句被称为 <strong>空语句</strong>。</p>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "xinetzone/cpp-book",
-            ref: "main",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./start"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-<div class="section">
-   
-</div>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="controlflow.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -831,7 +741,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

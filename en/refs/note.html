@@ -291,11 +291,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../start/separate-compliation.html">
-     分离式编译
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../start/literals.html">
      字面值常量
     </a>
@@ -563,14 +558,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>笔记</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>笔记</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -625,66 +623,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>笔记<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p>任何常用编程语言都具备一组公共的语法特征，不同语言仅在特征的细节处理上有所差异。</p>
-<p><strong>最基本的特征</strong> 包括：</p>
-<ul class="simple">
-<li><p><strong>内置类型</strong>：一些基本数据类型</p></li>
-<li><p><strong>变量</strong>：用于为对象命名</p></li>
-<li><p><strong>表达式与语句</strong>：用于操作数据类型的具体值</p></li>
-<li><p><strong>控制结构</strong>：允许有选择地执行一些语句或者重复执行一些语句</p></li>
-<li><p><strong>函数</strong>：用于定义可供随时调用的计算单元</p></li>
-</ul>
-<p>大多数编程语言借由以下两种方式扩展基本特征：</p>
-<ul class="simple">
-<li><p>赋予程序员 <strong>自定义数据类型</strong> 的权利</p></li>
-<li><p>将一些有用的功能封装成 <strong>库函数</strong></p></li>
-</ul>
-</div>
-<p>检查数据类型的阶段：</p>
-<ul class="simple">
-<li><p>Python（动态数据类型语言） 在运行时的</p></li>
-<li><p>而 C++（静态数据类型语言） 则是在编译时</p></li>
-</ul>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "xinetzone/cpp-book",
-            ref: "main",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./refs"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-<div class="section">
-   
-</div>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="draft.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -701,7 +641,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

@@ -93,7 +93,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="分离式编译" href="../separate-compliation.html" />
+    <link rel="next" title="字面值常量" href="../literals.html" />
     <link rel="prev" title="地址与指针" href="pointer.html" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -289,11 +289,6 @@ commentsRunWhenDOMLoaded(addUtterances);
       </a>
      </li>
     </ul>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../separate-compliation.html">
-     分离式编译
-    </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../literals.html">
@@ -606,19 +601,20 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>自由空间和引用</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> 导航 </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>自由空间和引用</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 导航 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    自由空间
@@ -631,7 +627,9 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -705,85 +703,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>自由空间和引用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
-<div class="admonition- admonition">
-<p class="admonition-title">需求</p>
-<p>简单理解 <code class="docutils literal notranslate"><span class="pre">new</span></code> 运算符、引用的概念。</p>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">Hint</p>
-<p><span class="guilabel">视频</span></p>
-<p>…</p>
-</div>
-<div class="section" id="id2">
-<h2>自由空间<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
-<p>当你编写一个 C++ 程序时，编译器为你的代码分配内存（也称为 <strong>代码存储</strong> （code storage）或 <strong>文本存储</strong> （text storage）），并为你定义的全局变量分配内存（称为 <strong>静态存储</strong> （static storage））。编译器还为你预留调用函数时所需的空间，函数需要用这些空间保存其参数和局部变量（称为 <strong>栈存储</strong> （stack storage）或 <strong>自动存储</strong> （automatic storage））。计算机中剩余的内存是“自由的”（“空闲的”），可以用于其他用途。内存分布：</p>
-<div class="mermaid">
-            classDiagram
-    class 内存布局
-    内存布局 : +代码
-    内存布局 : +静态数据
-    内存布局 : +自由空间
-    内存布局 : +栈
-        </div><p>C++ 语言使用 <code class="docutils literal notranslate"><span class="pre">new</span></code> 运算符将“自由空间” （free store，又称为 <strong>堆</strong> （heap））变为可用状态。</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>double* p = new double[4]; // 在自由空间中分配 4 个 double
-</pre></div>
-</div>
-</div>
-</div>
-<p>这段代码要求 C++ 运行时系统在自由空间中分配 4 个 <code class="docutils literal notranslate"><span class="pre">double</span></code>，并指向第一个 <code class="docutils literal notranslate"><span class="pre">double</span></code> 的指针返回给我们使用。</p>
-<p>运算符 <code class="docutils literal notranslate"><span class="pre">new</span></code> 返回一个指向它所创建的对象的指针。</p>
-<ul class="simple">
-<li><p>若它创建了多个对象，则返回指向第一个对象的指针。</p></li>
-<li><p>若对象的类型是 <code class="docutils literal notranslate"><span class="pre">X</span></code>，则 <code class="docutils literal notranslate"><span class="pre">new</span></code> 返回的指针类型是 <code class="docutils literal notranslate"><span class="pre">X*</span></code>。</p></li>
-</ul>
-<p>例如：</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w"> </span><span class="c1">// 错误：将 double* 赋予 char*</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>自由空间分配<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "xinetzone/cpp-book",
-            ref: "main",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
-            path: "./start/memory"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
-<div class="section">
-   
-</div>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="pointer.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -792,15 +713,15 @@ commentsRunWhenDOMLoaded(addUtterances);
             <p class="prev-next-title">地址与指针</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../separate-compliation.html" title="next page">
+    <a class='right-next' id="next-link" href="../literals.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">分离式编译</p>
+        <p class="prev-next-title">字面值常量</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

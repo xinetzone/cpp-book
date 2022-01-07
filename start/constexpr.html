@@ -294,11 +294,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="separate-compliation.html">
-     分离式编译
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="literals.html">
      字面值常量
     </a>
@@ -609,19 +604,20 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>常量表达式</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> 导航 </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>常量表达式</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 导航 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    常量表达式
@@ -634,7 +630,9 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -825,202 +823,8 @@ val + 2; // 因为使用了变量，不是常量表达式
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>常量表达式<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="admonition- admonition">
-<p class="admonition-title">需求</p>
-<p>学习使用 <code class="docutils literal notranslate"><span class="pre">constexpr</span></code> 与 <code class="docutils literal notranslate"><span class="pre">const</span></code>。</p>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">提示</p>
-<p><span class="guilabel">视频</span></p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.bilibili.com/video/BV1Db4y1Y7zF">C++ const 与 constexpr</a></p></li>
-</ul>
-</div>
-<dl class="simple myst">
-<dt><strong>符号常量</strong></dt><dd><p>用于表示那些在初始化后值就不再改变的数值量。</p>
-<p>也可以简称为 <strong>常量</strong>。</p>
-</dd>
-</dl>
-<p>符号常量就是我们认知中的常量。比如圆周率 <span class="math notranslate nohighlight">\(\pi\)</span>，在使用过程中，不希望它是可变的，可以使用 <strong>符号常量</strong> 来实现这一目的：</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>constexpr double pi = 3.1415926; // 定义一个符号常量 pi
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>pi = 7; // 错误，试图改变常量的值
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_8:2:5: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">cannot assign to variable &#39;pi&#39; with const-qualified type &#39;const double&#39;</span>
- pi = 7; // 错误，试图改变常量的值
-<span class=" -Color -Color-Bold -Color-Bold-Green"> ~~ ^</span>
-<span class=" -Color -Color-Bold">input_line_7:2:19: </span><span class=" -Color -Color-Bold -Color-Bold-Black">note: </span>variable &#39;pi&#39; declared const here
- constexpr double pi = 3.1415926; // 定义一个符号常量 pi
-<span class=" -Color -Color-Bold -Color-Bold-Green"> ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~</span>
-
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<p>仅仅是使用常量，而非改变它是可行的：</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>double c = 2 * pi;
-c
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6.2831852
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition important">
-<p class="admonition-title">重要</p>
-<p>常量对于维护程序的可读性具有重要作用。</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">小技巧</p>
-<p>除了个别情况（例如 0 和 1），程序中应该尽量少用字面常量，而是尽可能使用符号常量。</p>
-</div>
-<div class="section" id="id2">
-<h2>常量表达式<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="simple myst">
-<dt><strong>常量表达式</strong></dt><dd><p>仅由常量构成的 <strong>整型值</strong> 表达式。</p>
-</dd>
-</dl>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>constexpr int max = 18; // 字面常量是常量表达式
-int val = 19;
-
-max + 7; // 常量表达式（即常量整数+字面常量）
-val + 2; // 因为使用了变量，不是常量表达式
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>21
-</pre></div>
-</div>
-</div>
-</div>
-<p>一个 <code class="docutils literal notranslate"><span class="pre">constexpr</span></code> 符号常量必须给定一个在编译时已知的值。</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">conste</span><span class="p">]</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">500</span><span class="p">;</span><span class="w"></span>
-
-<span class="kt">void</span><span class="w"> </span><span class="nf">use</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 正确，c1 是 507</span>
-<span class="w">    </span><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span><span class="w"> </span><span class="c1">// 错误，不知道 c2 的值是多少</span>
-<span class="w">    </span><span class="c1">// ...</span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>只读<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<dl class="simple myst">
-<dt><strong>只读</strong></dt><dd><p>若某个变量初始化时的值在编译时未知，但初始化后也绝对不改变。</p>
-</dd>
-</dl>
-<p>C++ 提供了只读变量的表示：<code class="docutils literal notranslate"><span class="pre">const</span></code>。</p>
-<p>上面的代码可以改写为：</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>constexpr int max = 500;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>void use(int n) {
-    constexpr int c1 = max + 7; // 正确，c1 是 507
-    const int c2 = n + 7; // 正确，但是 c2 的值可以改变
-    // ...
-}
-</pre></div>
-</div>
-</div>
-</div>
-<p>由于 <code class="docutils literal notranslate"><span class="pre">c2</span></code> 是一个只读的常量，所以：</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-C++11 notranslate"><div class="highlight"><pre><span></span>void use(int n) {
-    constexpr int c1 = max + 7; // 正确，c1 是 507
-    const int c2 = n + 7; // 正确，但是 c2 的值可以改变
-    // ...
-    c2 = 7; // 错误，c2 是常量
-}
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">input_line_23:5:8: </span><span class=" -Color -Color-Bold -Color-Bold-Red">error: </span><span class=" -Color -Color-Bold">cannot assign to variable &#39;c2&#39; with const-qualified type &#39;const int&#39;</span>
-    c2 = 7;
-<span class=" -Color -Color-Bold -Color-Bold-Green">    ~~ ^</span>
-<span class=" -Color -Color-Bold">input_line_23:3:15: </span><span class=" -Color -Color-Bold -Color-Bold-Black">note: </span>variable &#39;c2&#39; declared const here
-    const int c2 = n + 7; // 正确，但是 c2 的值可以改变
-<span class=" -Color -Color-Bold -Color-Bold-Green">    ~~~~~~~~~~^~~~~~~~~~</span>
-
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Interpreter</span> <span class="n">Error</span><span class="p">:</span> 
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition hint">
-<p class="admonition-title">提示</p>
-<p>C++98 不支持 <code class="docutils literal notranslate"><span class="pre">constexpr</span></code>，只能使用 <code class="docutils literal notranslate"><span class="pre">const</span></code>。</p>
-</div>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "xinetzone/cpp-book",
-            ref: "main",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc",
-            path: "./start"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3100jvsc74a57bd0a2954483fe4136a94bd721da8601251ae4c667fedb6adcfe70ff0183b19bacbc'</script>
-<div class="section">
-   
-</div>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="type.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
@@ -1037,7 +841,7 @@ val + 2; // 因为使用了变量，不是常量表达式
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

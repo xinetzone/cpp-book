@@ -292,11 +292,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../separate-compliation.html">
-     分离式编译
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../literals.html">
      字面值常量
     </a>
@@ -564,14 +559,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>基础概念</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>基础概念</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -624,64 +622,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>基础概念<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>在 C++ 标准之下，很多重要的功能都是依赖 <strong>实现的</strong> （implementation-defined）：对于 C++ 语言的某些概念，每个实现版本都必须为之设定恰当的、定义良好的语法行为，同时信息记录行为规范。</p>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kt">char</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">64</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">2</span><span class="kt">int</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1025</span><span class="p">;</span><span class="w"></span>
-<span class="linenos">3</span><span class="kt">char</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"></span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>第 1、2 行是定义良好的：在任何情况下 <code class="docutils literal notranslate"><span class="pre">char</span></code> 都至少包含 8 个二进制位，肯定可以存下 64；<code class="docutils literal notranslate"><span class="pre">int</span></code> 是 32 个二进制位，同样没有问题。</p></li>
-<li><p>第 3 行是依赖于实现的：如果当前情况下 char 只占 8 位，则值被截断。</p></li>
-</ul>
-<p>大多数依赖于实现的功能都与运行程序的硬件与系统密切相关。</p>
-<p>为了尽可能满足可移植性的要求，首先需要明确哪些特性是依赖于实现的，然后把这些敏感的部分整理在一起，放到程序的某个带有明显标记的位置中。</p>
-<p>还有一种行为是 <strong>不确定的</strong> （sunspecified）：由于某些原因造成确切的行为无法预知，便认为它是不确定的。与依赖于实现的行为相比不确定的行为是一种很糟糕的行为。</p>
-<p>如果具体实现无法为某一概念指定明确合理的行为，则 C++ 标准会认为它是 <strong>未定义</strong> 的。</p>
-<div class="admonition important">
-<p class="admonition-title">重要</p>
-<p>程序员应该投入更多精力以确保程序中没有不确定的或未定义的部分。</p>
-</div>
-<div class="toctree-wrapper compound">
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "xinetzone/cpp-book",
-            ref: "main",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./start/concepts"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-<div class="section">
-   
-</div>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="../iostream.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
@@ -698,7 +640,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

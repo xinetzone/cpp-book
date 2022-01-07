@@ -292,11 +292,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="separate-compliation.html">
-     分离式编译
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="literals.html">
      字面值常量
     </a>
@@ -564,14 +559,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>使用代码</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>使用代码</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -647,87 +645,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>使用代码<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>C++ 是一种编译语言。要想运行一段 C++ 程序，需要首先使用 <strong>编译器</strong> 把 <strong>源文件</strong> 转换为 <strong>对象文件</strong> （也称为目标文件，但我觉得 “对象文件” 更加契合其表达的含义），然后再用 <strong>链接器</strong> 把这些对象文件组合生成 <strong>可执行文件</strong>。</p>
-<div class="mermaid">
-            stateDiagram-v2
-    source: 源代码
-    state source {
-        s1: 源文件1
-        s2: 源文件2
-    }
-
-    object: 对象文件
-    state object {
-        o1: 对象文件1
-        o2: 对象文件2
-    }
-
-    e: 可执行文件
-
-    state input &lt;&lt;fork&gt;&gt;
-        [*] --&gt; input
-        input --&gt; s1
-        input --&gt; s2
-
-        s1 --&gt; o1: 编译
-        s2 --&gt; o2: 编译
-
-        state output &lt;&lt;join&gt;&gt;
-        o1 --&gt; output
-        o2 --&gt; output
-        output --&gt; e: 链接
-        e --&gt; [*]
-        
-     note left of source
-         可移植，文件后缀可以是 `.cc`、`.cpp`、`h` 等
-     end note
-     
-     note left of object
-         不可移植，文件后缀可以是 `.o`、`.obj` 等
-     end note
-        
-     note left of e
-         适用于特定的硬件/系统，不可移植
-     end note
-        </div><p>由编译器发现的错误称为 <strong>编译时错误</strong>，由链接器发现的错误错误 <strong>链接时错误</strong>，直到程序运行时才发现的错误称为 <strong>运行时错误</strong> 或 <strong>逻辑错误</strong>。</p>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "xinetzone/cpp-book",
-            ref: "main",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./start"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-<div class="section">
-   
-</div>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="index.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
@@ -744,7 +663,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">

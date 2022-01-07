@@ -292,11 +292,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="separate-compliation.html">
-     分离式编译
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="literals.html">
      字面值常量
     </a>
@@ -577,19 +572,20 @@ commentsRunWhenDOMLoaded(addUtterances);
         </div>
     </div>
 </div>
-    <!-- Table of contents that is only displayed when printing the page -->
-    <div id="jb-print-docs-body" class="onlyprint">
-        <h1>类型</h1>
-        <!-- Table of contents -->
-        <div id="print-main-content" class="row">
-            <div class="col-12 col-md-12 pl-md-5 pr-md-5">
-            <div id="jb-print-toc">
-                
-                <div>
-                    <h2> 导航 </h2>
-                </div>
-                <nav aria-label="Page">
-                    <ul class="visible nav section-nav flex-column">
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>类型</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> 导航 </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
    基本类型
@@ -597,7 +593,9 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
 </ul>
 
-                </nav>
+                        </nav>
+                    </div>
+                </div>
             </div>
             
               <div>
@@ -703,117 +701,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 
               </div>
               
-            </div>
-        </div>
-    </div>
-    <div id="main-content" class="row noprint">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
-              <div>
-                 <div class="tex2jax_ignore mathjax_ignore section" id="id1">
-<h1>类型<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>C++ 程序中的每个名字（标识符）都对应一种数据类型。该类型决定了这个名字（即该名字代表的实体）能够执行哪些运算以及如何执行这些运算。</p>
-<div class="section" id="id2">
-<h2>基本类型<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="glossary simple">
-<dt id="term-0"><strong>基本类型</strong><a class="headerlink" href="#term-0" title="Permalink to this term">¶</a></dt><dd><p>对应于计算机最基本的存储单元并且展示了如何利用这些单元存储数据。基本类型无须声明便可直接使用。包括：</p>
-<ul class="simple">
-<li><p>布尔值类型（<code class="docutils literal notranslate"><span class="pre">bool</span></code>）</p></li>
-<li><p>字符类型（比如 <code class="docutils literal notranslate"><span class="pre">char</span></code> 和 <code class="docutils literal notranslate"><span class="pre">wchar_t</span></code>）</p></li>
-<li><p>整数类型（比如 <code class="docutils literal notranslate"><span class="pre">int</span></code> 和 <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">long</span></code>）</p></li>
-<li><p>浮点数类型（比如 <code class="docutils literal notranslate"><span class="pre">double</span></code> 和 <code class="docutils literal notranslate"><span class="pre">long</span> <span class="pre">double</span></code>）</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">void</span></code> 类型，用以表示类型信息缺失</p></li>
-</ul>
-</dd>
-</dl>
-<p>基于上述类型，可以使用声明符构造出更多的类型：</p>
-<ul class="simple">
-<li><p>指针类型（比如 <code class="docutils literal notranslate"><span class="pre">int*</span></code>）</p></li>
-<li><p>数组类型（比如 <code class="docutils literal notranslate"><span class="pre">char[]</span></code>）</p></li>
-<li><p>引用类型（比如 <code class="docutils literal notranslate"><span class="pre">double&amp;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">vector&lt;int&gt;&amp;&amp;</span></code>）</p></li>
-</ul>
-<p>还可以自定义类型：</p>
-<ul class="simple">
-<li><p>数据结构和类</p></li>
-<li><p>枚举类型，用以表示特定值的集合（<code class="docutils literal notranslate"><span class="pre">enum</span></code> 和 <code class="docutils literal notranslate"><span class="pre">enum</span> <span class="pre">class</span></code>）</p></li>
-</ul>
-<p>布尔值、字符和整数统称 <strong>整型</strong> （integral type），整型和浮点型进一步统称为 <strong>算术类型</strong>。</p>
-<p>枚举类型和类统称为用户 <strong>自定义类型</strong> （user-defined type）：用户必须先定义，之后才能使用。</p>
-<p>基本类型、指针和引用统称为 <strong>内置类型</strong> （built-in type）。</p>
-<p>C++ 设计这些类型时，假设计算机系统的字节可以存放字符、字可以存放和计算整数值、某些实体可以执行浮点计算
-，而内存地址可以用来引用或指向上述实体。</p>
-<div class="mermaid">
-            stateDiagram
-    direction RL
-
-    A: 内置类型
-    
-    state A {
-        B: 基本类型
-        C: 指针
-        D: 引用
-    }
-
-    state B {
-        aa: 算术类型
-        cc: void 类型
-    }
-        </div><div class="mermaid">
-            stateDiagram
-    direction LR
-    A: 算术类型
-    
-    state A {
-        B: 整型
-        C: 浮点型
-    }
-
-    state B {
-        D: 布尔值
-        E: 字符
-        F: 整数
-    }
-        </div><div class="mermaid">
-            stateDiagram
-    direction LR
-    A: 自定义类型
-    
-    state A {
-        B: 枚举类型
-        C: 类
-    }
-        </div><p>指针、数组、引用均是由算术类型复合而成。</p>
-<p>C++ 的基本类型以及指针和数组以一种与实现无关的方式把这些机器级别的思想和概念呈现在程序员面前。</p>
-</div>
-</div>
-
-    <script type="text/x-thebe-config">
-    {
-        requestKernel: true,
-        binderOptions: {
-            repo: "xinetzone/cpp-book",
-            ref: "main",
-        },
-        codeMirrorConfig: {
-            theme: "abcdef",
-            mode: "python"
-        },
-        kernelOptions: {
-            kernelName: "python3",
-            path: "./start"
-        },
-        predefinedOutput: true
-    }
-    </script>
-    <script>kernelName = 'python3'</script>
-<div class="section">
-   
-</div>
-
-              </div>
-              
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="simple-function.html" title="上一页 页">
         <i class="fas fa-angle-left"></i>
@@ -830,7 +719,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
