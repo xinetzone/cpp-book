@@ -23,7 +23,8 @@ statement-errors
 simple-function
 type
 constexpr
-dive2function
+statement
+variable
 class/index
 memory/index
 literals

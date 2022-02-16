@@ -144,7 +144,7 @@
     "一个 `constexpr` 符号常量必须给定一个在编译时已知的值。\n",
     "\n",
     "```c++\n",
-    "conste] int max = 500;\n",
+    "constexpr int max = 500;\n",
     "\n",
     "void use(int n) {\n",
     "    constexpr int c1 = max + 7; // 正确，c1 是 507\n",
