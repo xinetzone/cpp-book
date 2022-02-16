@@ -44,8 +44,8 @@ jobs:
           pip install --upgrade pip
           sudo apt-get update
           sudo apt-get install doxygen
-          conda env create -f environment.yml
           pip install -r docs/requirements.txt
+          conda install -c anaconda llvm
 
       - name: 🔧 Build HTML
         run: |
