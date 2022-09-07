@@ -1,0 +1,176 @@
+# [Bjarne Stroustrup](https://stroustrup.com/index.html) C++ 术语表
+
+原文修改于 2012 年 10 月 3 日
+
+{guilabel}`来源`：[C++ 术语表](https://stroustrup.com/glossary.html)
+
+这是一份关于 C++ 术语的词汇表。
+
+个别术语的定义/解释必然非常简短。为了弥补这一点，每个条目都包括一个或多个对 [C++ 程序设计语言（特别版）](https://stroustrup.com/3rd.html)（{term}`TC++PL`）的引用，在那里你可以找到更全面的解释和代码示例。我使用章节参考，而不是页码，这样本词汇表就可以和我的书的翻译一起使用。阅读整个章节总是明智的，而不是试图从几个半随机的句子中收集信息。
+
+对于那些对 C++ 设计背后的原因感兴趣的人来说，大多数条目还提到了 [The Design and Evolution of C++](https://stroustrup.com/dne.html)（{term}`D&E`）。有些条目包含我的主页的其他部分的链接，特别是我的 [FAQ](https://stroustrup.com/bs_faq.html) 和[ C++ 风格和技术 FAQ](https://stroustrup.com/bs_faq2.html)。如果我有时间，我将添加对 ISO 标准的参考。
+
+本词汇表是专门 "面向C++" 的。也就是说，它是在 C++ 的背景下定义术语的。例如，它用模板来定义通用编程，用虚拟函数来定义面向对象的编程，而不是试图做到足够的抽象和通用，以涵盖所有语言和所有用途。
+
+这些词条旨在提供简要的解释，而不是精确的定义。
+
+欢迎提出改进解释的建议，增加术语，或其他任何能使词汇表更有用的建议：bs at cs dot tamu dot edu.。
+
+```{glossary}
+**bit**
+**位**
+    计算机中最小的信息单位。
+
+    一个可以容纳 0 或 1 的 {term}`内存` 单位。在 {term}`C++` 中不能直接访问一个单独的位（寻址（addressing）单位是 {term}`字节`），但可以通过一个位域或使用按位逻辑 {term}`运算符` & 和 \| 来访问一个位。TC++PL 6.2.4.
+
+**byte**
+**字节**
+    {term}`内存` 单位，可以容纳 {term}`C++` 表示的 {term}`字符集` 的一个字符。在 C++ 中可以直接寻址的最小的内存单位。通常情况下，一个字节是 8 {term}`位`。TC++PL 4.6.
+
+**character set**
+**字符集**
+    一组整数 {term}`值` 与字符表征的映射；例如，ASCII（ANSI13.4-1968）赋予 0-127 值以意义。ASCII 是 C++ 的表示字符集，是用来表示程序源文本的字符集。TC++PL C.3. D&E 6.5.3.
+
+**user-defined type**
+**用户自定义类型**
+    {term}`类` 或 {term}`枚举`。程序员可以为用户定义的 {term}`类型` 定义 {term}`运算符` 的含义。另见：{term}`运算符重载`。TC++PL 6.2, 11, D&E 3.6, 11.7.1.
+
+**operator**
+**运算符**
+    内置操作的常规符号，如 `+`，`*` 和 `&`。程序员可以为 {term}`用户自定义类型` 定义运算符的含义。参见：{term}`运算符重载`、{term}`一元运算符`、{term}`二元运算符`、{term}`三元运算符`、{term}`前缀运算符`、{term}`后缀运算符`。TC++PL 6.2.
+
+**unary operator**
+**一元运算符**
+    带一个操作数的运算符，如 `!` 和一元 `*`。
+
+*binary operator*
+**二元运算符**
+    带两个操作数的运算符，如 `/`、`&&`、二进制 `*`。
+
+**ternary operator**
+**三元运算符**
+    带三个操作数的运算符，如 ?:。
+
+**prefix operator**
+前缀运算符
+    一个出现在其操作数之前的一元运算符。例如，`&var`。
+
+
+**postfix operator**
+后缀运算符
+    一个出现在其操作数之后的一元运算符。例如，`var++`。
+
+**operator overloading**
+**运算符重载**
+    having more than one
+    [operator](https://stroustrup.com/glossary.html#Goperator) with the same
+    [name](https://stroustrup.com/glossary.html#Gname) in the same
+    [scope](https://stroustrup.com/glossary.html#Gscope). Built-in
+    operators, such as + and \*, are overloaded for
+    [type](https://stroustrup.com/glossary.html#Gtype)s such as
+    [int](https://stroustrup.com/glossary.html#Gint) and
+    [float](https://stroustrup.com/glossary.html#Gfloat). Users can define
+    their own additional meanings for [user-defined
+    type](https://stroustrup.com/glossary.html#Guser-defined-type)s. It is
+    not possible to define new operators or to give new meanings to
+    operators for [built-in
+    type](https://stroustrup.com/glossary.html#Gbuilt-in-type)s. The
+    [compiler](https://stroustrup.com/glossary.html#Gcompiler) picks the
+    operator to be used based on
+    [argument](https://stroustrup.com/glossary.html#Gargument) types based
+    [overload
+    resolution](https://stroustrup.com/glossary.html#Goverload-resolution)
+    rules. See also: overload resolution. TC++PL 6.2, D&E 3.6, 11.7.1.
+
+**literal**
+**字面值**
+    bool 类型、字符类型、整数类型或浮点类型的值的表示法。参见：{term}`计数器`。TC++PL 4.2, 4.3.1, 4.4.1, 4.5.1, 5.2.2, D&E 11.2.1.
+
+**enumerator**
+**计数器**
+    枚举的值的名称标识符。TC++PL 4.8, D&E 11.7.
+
+**name**
+**名字**
+    以字母开头的数字和字母的序列，用于中标识（"name"）在程序文本中的用户自定义实体。一个下划线被视为一个字母。名称区分大小写。标准没有对名称的长度施加上限。TC++PL 4.9.3.
+
+**identifier**
+**标识符**
+    见 {term}`name`。
+
+linker
+链接器
+    C++ 实现的一部分，将单独编译的翻译单元产生的代码合并到一个程序或程序的一部分。TC++PL 9.1, D&E 4.5, 11.3.
+
+static memory
+静态内存
+    由 {term}`链接器` 分配的内存。TC++PL 10.4.3, D&E 2.3, 2.11.1, 3.9, 11.4.2.
+
+memory
+内存
+    静态内存、stack、free store。
+
+address
+地址
+    一个值，用来在计算机 {term}`内存` 中查找一个对象。
+
+value
+值
+    内存中的一组 {term}`位`，根据类型解释其含义。
+
+data
+数据
+    计算中用到的 {term}`值`。
+
+object
+对象
+    1. 已知类型、已初始化的一块内存，保存该类型的一个值；
+    2. 一块内存。
+
+operation
+操作
+    用于执行某个动作，例如函数和运算符。
+
+type
+类型
+    定义了对象的一组可能取 {term}`值` 及其一组 {term}`操作` 的东西。
+
+**class**
+**类**
+    a [user-defined
+    type](https://stroustrup.com/glossary.html#Guser-defined-type). A class
+    can have [member
+    function](https://stroustrup.com/glossary.html#Gmember-function)s,
+    [member data](https://stroustrup.com/glossary.html#Gmember-data),
+    [member
+    constant](https://stroustrup.com/glossary.html#Gmember-constant)s, and
+    [member type](https://stroustrup.com/glossary.html#Gmember-type)s. A
+    class is thee primary mechanism for representing
+    [concept](https://stroustrup.com/glossary.html#Gconcept)s in
+    [C++](https://stroustrup.com/glossary.html#GC++). See also: [template
+    class](https://stroustrup.com/glossary.html#Gtemplate-class). TC++PL
+    2.5.2, 10, D&E 2.3.
+
+**enumeration**
+**枚举**
+    a [user-defined
+    type](https://stroustrup.com/glossary.html#Guser-defined-type)
+    consisting of a set of named
+    [value](https://stroustrup.com/glossary.html#Gvalue)s. TC++PL 4.8, D&E
+    11.7.
+
+**word**
+**字**
+    计算机内存的基本单位。
+
+    在给定的机器上，用来存放整数或指针的数个字节。在许多机器上，为了获得可接受的性能，对象必须在字边界上对齐。int 通常存储在一个字中。通常，一个字有 4 个字节。参见：{term}`对齐`。TC + + PL 4.6。
+
+**alignment**
+**对齐**
+    placing
+    [object](https://stroustrup.com/glossary.html#Gobject)s in
+    [memory](https://stroustrup.com/glossary.html#Gmemory) to suit hardware
+    requirements. On many machines, an object must be aligned on a
+    [word](https://stroustrup.com/glossary.html#Gword#) boundary for
+    acceptable performance.
+```

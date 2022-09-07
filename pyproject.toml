@@ -1,0 +1,52 @@
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.4,<4"]
+
+[project]
+authors = [{name = "xinetzone", email = "735613050@qq.com"}]
+classifiers = ["License :: OSI Approved :: Apache Software License"]
+dynamic = ["version", "description"]
+license = {file = "LICENSE"}
+name = "cpp-book"
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = [
+  "invoke"
+]
+
+maintainers = [
+  {name = "xinetzone", email = "735613050@qq.com"},
+]
+
+[project.urls]
+Home = "https://github.com/xinetzone/cpp-book"
+
+[project.optional-dependencies]
+doc = [
+  "sphinx>=4.5",
+  "xyzstyle",
+  "sphinx-book-theme>=0.1.7",
+  "ipywidgets",
+  "myst-nb",
+  # "nbsphinx",
+  "sphinx-thebe",
+  "sphinx-copybutton",
+  "sphinx-comments",
+  "breathe",
+  # "plotly",
+  # "pandas",
+  # "matplotlib",
+  "sphinxcontrib-mermaid",
+  "sphinx-design",
+  "sphinx-automodapi",
+  # "sphinxext-rediraffe",
+  "sphinx-sitemap"
+]
+
+[tool.flit.module]
+name = "cpp_book"
+
+[tool.flit.sdist]
+# include = ["docs/"]
+exclude = ['doc', '.git', '.github', 'output']
