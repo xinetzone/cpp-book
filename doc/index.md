@@ -10,6 +10,7 @@ start/index
 tour/index
 programming/index
 guide/index
+exercises/index
 other/index
 refs/index
 about/index
