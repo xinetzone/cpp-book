@@ -11,6 +11,7 @@ tour/index
 programming/index
 guide/index
 exercises/index
+wiki/index
 other/index
 refs/index
 about/index

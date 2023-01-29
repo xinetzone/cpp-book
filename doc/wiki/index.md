@@ -1,9 +1,9 @@
-# 练习簿
+# 百科
 
 ```{toctree}
 :maxdepth: 2
 :hidden:
 
-timer
-vector-slice
+binary-code
+float
 ```
