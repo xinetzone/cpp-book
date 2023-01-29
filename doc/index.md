@@ -5,14 +5,11 @@
 :maxdepth: 2
 :hidden:
 
-propaedeutics/index
+prepare/index
 start/index
-tour/index
-programming/index
-guide/index
+books/index
 exercises/index
-wiki/index
-other/index
+compiler/index
 refs/index
 about/index
 draft/index

@@ -1,4 +1,11 @@
-# 笔记
+# 暂存区
+
+- [xeus-cling 文档](https://daobook.github.io/xeus-cling/index.html) | [github](https://github.com/daobook/xeus-cling)：用于 C++ 编程语言的 Jupyter内核。
+- [DefTruth/lite.ai.toolkit](https://github.com/DefTruth/lite.ai.toolkit)：🍅🍅 Lite.AI.ToolKit —— 一个开箱即用的 C++ AI 模型工具箱。包括ONNXRuntime、NCNN、MNN 和 TNN 等超强人工智能模型。YOLOX, YOLOP, YOLOv5, YOLOR, NanoDet, ...
+- [isocpp/CppCoreGuidelines: The C++ Core Guidelines are a set of tried-and-true guidelines, rules, and best practices about coding in C++ (github.com)](https://github.com/isocpp/CppCoreGuidelines)
+- [C++ Tutorial (w3schools.com)](https://www.w3schools.com/cpp/default.asp)
+
+## 临时笔记
 
 ```{hint}
 任何常用编程语言都具备一组公共的语法特征，不同语言仅在特征的细节处理上有所差异。
@@ -21,3 +28,7 @@
 
 - Python（动态数据类型语言） 在运行时的
 - 而 C++（静态数据类型语言） 则是在编译时
+
+## 高级教程
+
+- 欧长坤 [现代 C++ 教程](https://changkun.de/modern-cpp/) | [github](https://github.com/daobook/modern-cpp-tutorial)。
