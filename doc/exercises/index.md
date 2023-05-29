@@ -6,4 +6,5 @@
 
 timer
 vector-slice
+frexp
 ```
