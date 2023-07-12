@@ -2,9 +2,7 @@
 
 ```{toctree}
 :maxdepth: 2
-:hidden:
+:glob:
 
-timer
-vector-slice
-frexp
+*
 ```
