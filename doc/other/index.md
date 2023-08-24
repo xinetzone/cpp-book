@@ -6,3 +6,7 @@
 - [Videos](https://www.stroustrup.com/videos.html)
 - [Interviews](https://www.stroustrup.com/interviews.html)
 - [Biographical material](https://www.stroustrup.com/bio.html)
+
+```{toctree}
+crtp
+```
