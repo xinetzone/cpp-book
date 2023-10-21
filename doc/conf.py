@@ -152,9 +152,9 @@ gettext_compact = False  # optional.
 html_sidebars = {
 }
 
-extra_navbar = """<div>
-版权所有 © 2021 <a href="https://xinetzone.github.io/">xinetzone</a></div>
-"""
+# extra_navbar = """<div>
+# 版权所有 © 2021 <a href="https://xinetzone.github.io/">xinetzone</a></div>
+# """
 autosummary_generate = True
 
 html_theme_options = {
@@ -182,12 +182,12 @@ html_theme_options = {
     # "launch_buttons": '', # 默认 `False`
     "home_page_in_toc": False,  # 是否将主页放在导航栏（顶部）
     # -- 只显示标识，不显示 `html_title`，如果它存在的话。-----
-    "logo_only": True,
+    # "logo_only": True,
     # -- 在导航栏中显示子目录，向下到这里列出的深度。 ----
     # "show_navbar_depth": 2,
     # -- 在侧边栏页脚添加额外的 HTML -------------------
     # （如果 `sbt-sidebar-footer.html `在 `html_sidebars` 中被使用）。
-    "extra_navbar": extra_navbar,
+    # "extra_navbar": extra_navbar,
     # -- 在每个页面的页脚添加额外的 HTML。---
     # "extra_footer": '',
     # （仅限开发人员）触发一些功能，使开发主题更容易。
