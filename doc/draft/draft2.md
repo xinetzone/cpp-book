@@ -35,7 +35,7 @@ echo %ERRORLEVEL%
 ```
 ````
 
-````{tab-item}Linux
+````{tab-item} Linux
 ```sh
 echo $?
 ```

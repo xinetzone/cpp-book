@@ -26,6 +26,7 @@ gettext_compact = False # 为每个翻译创建单独的 .po 文件。
 # -------------------------------------------------------------------------------------
 extensions = [
     "myst_nb",
+    "breathe",
     "sphinx_design",
     "sphinx.ext.viewcode", # 添加到高亮源代码的链接
     "sphinx.ext.extlinks", # 缩短外部链接
@@ -124,8 +125,8 @@ tippy_rtd_urls = [
 # ===================== 可选 ==========================================================
 # 用户可以使用 BibTeX 格式的参考文献数据库，并在文档中插入引用和生成参考文献列表。
 # -------------------------------------------------------------------------------------
-extensions.append('sphinxcontrib.bibtex')
-bibtex_bibfiles = ['refs.bib']
+# extensions.append('sphinxcontrib.bibtex')
+# bibtex_bibfiles = ['refs.bib']
 # 自动生成 API 文档的路径
 # -------------------------------------------------------------------------------------
 extensions.append("autoapi.extension")

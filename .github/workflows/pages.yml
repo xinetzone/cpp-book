@@ -46,7 +46,7 @@ jobs:
           pip install --upgrade pip
           pip install .[doc] --upgrade
           conda install -c conda-forge pandoc compilers cppyy pandoc llvm doxygen 
-          conda install anaconda::graphviz
+          conda install -c conda-forge -y graphviz
           invoke doc
       - name: Setup Pages
         uses: actions/configure-pages@main
