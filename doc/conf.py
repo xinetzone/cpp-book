@@ -68,7 +68,7 @@ html_theme = 'xyzstyle' # 使用的主题名称
 html_logo = "_static/images/logo.jpg"
 html_title = "Sphinx xyzstyle Theme"
 html_copy_source = True
-html_favicon = "_static/images/favicon.jpg"
+html_favicon = "_static/images/page-logo.jfif"
 html_last_updated_fmt = '%Y-%m-%d, %H:%M:%S' # 文档的最后更新时间格式
 # 在此添加包含自定义静态文件（如样式表）的任何路径，相对于此目录。
 # 它们会在内置静态文件之后被复制，因此名为 "default.css" 的文件将覆盖内置的 "default.css"。

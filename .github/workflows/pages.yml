@@ -42,11 +42,11 @@ jobs:
           cache-dependency-path: "pyproject.toml"
       - name: 🔧 Build HTML
         run: |
-          sudo apt-get install graphviz doxygen
           apt-get update && sudo apt-get upgrade
           pip install --upgrade pip
           pip install .[doc] --upgrade
-          conda install -c conda-forge pandoc compilers cppyy pandoc llvm
+          conda install -c conda-forge pandoc compilers cppyy pandoc llvm doxygen 
+          conda install anaconda::graphviz
           invoke doc
       - name: Setup Pages
         uses: actions/configure-pages@main

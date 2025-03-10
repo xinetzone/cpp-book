@@ -28,17 +28,19 @@
 
 访问 `main` 的返回值的方法依赖于系统：
 
-````{tabbed} Windows
+`````{tab-set} 
+````{tab-item} Windows
 ```sh
 echo %ERRORLEVEL%
 ```
 ````
 
-````{tabbed} Linux
+````{tab-item}Linux
 ```sh
 echo $?
 ```
 ````
+`````
 
 编译源码的命令：
 
