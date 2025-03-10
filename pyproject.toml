@@ -1,52 +1,59 @@
-[build-system]
-build-backend = "flit_core.buildapi"
-requires = ["flit_core >=3.4,<4"]
-
 [project]
-authors = [{name = "xinetzone", email = "735613050@qq.com"}]
-classifiers = ["License :: OSI Approved :: Apache Software License"]
-dynamic = ["version", "description"]
-license = {file = "LICENSE"}
 name = "cpp-book"
-readme = "README.md"
-requires-python = ">=3.8"
-
-dependencies = [
-  "invoke"
+version = "0.0.2"
+description = "道可道，非恒道"
+authors = [
+    {name = "xinetzone", email = "735613050@qq.com"},
 ]
-
+requires-python = ">=3.10"
+readme = "README.md"
+license = {file = "LICENSE"}
 maintainers = [
   {name = "xinetzone", email = "735613050@qq.com"},
 ]
+dependencies = []
 
 [project.urls]
-Home = "https://github.com/xinetzone/cpp-book"
+Repository = "https://github.com/xinetzone/cpp-book"
+Documentation = "https://xinetzone.github.io/cpp-book/"
 
 [project.optional-dependencies]
 doc = [
-  "sphinx>=4.5",
-  "xyzstyle",
-  "sphinx-book-theme>=0.1.7",
-  "ipywidgets",
-  "myst-nb",
-  # "nbsphinx",
-  "sphinx-thebe",
-  "sphinx-copybutton",
-  "sphinx-comments",
-  "breathe",
-  # "plotly",
-  # "pandas",
-  # "matplotlib",
-  "sphinxcontrib-mermaid",
-  "sphinx-design",
-  "sphinx-automodapi",
-  # "sphinxext-rediraffe",
-  "sphinx-sitemap"
+    "xyzstyle",
+    "sphinx",
+    # "ablog",
+    "ipywidgets",
+    "folium",
+    "numpy",
+    "matplotlib",
+    "sphinx-comments",
+    "myst-nb",
+    "nbclient",
+    "pandas",
+    "plotly",
+    "sphinx-design",
+    "sphinx-examples",
+    "sphinx-copybutton",
+    "sphinx-contributors",
+    "sphinx-thebe",
+    "sphinxcontrib-bibtex",
+    "sphinxext-opengraph",
+    "sphinx-sitemap",
+    "sphinx-autoapi>=3.4",
+    "graphviz",
+    "sphinx-intl", # 文档国际化
+    "sphinx-tippy",
+    "taolib",
+    "breathe",
 ]
 
-[tool.flit.module]
-name = "cpp_book"
+flows = [
+    "invoke",
+]
 
-[tool.flit.sdist]
-# include = ["docs/"]
-exclude = ['doc', '.git', '.github', 'output']
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+distribution = true

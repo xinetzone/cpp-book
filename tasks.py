@@ -1,3 +1,8 @@
-from d2py.tools.write import site
+import inspect
+if not hasattr(inspect, 'getargspec'): # 修复
+    inspect.getargspec = inspect.getfullargspec
+import logging
+from taolib.flows.tasks import sites
 
-namespace = site('doc', target='doc/_build/html')
+logging.basicConfig(level=logging.INFO)
+namespace = sites('doc', target='doc/_build/html')
