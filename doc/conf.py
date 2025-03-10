@@ -34,6 +34,7 @@ extensions = [
     'sphinx_copybutton', # 为代码块添加复制按钮。
     "sphinx_comments", # 为 Sphinx 文档添加评论和注释功能。
     "sphinx.ext.napoleon", # 支持 Google 和 Numpy 风格的文档字符串
+    "sphinxcontrib.mermaid",
 ]
 
 # 在此添加包含模板的任何路径，相对于此目录。
@@ -243,3 +244,13 @@ html_sidebars = {
 breathe_projects = { "cpp-examples": "xml/" }
 
 breathe_default_project = "cpp-examples"
+
+
+# 如果你希望stderr和stdout中的每个输出都被合并成一个流，请使用以下配置。
+# 避免将 jupter 执行报错的信息输出到 cmd
+nb_merge_streams = True
+nb_execution_allow_errors = True
+nb_execution_mode = "off"
+
+# 配置mermaid参数
+mermaid_params = ['--theme', 'forest']
