@@ -1,10 +1,7 @@
 # 百科
 
 ```{toctree}
-:maxdepth: 2
-:hidden:
+:glob:
 
-binary-code
-float
-ifndef
+*
 ```
